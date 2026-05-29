@@ -19,6 +19,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
+import { site } from "@/lib/site-content"
 
 const listVariants = {
   closed: {
@@ -48,6 +49,7 @@ const itemVariants = {
 }
 
 export default function Navbar() {
+  const navigation = site.navigation
   const pathname = usePathname()
   const [scrolled, setScrolled] = React.useState(false)
   const [sheetOpen, setSheetOpen] = React.useState(false)
@@ -95,7 +97,7 @@ export default function Navbar() {
           href="/"
           className="font-serif text-3xl font-light tracking-[0.01em] text-[#F5F0E8]"
         >
-          Nova<span className="text-[#C9A84C]">PR</span>
+          {navigation.brandPrefix}<span className="text-[#C9A84C]">{navigation.brandAccent}</span>
         </Link>
 
         <nav className="hidden lg:block">
@@ -136,7 +138,7 @@ export default function Navbar() {
                         >
                           <div className="rounded-[28px] border border-[#C9A84C]/15 bg-[#161616] p-6 shadow-[0_30px_80px_rgba(15,15,15,0.55)]">
                             <p className="mb-5 font-ui text-[11px] uppercase tracking-[0.28em] text-[#C9A84C]">
-                              Our Services
+                              {navigation.servicesDropdownLabel}
                             </p>
                             <div className="space-y-3">
                               {serviceNavigationLinks.map((service) => (
@@ -172,10 +174,10 @@ export default function Navbar() {
 
         <div className="hidden lg:block">
           <Link
-            href="/contact"
+            href={navigation.primaryCta.href}
             className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#C9A84C] px-6 py-3 font-ui text-[11px] uppercase tracking-[0.28em] text-[#C9A84C] transition-all duration-700 hover:-translate-y-0.5 hover:bg-[#C9A84C] hover:text-[#0F0F0F] hover:shadow-[0_14px_30px_rgba(201,168,76,0.18)]"
           >
-            Start a Conversation
+            {navigation.primaryCta.label}
           </Link>
         </div>
 
@@ -210,7 +212,7 @@ export default function Navbar() {
             </Button>
 
             <SheetHeader className="sr-only px-0">
-              <SheetTitle>Navigation</SheetTitle>
+              <SheetTitle>{navigation.mobileTitle}</SheetTitle>
             </SheetHeader>
 
             <motion.nav
@@ -251,11 +253,11 @@ export default function Navbar() {
 
             <SheetFooter className="px-0 pb-0">
               <Link
-                href="/contact"
+                href={navigation.primaryCta.href}
                 className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-[#C9A84C] px-6 py-4 font-ui text-[11px] uppercase tracking-[0.28em] text-[#0F0F0F]"
                 onClick={() => setSheetOpen(false)}
               >
-                Start a Conversation
+                {navigation.primaryCta.label}
               </Link>
             </SheetFooter>
           </SheetContent>

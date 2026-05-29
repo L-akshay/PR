@@ -3,8 +3,11 @@ import Link from "next/link"
 
 import FadeUp from "@/components/ui/FadeUp"
 import SectionLabel from "@/components/ui/SectionLabel"
+import { site } from "@/lib/site-content"
 
 export default function WhatWeDo() {
+  const content = site.home.whatWeDo
+
   return (
     <section className="relative overflow-hidden px-5 py-18 md:py-24 lg:px-16">
       <div className="pointer-events-none absolute inset-0">
@@ -16,8 +19,8 @@ export default function WhatWeDo() {
         <FadeUp delay={0}>
           <div className="group relative overflow-hidden rounded-[32px] border border-[#C9A84C]/15 shadow-[0_28px_90px_rgba(15,15,15,0.22)]">
             <Image
-              src="/images/sections/what-we-do.jpg"
-              alt="Workshop collaboration around a planning board"
+              src={content.image}
+              alt={content.imageAlt}
               width={900}
               height={1040}
               className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:scale-[1.05]"
@@ -29,15 +32,15 @@ export default function WhatWeDo() {
         <FadeUp delay={0.1}>
           <div className="rounded-[32px] border border-[#C9A84C]/10 bg-[linear-gradient(180deg,rgba(22,22,22,0.82)_0%,rgba(15,15,15,0.58)_100%)] p-8 shadow-[0_22px_70px_rgba(15,15,15,0.18)] backdrop-blur-sm lg:p-10">
             <SectionLabel
-              label="What We Do"
-              title="A strategic PR partner built for brands that want sharper presence."
-              description="We connect editorial thinking, media access, creative direction, digital performance, and search visibility into one disciplined growth engine. That means fewer disconnected vendors and a far stronger brand signal across every touchpoint."
+              label={content.label}
+              title={content.title}
+              description={content.description}
             />
             <Link
-              href="/about"
+              href={content.cta.href}
               className="group mt-8 inline-flex min-h-11 items-center gap-3 font-ui text-[11px] uppercase tracking-[0.28em] text-[#C9A84C] transition-colors duration-700 hover:text-[#F5F0E8]"
             >
-              <span>Discover Who We Are</span>
+              <span>{content.cta.label}</span>
               <span className="h-px w-10 bg-[#C9A84C] transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:w-14 group-hover:bg-[#F5F0E8]" />
             </Link>
           </div>

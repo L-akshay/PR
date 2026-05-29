@@ -173,12 +173,23 @@ type SiteContentHomeServicesPreview {
   label: String
   title: String
   description: String
+  viewAllLabel: String
+  scrollLabel: String
+  exploreLabel: String
+}
+
+type SiteContentHomeWhyChoosePrChecklist {
+  number: String
+  text: String
 }
 
 type SiteContentHomeWhyChoosePr {
   label: String
   title: String
   description: String
+  image: String
+  imageAlt: String
+  checklist: [SiteContentHomeWhyChoosePrChecklist]
 }
 
 type SiteContentHomeWhySubscribeCards {
@@ -195,10 +206,29 @@ type SiteContentHomeWhySubscribe {
   cards: [SiteContentHomeWhySubscribeCards]
 }
 
+type SiteContentHomeWhyChooseUsCta {
+  href: String
+  label: String
+}
+
 type SiteContentHomeWhyChooseUs {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentHomeWhyChooseUsCta
 }
 
 type SiteContentHomeProjectsPreviewPrimaryCta {
@@ -217,10 +247,29 @@ type SiteContentHomeProjectsPreview {
   secondaryCta: SiteContentHomeProjectsPreviewSecondaryCta
 }
 
+type SiteContentHomeTestimonialsIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentHomeTestimonialsIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentHomeTestimonialsIntroCta
 }
 
 type SiteContentHomeLetsTalkPrimaryCta {
@@ -241,10 +290,29 @@ type SiteContentHomeLetsTalk {
   secondaryCta: SiteContentHomeLetsTalkSecondaryCta
 }
 
+type SiteContentHomeContactShortCta {
+  href: String
+  label: String
+}
+
 type SiteContentHomeContactShort {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentHomeContactShortCta
 }
 
 type SiteContentHome {
@@ -261,28 +329,104 @@ type SiteContentHome {
   contactShort: SiteContentHomeContactShort
 }
 
+type SiteContentPageHeroesServicesCta {
+  href: String
+  label: String
+}
+
 type SiteContentPageHeroesServices {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentPageHeroesServicesCta
+}
+
+type SiteContentPageHeroesCaseStudiesCta {
+  href: String
+  label: String
 }
 
 type SiteContentPageHeroesCaseStudies {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentPageHeroesCaseStudiesCta
+}
+
+type SiteContentPageHeroesBlogCta {
+  href: String
+  label: String
 }
 
 type SiteContentPageHeroesBlog {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentPageHeroesBlogCta
+}
+
+type SiteContentPageHeroesContactCta {
+  href: String
+  label: String
 }
 
 type SiteContentPageHeroesContact {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentPageHeroesContactCta
 }
 
 type SiteContentPageHeroes {
@@ -300,10 +444,29 @@ type SiteContentAboutHero {
   scrollLabel: String
 }
 
+type SiteContentAboutMissionCta {
+  href: String
+  label: String
+}
+
 type SiteContentAboutMission {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentAboutMissionCta
 }
 
 type SiteContentAboutStats {
@@ -314,16 +477,54 @@ type SiteContentAboutStats {
   description: String
 }
 
+type SiteContentAboutTimelineIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentAboutTimelineIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentAboutTimelineIntroCta
+}
+
+type SiteContentAboutValuesIntroCta {
+  href: String
+  label: String
 }
 
 type SiteContentAboutValuesIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentAboutValuesIntroCta
 }
 
 type SiteContentAboutValues {
@@ -360,10 +561,29 @@ type SiteContentAbout {
   closing: SiteContentAboutClosing
 }
 
+type SiteContentServicesPageIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentServicesPageIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentServicesPageIntroCta
 }
 
 type SiteContentServicesPageHighlights {
@@ -374,10 +594,29 @@ type SiteContentServicesPageHighlights {
   description: String
 }
 
+type SiteContentServicesPageFullListCta {
+  href: String
+  label: String
+}
+
 type SiteContentServicesPageFullList {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentServicesPageFullListCta
 }
 
 type SiteContentServicesPageClosingPrimaryCta {
@@ -408,16 +647,54 @@ type SiteContentServicesPageDetailAllServicesCta {
   label: String
 }
 
+type SiteContentServicesPageDetailProcessIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentServicesPageDetailProcessIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentServicesPageDetailProcessIntroCta
+}
+
+type SiteContentServicesPageDetailRelatedIntroCta {
+  href: String
+  label: String
 }
 
 type SiteContentServicesPageDetailRelatedIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentServicesPageDetailRelatedIntroCta
 }
 
 type SiteContentServicesPageDetailClosingPrimaryCta {
@@ -449,6 +726,7 @@ type SiteContentServicesPageDetail {
 }
 
 type SiteContentServicesPage {
+  serviceCtaLabel: String
   intro: SiteContentServicesPageIntro
   highlights: [SiteContentServicesPageHighlights]
   fullList: SiteContentServicesPageFullList
@@ -456,16 +734,70 @@ type SiteContentServicesPage {
   detail: SiteContentServicesPageDetail
 }
 
-type SiteContentBlogPage {
+type SiteContentBlogPageIntroCta {
+  href: String
+  label: String
+}
+
+type SiteContentBlogPageIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentBlogPageIntroCta
+}
+
+type SiteContentBlogPageClosingPrimaryCta {
+  href: String
+  label: String
+}
+
+type SiteContentBlogPageClosing {
+  eyebrow: String
+  primaryCta: SiteContentBlogPageClosingPrimaryCta
+}
+
+type SiteContentBlogPage {
+  intro: SiteContentBlogPageIntro
+  backLabel: String
+  closing: SiteContentBlogPageClosing
+}
+
+type SiteContentCaseStudiesPageIncludedIntroCta {
+  href: String
+  label: String
 }
 
 type SiteContentCaseStudiesPageIncludedIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentCaseStudiesPageIncludedIntroCta
 }
 
 type SiteContentCaseStudiesPageClosingPrimaryCta {
@@ -523,6 +855,7 @@ type SiteContentContactPageConsultationRequest {
   label: String
   title: String
   description: String
+  confidentiality: String
 }
 
 type SiteContentContactPageForm {
@@ -538,10 +871,29 @@ type SiteContentContactPageForm {
   submitLabel: String
 }
 
+type SiteContentContactPageOtherOptionsIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentContactPageOtherOptionsIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentContactPageOtherOptionsIntroCta
 }
 
 type SiteContentContactPageFinalCta {
@@ -590,22 +942,79 @@ type SiteContentDataAllServiceGroups {
   items: [String]
 }
 
+type SiteContentDataProjectSectionIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentDataProjectSectionIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataProjectSectionIntroCta
+}
+
+type SiteContentDataProjectsPageIntroCta {
+  href: String
+  label: String
 }
 
 type SiteContentDataProjectsPageIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataProjectsPageIntroCta
+}
+
+type SiteContentDataProjectsClosingCtaCta {
+  href: String
+  label: String
 }
 
 type SiteContentDataProjectsClosingCta {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataProjectsClosingCtaCta
 }
 
 type SiteContentDataProjectItems {
@@ -672,10 +1081,29 @@ type SiteContentDataBlogPosts {
   content: String
 }
 
+type SiteContentDataContactContactPageIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentDataContactContactPageIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataContactContactPageIntroCta
 }
 
 type SiteContentDataContactContactStrategyConsultationHighlights {
@@ -699,10 +1127,29 @@ type SiteContentDataContactContactOptions {
   external: Boolean
 }
 
+type SiteContentDataContactContactExpectationsIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentDataContactContactExpectationsIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataContactContactExpectationsIntroCta
 }
 
 type SiteContentDataContactContactExpectations {
@@ -711,10 +1158,29 @@ type SiteContentDataContactContactExpectations {
   description: String
 }
 
+type SiteContentDataContactContactConversationTopicsIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentDataContactContactConversationTopicsIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataContactContactConversationTopicsIntroCta
 }
 
 type SiteContentDataContactContactConversationTopics {
@@ -727,10 +1193,29 @@ type SiteContentDataContactContactFaqs {
   answer: String
 }
 
+type SiteContentDataContactContactReasonsIntroCta {
+  href: String
+  label: String
+}
+
 type SiteContentDataContactContactReasonsIntro {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataContactContactReasonsIntroCta
 }
 
 type SiteContentDataContactContactReasons {
@@ -937,12 +1422,23 @@ input SiteContentHomeServicesPreviewFilter {
   label: StringFilter
   title: StringFilter
   description: StringFilter
+  viewAllLabel: StringFilter
+  scrollLabel: StringFilter
+  exploreLabel: StringFilter
+}
+
+input SiteContentHomeWhyChoosePrChecklistFilter {
+  number: StringFilter
+  text: StringFilter
 }
 
 input SiteContentHomeWhyChoosePrFilter {
   label: StringFilter
   title: StringFilter
   description: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  checklist: SiteContentHomeWhyChoosePrChecklistFilter
 }
 
 input SiteContentHomeWhySubscribeCardsFilter {
@@ -959,10 +1455,29 @@ input SiteContentHomeWhySubscribeFilter {
   cards: SiteContentHomeWhySubscribeCardsFilter
 }
 
+input SiteContentHomeWhyChooseUsCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentHomeWhyChooseUsFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentHomeWhyChooseUsCtaFilter
 }
 
 input SiteContentHomeProjectsPreviewPrimaryCtaFilter {
@@ -981,10 +1496,29 @@ input SiteContentHomeProjectsPreviewFilter {
   secondaryCta: SiteContentHomeProjectsPreviewSecondaryCtaFilter
 }
 
+input SiteContentHomeTestimonialsIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentHomeTestimonialsIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentHomeTestimonialsIntroCtaFilter
 }
 
 input SiteContentHomeLetsTalkPrimaryCtaFilter {
@@ -1005,10 +1539,29 @@ input SiteContentHomeLetsTalkFilter {
   secondaryCta: SiteContentHomeLetsTalkSecondaryCtaFilter
 }
 
+input SiteContentHomeContactShortCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentHomeContactShortFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentHomeContactShortCtaFilter
 }
 
 input SiteContentHomeFilter {
@@ -1025,28 +1578,104 @@ input SiteContentHomeFilter {
   contactShort: SiteContentHomeContactShortFilter
 }
 
+input SiteContentPageHeroesServicesCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentPageHeroesServicesFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentPageHeroesServicesCtaFilter
+}
+
+input SiteContentPageHeroesCaseStudiesCtaFilter {
+  href: StringFilter
+  label: StringFilter
 }
 
 input SiteContentPageHeroesCaseStudiesFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentPageHeroesCaseStudiesCtaFilter
+}
+
+input SiteContentPageHeroesBlogCtaFilter {
+  href: StringFilter
+  label: StringFilter
 }
 
 input SiteContentPageHeroesBlogFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentPageHeroesBlogCtaFilter
+}
+
+input SiteContentPageHeroesContactCtaFilter {
+  href: StringFilter
+  label: StringFilter
 }
 
 input SiteContentPageHeroesContactFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentPageHeroesContactCtaFilter
 }
 
 input SiteContentPageHeroesFilter {
@@ -1064,10 +1693,29 @@ input SiteContentAboutHeroFilter {
   scrollLabel: StringFilter
 }
 
+input SiteContentAboutMissionCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentAboutMissionFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentAboutMissionCtaFilter
 }
 
 input NumberFilter {
@@ -1088,16 +1736,54 @@ input SiteContentAboutStatsFilter {
   description: StringFilter
 }
 
+input SiteContentAboutTimelineIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentAboutTimelineIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentAboutTimelineIntroCtaFilter
+}
+
+input SiteContentAboutValuesIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
 }
 
 input SiteContentAboutValuesIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentAboutValuesIntroCtaFilter
 }
 
 input SiteContentAboutValuesFilter {
@@ -1134,10 +1820,29 @@ input SiteContentAboutFilter {
   closing: SiteContentAboutClosingFilter
 }
 
+input SiteContentServicesPageIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentServicesPageIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentServicesPageIntroCtaFilter
 }
 
 input SiteContentServicesPageHighlightsFilter {
@@ -1148,10 +1853,29 @@ input SiteContentServicesPageHighlightsFilter {
   description: StringFilter
 }
 
+input SiteContentServicesPageFullListCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentServicesPageFullListFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentServicesPageFullListCtaFilter
 }
 
 input SiteContentServicesPageClosingPrimaryCtaFilter {
@@ -1182,16 +1906,54 @@ input SiteContentServicesPageDetailAllServicesCtaFilter {
   label: StringFilter
 }
 
+input SiteContentServicesPageDetailProcessIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentServicesPageDetailProcessIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentServicesPageDetailProcessIntroCtaFilter
+}
+
+input SiteContentServicesPageDetailRelatedIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
 }
 
 input SiteContentServicesPageDetailRelatedIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentServicesPageDetailRelatedIntroCtaFilter
 }
 
 input SiteContentServicesPageDetailClosingPrimaryCtaFilter {
@@ -1223,6 +1985,7 @@ input SiteContentServicesPageDetailFilter {
 }
 
 input SiteContentServicesPageFilter {
+  serviceCtaLabel: StringFilter
   intro: SiteContentServicesPageIntroFilter
   highlights: SiteContentServicesPageHighlightsFilter
   fullList: SiteContentServicesPageFullListFilter
@@ -1230,16 +1993,70 @@ input SiteContentServicesPageFilter {
   detail: SiteContentServicesPageDetailFilter
 }
 
-input SiteContentBlogPageFilter {
+input SiteContentBlogPageIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
+input SiteContentBlogPageIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentBlogPageIntroCtaFilter
+}
+
+input SiteContentBlogPageClosingPrimaryCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
+input SiteContentBlogPageClosingFilter {
+  eyebrow: StringFilter
+  primaryCta: SiteContentBlogPageClosingPrimaryCtaFilter
+}
+
+input SiteContentBlogPageFilter {
+  intro: SiteContentBlogPageIntroFilter
+  backLabel: StringFilter
+  closing: SiteContentBlogPageClosingFilter
+}
+
+input SiteContentCaseStudiesPageIncludedIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
 }
 
 input SiteContentCaseStudiesPageIncludedIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentCaseStudiesPageIncludedIntroCtaFilter
 }
 
 input SiteContentCaseStudiesPageClosingPrimaryCtaFilter {
@@ -1297,6 +2114,7 @@ input SiteContentContactPageConsultationRequestFilter {
   label: StringFilter
   title: StringFilter
   description: StringFilter
+  confidentiality: StringFilter
 }
 
 input SiteContentContactPageFormFilter {
@@ -1312,10 +2130,29 @@ input SiteContentContactPageFormFilter {
   submitLabel: StringFilter
 }
 
+input SiteContentContactPageOtherOptionsIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentContactPageOtherOptionsIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentContactPageOtherOptionsIntroCtaFilter
 }
 
 input SiteContentContactPageFinalCtaFilter {
@@ -1364,22 +2201,79 @@ input SiteContentDataAllServiceGroupsFilter {
   items: StringFilter
 }
 
+input SiteContentDataProjectSectionIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentDataProjectSectionIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentDataProjectSectionIntroCtaFilter
+}
+
+input SiteContentDataProjectsPageIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
 }
 
 input SiteContentDataProjectsPageIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentDataProjectsPageIntroCtaFilter
+}
+
+input SiteContentDataProjectsClosingCtaCtaFilter {
+  href: StringFilter
+  label: StringFilter
 }
 
 input SiteContentDataProjectsClosingCtaFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentDataProjectsClosingCtaCtaFilter
 }
 
 input SiteContentDataProjectItemsFilter {
@@ -1446,10 +2340,29 @@ input SiteContentDataBlogPostsFilter {
   content: StringFilter
 }
 
+input SiteContentDataContactContactPageIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentDataContactContactPageIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentDataContactContactPageIntroCtaFilter
 }
 
 input SiteContentDataContactContactStrategyConsultationHighlightsFilter {
@@ -1473,10 +2386,29 @@ input SiteContentDataContactContactOptionsFilter {
   external: BooleanFilter
 }
 
+input SiteContentDataContactContactExpectationsIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentDataContactContactExpectationsIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentDataContactContactExpectationsIntroCtaFilter
 }
 
 input SiteContentDataContactContactExpectationsFilter {
@@ -1485,10 +2417,29 @@ input SiteContentDataContactContactExpectationsFilter {
   description: StringFilter
 }
 
+input SiteContentDataContactContactConversationTopicsIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentDataContactContactConversationTopicsIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentDataContactContactConversationTopicsIntroCtaFilter
 }
 
 input SiteContentDataContactContactConversationTopicsFilter {
@@ -1501,10 +2452,29 @@ input SiteContentDataContactContactFaqsFilter {
   answer: StringFilter
 }
 
+input SiteContentDataContactContactReasonsIntroCtaFilter {
+  href: StringFilter
+  label: StringFilter
+}
+
 input SiteContentDataContactContactReasonsIntroFilter {
   label: StringFilter
   title: StringFilter
+  heading: StringFilter
+  homeLabel: StringFilter
+  currentLabel: StringFilter
+  noteLabel: StringFilter
+  titlePrefix: StringFilter
+  titleAccent: StringFilter
+  titleSuffix: StringFilter
   description: StringFilter
+  supporting: StringFilter
+  note: StringFilter
+  quote: StringFilter
+  button: StringFilter
+  image: ImageFilter
+  imageAlt: StringFilter
+  cta: SiteContentDataContactContactReasonsIntroCtaFilter
 }
 
 input SiteContentDataContactContactReasonsFilter {
@@ -1719,12 +2689,23 @@ input SiteContentHomeServicesPreviewMutation {
   label: String
   title: String
   description: String
+  viewAllLabel: String
+  scrollLabel: String
+  exploreLabel: String
+}
+
+input SiteContentHomeWhyChoosePrChecklistMutation {
+  number: String
+  text: String
 }
 
 input SiteContentHomeWhyChoosePrMutation {
   label: String
   title: String
   description: String
+  image: String
+  imageAlt: String
+  checklist: [SiteContentHomeWhyChoosePrChecklistMutation]
 }
 
 input SiteContentHomeWhySubscribeCardsMutation {
@@ -1741,10 +2722,29 @@ input SiteContentHomeWhySubscribeMutation {
   cards: [SiteContentHomeWhySubscribeCardsMutation]
 }
 
+input SiteContentHomeWhyChooseUsCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentHomeWhyChooseUsMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentHomeWhyChooseUsCtaMutation
 }
 
 input SiteContentHomeProjectsPreviewPrimaryCtaMutation {
@@ -1763,10 +2763,29 @@ input SiteContentHomeProjectsPreviewMutation {
   secondaryCta: SiteContentHomeProjectsPreviewSecondaryCtaMutation
 }
 
+input SiteContentHomeTestimonialsIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentHomeTestimonialsIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentHomeTestimonialsIntroCtaMutation
 }
 
 input SiteContentHomeLetsTalkPrimaryCtaMutation {
@@ -1787,10 +2806,29 @@ input SiteContentHomeLetsTalkMutation {
   secondaryCta: SiteContentHomeLetsTalkSecondaryCtaMutation
 }
 
+input SiteContentHomeContactShortCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentHomeContactShortMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentHomeContactShortCtaMutation
 }
 
 input SiteContentHomeMutation {
@@ -1807,28 +2845,104 @@ input SiteContentHomeMutation {
   contactShort: SiteContentHomeContactShortMutation
 }
 
+input SiteContentPageHeroesServicesCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentPageHeroesServicesMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentPageHeroesServicesCtaMutation
+}
+
+input SiteContentPageHeroesCaseStudiesCtaMutation {
+  href: String
+  label: String
 }
 
 input SiteContentPageHeroesCaseStudiesMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentPageHeroesCaseStudiesCtaMutation
+}
+
+input SiteContentPageHeroesBlogCtaMutation {
+  href: String
+  label: String
 }
 
 input SiteContentPageHeroesBlogMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentPageHeroesBlogCtaMutation
+}
+
+input SiteContentPageHeroesContactCtaMutation {
+  href: String
+  label: String
 }
 
 input SiteContentPageHeroesContactMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentPageHeroesContactCtaMutation
 }
 
 input SiteContentPageHeroesMutation {
@@ -1846,10 +2960,29 @@ input SiteContentAboutHeroMutation {
   scrollLabel: String
 }
 
+input SiteContentAboutMissionCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentAboutMissionMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentAboutMissionCtaMutation
 }
 
 input SiteContentAboutStatsMutation {
@@ -1860,16 +2993,54 @@ input SiteContentAboutStatsMutation {
   description: String
 }
 
+input SiteContentAboutTimelineIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentAboutTimelineIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentAboutTimelineIntroCtaMutation
+}
+
+input SiteContentAboutValuesIntroCtaMutation {
+  href: String
+  label: String
 }
 
 input SiteContentAboutValuesIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentAboutValuesIntroCtaMutation
 }
 
 input SiteContentAboutValuesMutation {
@@ -1906,10 +3077,29 @@ input SiteContentAboutMutation {
   closing: SiteContentAboutClosingMutation
 }
 
+input SiteContentServicesPageIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentServicesPageIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentServicesPageIntroCtaMutation
 }
 
 input SiteContentServicesPageHighlightsMutation {
@@ -1920,10 +3110,29 @@ input SiteContentServicesPageHighlightsMutation {
   description: String
 }
 
+input SiteContentServicesPageFullListCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentServicesPageFullListMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentServicesPageFullListCtaMutation
 }
 
 input SiteContentServicesPageClosingPrimaryCtaMutation {
@@ -1954,16 +3163,54 @@ input SiteContentServicesPageDetailAllServicesCtaMutation {
   label: String
 }
 
+input SiteContentServicesPageDetailProcessIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentServicesPageDetailProcessIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentServicesPageDetailProcessIntroCtaMutation
+}
+
+input SiteContentServicesPageDetailRelatedIntroCtaMutation {
+  href: String
+  label: String
 }
 
 input SiteContentServicesPageDetailRelatedIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentServicesPageDetailRelatedIntroCtaMutation
 }
 
 input SiteContentServicesPageDetailClosingPrimaryCtaMutation {
@@ -1995,6 +3242,7 @@ input SiteContentServicesPageDetailMutation {
 }
 
 input SiteContentServicesPageMutation {
+  serviceCtaLabel: String
   intro: SiteContentServicesPageIntroMutation
   highlights: [SiteContentServicesPageHighlightsMutation]
   fullList: SiteContentServicesPageFullListMutation
@@ -2002,16 +3250,70 @@ input SiteContentServicesPageMutation {
   detail: SiteContentServicesPageDetailMutation
 }
 
-input SiteContentBlogPageMutation {
+input SiteContentBlogPageIntroCtaMutation {
+  href: String
+  label: String
+}
+
+input SiteContentBlogPageIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentBlogPageIntroCtaMutation
+}
+
+input SiteContentBlogPageClosingPrimaryCtaMutation {
+  href: String
+  label: String
+}
+
+input SiteContentBlogPageClosingMutation {
+  eyebrow: String
+  primaryCta: SiteContentBlogPageClosingPrimaryCtaMutation
+}
+
+input SiteContentBlogPageMutation {
+  intro: SiteContentBlogPageIntroMutation
+  backLabel: String
+  closing: SiteContentBlogPageClosingMutation
+}
+
+input SiteContentCaseStudiesPageIncludedIntroCtaMutation {
+  href: String
+  label: String
 }
 
 input SiteContentCaseStudiesPageIncludedIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentCaseStudiesPageIncludedIntroCtaMutation
 }
 
 input SiteContentCaseStudiesPageClosingPrimaryCtaMutation {
@@ -2069,6 +3371,7 @@ input SiteContentContactPageConsultationRequestMutation {
   label: String
   title: String
   description: String
+  confidentiality: String
 }
 
 input SiteContentContactPageFormMutation {
@@ -2084,10 +3387,29 @@ input SiteContentContactPageFormMutation {
   submitLabel: String
 }
 
+input SiteContentContactPageOtherOptionsIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentContactPageOtherOptionsIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentContactPageOtherOptionsIntroCtaMutation
 }
 
 input SiteContentContactPageFinalCtaMutation {
@@ -2136,22 +3458,79 @@ input SiteContentDataAllServiceGroupsMutation {
   items: [String]
 }
 
+input SiteContentDataProjectSectionIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentDataProjectSectionIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataProjectSectionIntroCtaMutation
+}
+
+input SiteContentDataProjectsPageIntroCtaMutation {
+  href: String
+  label: String
 }
 
 input SiteContentDataProjectsPageIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataProjectsPageIntroCtaMutation
+}
+
+input SiteContentDataProjectsClosingCtaCtaMutation {
+  href: String
+  label: String
 }
 
 input SiteContentDataProjectsClosingCtaMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataProjectsClosingCtaCtaMutation
 }
 
 input SiteContentDataProjectItemsMutation {
@@ -2218,10 +3597,29 @@ input SiteContentDataBlogPostsMutation {
   content: String
 }
 
+input SiteContentDataContactContactPageIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentDataContactContactPageIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataContactContactPageIntroCtaMutation
 }
 
 input SiteContentDataContactContactStrategyConsultationHighlightsMutation {
@@ -2245,10 +3643,29 @@ input SiteContentDataContactContactOptionsMutation {
   external: Boolean
 }
 
+input SiteContentDataContactContactExpectationsIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentDataContactContactExpectationsIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataContactContactExpectationsIntroCtaMutation
 }
 
 input SiteContentDataContactContactExpectationsMutation {
@@ -2257,10 +3674,29 @@ input SiteContentDataContactContactExpectationsMutation {
   description: String
 }
 
+input SiteContentDataContactContactConversationTopicsIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentDataContactContactConversationTopicsIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataContactContactConversationTopicsIntroCtaMutation
 }
 
 input SiteContentDataContactContactConversationTopicsMutation {
@@ -2273,10 +3709,29 @@ input SiteContentDataContactContactFaqsMutation {
   answer: String
 }
 
+input SiteContentDataContactContactReasonsIntroCtaMutation {
+  href: String
+  label: String
+}
+
 input SiteContentDataContactContactReasonsIntroMutation {
   label: String
   title: String
+  heading: String
+  homeLabel: String
+  currentLabel: String
+  noteLabel: String
+  titlePrefix: String
+  titleAccent: String
+  titleSuffix: String
   description: String
+  supporting: String
+  note: String
+  quote: String
+  button: String
+  image: String
+  imageAlt: String
+  cta: SiteContentDataContactContactReasonsIntroCtaMutation
 }
 
 input SiteContentDataContactContactReasonsMutation {

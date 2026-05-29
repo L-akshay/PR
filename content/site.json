@@ -387,6 +387,7 @@
     }
   },
   "servicesPage": {
+    "serviceCtaLabel": "Explore Service",
     "intro": {
       "label": "Services",
       "title": "Integrated services built to move reputation, reach, and recall.",
@@ -931,11 +932,15 @@
     },
     "projectsPageIntro": {
       "label": "Projects",
+      "homeLabel": "Home",
+      "currentLabel": "Projects",
+      "noteLabel": "Editorial Note",
       "heading": "A curated look at the campaigns and engagements that demonstrate how we apply PR strategy across different industries, objectives, and markets.",
       "supporting": "These are not our most glamorous projects. They are our most instructive ones.",
       "note": "Project portfolios in PR are awkward by nature. Confidentiality matters. Clients do not always want their communications strategy documented publicly. What we can share is a representative set of campaign types, the strategic thinking behind them, and the measurable outcomes produced. The industries and company sizes vary. The methodology does not."
     },
     "projectsClosingCta": {
+      "label": "The Next Project",
       "heading": "Every project begins with a conversation about your specific situation.",
       "supporting": "If any of the above resonates with a challenge you are navigating, that is the right place to start.",
       "button": "Schedule a Project Discussion"

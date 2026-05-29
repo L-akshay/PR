@@ -21,11 +21,13 @@ import {
   contactExpectations,
   contactExpectationsIntro,
   contactOptions,
+  otherOptionsIntro,
   contactPageIntro,
   contactReasons,
   contactReasonsIntro,
   contactStrategyConsultation,
 } from "@/lib/data/contact"
+import { site } from "@/lib/site-content"
 
 const contactOptionIcons = {
   Email: Mail,
@@ -36,6 +38,8 @@ const contactOptionIcons = {
 const expectationIcons = [CalendarDays, Mail, MessageCircle, Clock3]
 
 export default function Contact() {
+  const contactPage = site.contactPage
+
   return (
     <section className="relative overflow-hidden px-5 py-18 lg:px-16 lg:py-24">
       <div className="pointer-events-none absolute inset-0">
@@ -115,42 +119,34 @@ export default function Contact() {
               <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[#C9A84C]/65 to-transparent" />
 
               <p className="relative font-ui text-[11px] uppercase tracking-[0.34em] text-[#C9A84C]">
-                Consultation Request
+                {contactPage.consultationRequest.label}
               </p>
               <h3 className="relative mt-6 max-w-2xl font-serif text-4xl font-light leading-[0.98] text-[#F5F0E8] sm:text-5xl">
-                Tell us where things stand and what has to change.
+                {contactPage.consultationRequest.title}
               </h3>
               <p className="relative mt-6 max-w-2xl font-ui text-[15px] leading-[1.9] text-[#888880] sm:text-[17px]">
-                Share your current communications position, the commercial objective in front of you, and the challenge or opportunity you need to address. We will come back with the right next step.
+                {contactPage.consultationRequest.description}
               </p>
 
               <div className="relative mt-8">
                 <ContactForm
-                  primarySelectLabel="Primary Objective"
-                  primarySelectOptions={[
-                    "Strategy Consultation",
-                    "Launch or Market Entry",
-                    "Thought Leadership",
-                    "Reputation or Crisis Support",
-                    "Investor or Funding Communications",
-                    "Not Sure Yet",
-                  ]}
-                  secondarySelectLabel="Timing"
-                  secondarySelectOptions={[
-                    "Immediate",
-                    "Within 30 Days",
-                    "Within 90 Days",
-                    "Exploring Options",
-                  ]}
-                  messagePlaceholder="Tell us about your current communications position, your commercial objective, and the specific challenge or opportunity you want to address."
-                  submitLabel="Request Consultation"
+                  namePlaceholder={contactPage.form.namePlaceholder}
+                  emailPlaceholder={contactPage.form.emailPlaceholder}
+                  phonePlaceholder={contactPage.form.phonePlaceholder}
+                  companyPlaceholder={contactPage.form.companyPlaceholder}
+                  primarySelectLabel={contactPage.form.primarySelectLabel}
+                  primarySelectOptions={contactPage.form.primarySelectOptions}
+                  secondarySelectLabel={contactPage.form.secondarySelectLabel}
+                  secondarySelectOptions={contactPage.form.secondarySelectOptions}
+                  messagePlaceholder={contactPage.form.messagePlaceholder}
+                  submitLabel={contactPage.form.submitLabel}
                 />
               </div>
 
               <div className="relative mt-5 flex items-start gap-3 rounded-[24px] border border-[#C9A84C]/12 bg-[#161616] px-5 py-4">
                 <ShieldCheck className="mt-0.5 size-5 shrink-0 text-[#C9A84C]" />
                 <p className="font-ui text-sm leading-relaxed text-[#888880]">
-                  Confidential from the first conversation. If your situation requires an NDA before the consultation, we are comfortable signing one.
+                  {contactPage.consultationRequest.confidentiality}
                 </p>
               </div>
             </div>
@@ -198,9 +194,9 @@ export default function Contact() {
         <div className="mt-24">
           <FadeUp delay={0}>
             <SectionLabel
-              label="Other Contact Options"
-              title="Choose the route that best fits the kind of conversation you need."
-              description="The strategy consultation is the primary path, but we also handle detailed email enquiries, network introductions, and journalist requests directly."
+              label={otherOptionsIntro.label}
+              title={otherOptionsIntro.title}
+              description={otherOptionsIntro.description}
               className="max-w-4xl"
             />
           </FadeUp>
@@ -304,10 +300,10 @@ export default function Contact() {
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <GoldButton href="#strategy-consultation">
-                Book The First Conversation
+                {contactPage.finalCta.label}
               </GoldButton>
               <p className="font-ui text-sm text-[#888880]">
-                The first conversation costs nothing and commits you to nothing.
+                {contactPage.finalCta.note}
               </p>
             </div>
           </div>

@@ -3,49 +3,33 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import {
-  AlertTriangle, BarChart2, Globe,
-  Shield, TrendingUp, Users,
+  AlertTriangle,
+  BarChart2,
+  Globe,
+  Shield,
+  TrendingUp,
+  Users,
 } from "lucide-react"
+
 import FadeUp from "@/components/ui/FadeUp"
 import SectionLabel from "@/components/ui/SectionLabel"
+import { site } from "@/lib/site-content"
 
-const cards = [
-  {
-    id: "01", icon: Shield,
-    title: "Build authenticity and credibility",
-    description: "Thoughtful PR creates third-party validation that helps your audience trust the brand before the sales conversation even starts.",
-  },
-  {
-    id: "02", icon: TrendingUp,
-    title: "Take your growth story further",
-    description: "Strong communications make momentum visible, giving investors, customers, and partners a clearer reason to pay attention.",
-  },
-  {
-    id: "03", icon: AlertTriangle,
-    title: "Manage sensitive moments well",
-    description: "A disciplined PR team helps brands respond faster, communicate clearly, and protect long-term reputation under pressure.",
-  },
-  {
-    id: "04", icon: Users,
-    title: "Shape brand perception",
-    description: "Consistency across coverage, messaging, and storytelling builds memory and makes your brand feel more credible over time.",
-  },
-  {
-    id: "05", icon: Globe,
-    title: "Scale across markets",
-    description: "Communications systems that travel well help brands expand into new sectors, cities, and audiences without losing clarity.",
-  },
-  {
-    id: "06", icon: BarChart2,
-    title: "Stay accountable to outcomes",
-    description: "The best PR work is measured against visibility, sentiment, reach, and the business signals that matter most.",
-  },
-]
+const iconMap = {
+  alert: AlertTriangle,
+  barChart: BarChart2,
+  globe: Globe,
+  shield: Shield,
+  trending: TrendingUp,
+  users: Users,
+}
 
-function Card({ card, index }: { card: typeof cards[0]; index: number }) {
+type CardContent = (typeof site.home.whySubscribe.cards)[number]
+
+function Card({ card, index }: { card: CardContent; index: number }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: "-60px" })
-  const Icon = card.icon
+  const Icon = iconMap[card.icon as keyof typeof iconMap] ?? Shield
 
   return (
     <motion.article
@@ -96,21 +80,23 @@ function Card({ card, index }: { card: typeof cards[0]; index: number }) {
 }
 
 export default function WhySubscribe() {
+  const content = site.home.whySubscribe
+
   return (
     <section className="bg-[#0f0f0f] px-5 py-20 md:py-24 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <FadeUp delay={0}>
           <SectionLabel
-            label="Why Subscribe"
-            title="Why should brands invest in PR services?"
-            description="PR works best when it strengthens both perception and performance. The value is not only in visibility — it is in the trust, momentum, and long-term brand memory that visibility creates."
+            label={content.label}
+            title={content.title}
+            description={content.description}
             align="center"
             className="mx-auto max-w-3xl"
           />
         </FadeUp>
 
         <div className="mt-16 grid grid-cols-1 border-l border-t border-[#2a2a2a] md:grid-cols-2 lg:grid-cols-3">
-          {cards.map((card, index) => (
+          {content.cards.map((card, index) => (
             <Card key={card.id} card={card} index={index} />
           ))}
         </div>

@@ -15,6 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { services } from "@/lib/data/services"
+import { site } from "@/lib/site-content"
 import { cn } from "@/lib/utils"
 
 export default function ServicesPreview() {
@@ -23,6 +24,7 @@ export default function ServicesPreview() {
   const wrapperRef = React.useRef<HTMLDivElement | null>(null)
   const frameRef = React.useRef<number | null>(null)
   const activeService = services[activeIndex]
+  const content = site.home.servicesPreview
 
   React.useEffect(() => {
     if (typeof window === "undefined") return
@@ -122,9 +124,9 @@ export default function ServicesPreview() {
         <RevealOnScroll>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <SectionLabel
-              label="Services"
-              title="Integrated services built to move reputation, reach, and recall."
-              description="Five core practice areas work together so your brand does not have to choose between visibility and consistency."
+              label={content.label}
+              title={content.title}
+              description={content.description}
               variant="classic"
               className="max-w-4xl"
             />
@@ -132,7 +134,7 @@ export default function ServicesPreview() {
               href="/services"
               className="inline-flex h-11 items-center font-sans text-xs uppercase tracking-[0.24em] text-gold transition-colors duration-700 hover:text-offwhite"
             >
-              View All Services -&gt;
+              {content.viewAllLabel}
             </Link>
           </div>
         </RevealOnScroll>
@@ -214,7 +216,7 @@ export default function ServicesPreview() {
                 </div>
 
                 <p className="font-sans text-xs uppercase tracking-[0.16em] text-muted/40">
-                  Scroll to explore
+                  {content.scrollLabel}
                 </p>
               </div>
 
@@ -259,7 +261,7 @@ export default function ServicesPreview() {
                             href={`/services/${activeService.slug}`}
                             className="mt-7 inline-flex h-11 items-center gap-2 font-sans text-xs uppercase tracking-[0.24em] text-gold transition-colors duration-500 hover:text-offwhite"
                           >
-                            Explore Service -&gt;
+                            {content.exploreLabel}
                           </Link>
                         </motion.div>
                       </div>
@@ -299,7 +301,7 @@ export default function ServicesPreview() {
                     href={`/services/${service.slug}`}
                     className="mt-6 inline-flex h-11 items-center font-sans text-xs uppercase tracking-[0.24em] text-gold"
                   >
-                    Explore Service -&gt;
+                    {content.exploreLabel}
                   </Link>
                 </AccordionContent>
               </AccordionItem>

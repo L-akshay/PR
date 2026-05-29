@@ -91,12 +91,22 @@ export const SiteContentPartsFragmentDoc = gql`
       label
       title
       description
+      viewAllLabel
+      scrollLabel
+      exploreLabel
     }
     whyChoosePr {
       __typename
       label
       title
       description
+      image
+      imageAlt
+      checklist {
+        __typename
+        number
+        text
+      }
     }
     whySubscribe {
       __typename
@@ -115,7 +125,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     projectsPreview {
       __typename
@@ -135,7 +163,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     letsTalk {
       __typename
@@ -157,7 +203,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
   }
   pageHeroes {
@@ -166,25 +230,97 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     caseStudies {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     blog {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     contact {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
   }
   about {
@@ -201,7 +337,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     stats {
       __typename
@@ -215,13 +369,49 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     valuesIntro {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     values {
       __typename
@@ -248,11 +438,30 @@ export const SiteContentPartsFragmentDoc = gql`
   }
   servicesPage {
     __typename
+    serviceCtaLabel
     intro {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     highlights {
       __typename
@@ -266,7 +475,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     closing {
       __typename
@@ -302,13 +529,49 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       relatedIntro {
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       closing {
         __typename
@@ -330,9 +593,40 @@ export const SiteContentPartsFragmentDoc = gql`
   }
   blogPage {
     __typename
-    label
-    title
-    description
+    intro {
+      __typename
+      label
+      title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
+      description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
+    }
+    backLabel
+    closing {
+      __typename
+      eyebrow
+      primaryCta {
+        __typename
+        href
+        label
+      }
+    }
   }
   caseStudiesPage {
     __typename
@@ -340,7 +634,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     closing {
       __typename
@@ -390,6 +702,7 @@ export const SiteContentPartsFragmentDoc = gql`
       label
       title
       description
+      confidentiality
     }
     form {
       __typename
@@ -408,7 +721,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     finalCta {
       __typename
@@ -456,19 +787,73 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     projectsPageIntro {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     projectsClosingCta {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     projectItems {
       __typename
@@ -539,7 +924,25 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       contactStrategyConsultation {
         __typename
@@ -565,7 +968,25 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       contactExpectations {
         __typename
@@ -577,7 +998,25 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       contactConversationTopics {
         __typename
@@ -593,7 +1032,25 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       contactReasons {
         __typename

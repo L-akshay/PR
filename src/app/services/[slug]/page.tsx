@@ -9,6 +9,7 @@ import PageHero from "@/components/ui/PageHero"
 import SectionLabel from "@/components/ui/SectionLabel"
 import ServiceCard from "@/components/ui/ServiceCard"
 import { getServiceBySlug, services } from "@/lib/data/services"
+import { site } from "@/lib/site-content"
 
 type ServicePageProps = {
   params: Promise<{
@@ -35,6 +36,7 @@ export default async function ServiceDetailPage({
   const relatedServices = services
     .filter((item) => item.slug !== service.slug)
     .slice(0, 3)
+  const detail = site.servicesPage.detail
 
   return (
     <>
@@ -55,7 +57,7 @@ export default async function ServiceDetailPage({
             <FadeUp delay={0}>
               <div className="rounded-[36px] border border-[#C9A84C]/15 bg-[#161616] p-8 lg:p-10">
                 <p className="font-ui text-[11px] uppercase tracking-[0.32em] text-[#C9A84C]">
-                  Service Focus
+                  {detail.focusLabel}
                 </p>
                 <h2 className="mt-6 font-serif text-4xl font-light leading-[0.98] text-[#F5F0E8] sm:text-5xl">
                   {service.eyebrow}
@@ -77,7 +79,7 @@ export default async function ServiceDetailPage({
 
                 <div className="mt-8 rounded-[28px] border border-[#C9A84C]/12 bg-[#111111] p-6">
                   <p className="font-ui text-[11px] uppercase tracking-[0.28em] text-[#C9A84C]">
-                    Why It Matters
+                    {detail.whyLabel}
                   </p>
                   <p className="mt-4 font-ui text-[15px] leading-[1.9] text-[#F5F0E8] sm:text-[17px]">
                     {service.intro}
@@ -85,8 +87,8 @@ export default async function ServiceDetailPage({
                 </div>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                  <GoldButton href="/contact">Start a Conversation</GoldButton>
-                  <GhostButton href="/services">See All Services</GhostButton>
+                  <GoldButton href={detail.startCta.href}>{detail.startCta.label}</GoldButton>
+                  <GhostButton href={detail.allServicesCta.href}>{detail.allServicesCta.label}</GhostButton>
                 </div>
               </div>
             </FadeUp>
@@ -146,9 +148,9 @@ export default async function ServiceDetailPage({
         <div className="mx-auto max-w-7xl">
           <FadeUp delay={0}>
             <SectionLabel
-              label="Process"
-              title="A clear process that keeps execution sharp."
-              description="Each phase is designed to carry the same standard from planning through rollout."
+              label={detail.processIntro.label}
+              title={detail.processIntro.title}
+              description={detail.processIntro.description}
               align="center"
               className="mx-auto max-w-4xl"
             />
@@ -179,8 +181,8 @@ export default async function ServiceDetailPage({
         <div className="mx-auto max-w-7xl">
           <FadeUp delay={0}>
             <SectionLabel
-              label="Related Services"
-              title="Adjacent capabilities that strengthen the same outcome."
+              label={detail.relatedIntro.label}
+              title={detail.relatedIntro.title}
               className="max-w-4xl"
             />
           </FadeUp>
@@ -196,14 +198,11 @@ export default async function ServiceDetailPage({
       </section>
 
       <ClosingCta
-        eyebrow="Need A Tailored Mix?"
-        heading={[
-          "We can shape the right service stack",
-          "around your growth stage.",
-        ]}
-        supporting="If this service is part of a wider brand move, we can combine it with the right PR, digital, creator, creative, or search support instead of forcing it into a one-size-fits-all package."
-        primaryCta={{ href: "/contact", label: "Talk to the Team" }}
-        secondaryCta={{ href: "/services", label: "See All Services" }}
+        eyebrow={detail.closing.eyebrow}
+        heading={detail.closing.heading}
+        supporting={detail.closing.supporting}
+        primaryCta={detail.closing.primaryCta}
+        secondaryCta={detail.closing.secondaryCta}
       />
     </>
   )

@@ -3,6 +3,7 @@ import { Building2, Mail, Phone, User } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { services } from "@/lib/data/services"
+import { site } from "@/lib/site-content"
 import { cn } from "@/lib/utils"
 
 function Field({
@@ -58,6 +59,10 @@ function SelectField({
 
 type ContactFormProps = {
   compact?: boolean
+  namePlaceholder?: string
+  emailPlaceholder?: string
+  phonePlaceholder?: string
+  companyPlaceholder?: string
   primarySelectLabel?: string
   primarySelectOptions?: string[]
   secondarySelectLabel?: string
@@ -68,23 +73,27 @@ type ContactFormProps = {
 
 export default function ContactForm({
   compact = false,
+  namePlaceholder = site.contactPage.form.namePlaceholder,
+  emailPlaceholder = site.contactPage.form.emailPlaceholder,
+  phonePlaceholder = site.contactPage.form.phonePlaceholder,
+  companyPlaceholder = site.contactPage.form.companyPlaceholder,
   primarySelectLabel = "Service Interested In",
   primarySelectOptions = services.map((service) => service.title),
-  secondarySelectLabel = "Budget Range",
-  secondarySelectOptions = ["Under 2L", "2L - 5L", "5L - 10L", "10L+"],
-  messagePlaceholder = "Tell us what you are building, launching, or solving.",
-  submitLabel = "Submit Inquiry",
+  secondarySelectLabel = site.contactPage.form.secondarySelectLabel,
+  secondarySelectOptions = site.contactPage.form.secondarySelectOptions,
+  messagePlaceholder = site.contactPage.form.messagePlaceholder,
+  submitLabel = site.contactPage.form.submitLabel,
 }: ContactFormProps) {
   return (
     <form className="space-y-4">
       <div className={cn("grid gap-4", !compact && "md:grid-cols-2")}>
-        <Field icon={User} placeholder="Full Name" />
-        <Field icon={Mail} placeholder="Email Address" type="email" />
+        <Field icon={User} placeholder={namePlaceholder} />
+        <Field icon={Mail} placeholder={emailPlaceholder} type="email" />
       </div>
 
       <div className={cn("grid gap-4", !compact && "md:grid-cols-2")}>
-        <Field icon={Phone} placeholder="Phone Number" type="tel" />
-        <Field icon={Building2} placeholder="Company Name" />
+        <Field icon={Phone} placeholder={phonePlaceholder} type="tel" />
+        <Field icon={Building2} placeholder={companyPlaceholder} />
       </div>
 
       <div className={cn("grid gap-4", !compact && "md:grid-cols-2")}>

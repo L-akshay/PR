@@ -6,6 +6,7 @@ import ClosingCta from "@/components/ui/ClosingCta"
 import FadeUp from "@/components/ui/FadeUp"
 import PageHero from "@/components/ui/PageHero"
 import { blogPosts } from "@/lib/data/blog"
+import { site } from "@/lib/site-content"
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -24,6 +25,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) {
     notFound()
   }
+  const page = site.blogPage
 
   return (
     <>
@@ -44,7 +46,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 href="/blog"
                 className="font-sans text-xs uppercase tracking-[0.24em] text-muted transition-colors duration-300 hover:text-gold"
               >
-                &larr; All Posts
+                {page.backLabel}
               </Link>
             </div>
           </FadeUp>
@@ -78,8 +80,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </section>
 
       <ClosingCta
-        eyebrow="Want to work with us?"
-        primaryCta={{ href: "/contact", label: "Start a Conversation" }}
+        eyebrow={page.closing.eyebrow}
+        primaryCta={page.closing.primaryCta}
       />
     </>
   )

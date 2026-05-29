@@ -263,6 +263,15 @@ export type SiteContentHomeServicesPreview = {
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  viewAllLabel?: Maybe<Scalars['String']['output']>;
+  scrollLabel?: Maybe<Scalars['String']['output']>;
+  exploreLabel?: Maybe<Scalars['String']['output']>;
+};
+
+export type SiteContentHomeWhyChoosePrChecklist = {
+  __typename?: 'SiteContentHomeWhyChoosePrChecklist';
+  number?: Maybe<Scalars['String']['output']>;
+  text?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentHomeWhyChoosePr = {
@@ -270,6 +279,9 @@ export type SiteContentHomeWhyChoosePr = {
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  checklist?: Maybe<Array<Maybe<SiteContentHomeWhyChoosePrChecklist>>>;
 };
 
 export type SiteContentHomeWhySubscribeCards = {
@@ -288,11 +300,31 @@ export type SiteContentHomeWhySubscribe = {
   cards?: Maybe<Array<Maybe<SiteContentHomeWhySubscribeCards>>>;
 };
 
+export type SiteContentHomeWhyChooseUsCta = {
+  __typename?: 'SiteContentHomeWhyChooseUsCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentHomeWhyChooseUs = {
   __typename?: 'SiteContentHomeWhyChooseUs';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentHomeWhyChooseUsCta>;
 };
 
 export type SiteContentHomeProjectsPreviewPrimaryCta = {
@@ -314,11 +346,31 @@ export type SiteContentHomeProjectsPreview = {
   secondaryCta?: Maybe<SiteContentHomeProjectsPreviewSecondaryCta>;
 };
 
+export type SiteContentHomeTestimonialsIntroCta = {
+  __typename?: 'SiteContentHomeTestimonialsIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentHomeTestimonialsIntro = {
   __typename?: 'SiteContentHomeTestimonialsIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentHomeTestimonialsIntroCta>;
 };
 
 export type SiteContentHomeLetsTalkPrimaryCta = {
@@ -342,11 +394,31 @@ export type SiteContentHomeLetsTalk = {
   secondaryCta?: Maybe<SiteContentHomeLetsTalkSecondaryCta>;
 };
 
+export type SiteContentHomeContactShortCta = {
+  __typename?: 'SiteContentHomeContactShortCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentHomeContactShort = {
   __typename?: 'SiteContentHomeContactShort';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentHomeContactShortCta>;
 };
 
 export type SiteContentHome = {
@@ -364,32 +436,112 @@ export type SiteContentHome = {
   contactShort?: Maybe<SiteContentHomeContactShort>;
 };
 
+export type SiteContentPageHeroesServicesCta = {
+  __typename?: 'SiteContentPageHeroesServicesCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentPageHeroesServices = {
   __typename?: 'SiteContentPageHeroesServices';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentPageHeroesServicesCta>;
+};
+
+export type SiteContentPageHeroesCaseStudiesCta = {
+  __typename?: 'SiteContentPageHeroesCaseStudiesCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentPageHeroesCaseStudies = {
   __typename?: 'SiteContentPageHeroesCaseStudies';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentPageHeroesCaseStudiesCta>;
+};
+
+export type SiteContentPageHeroesBlogCta = {
+  __typename?: 'SiteContentPageHeroesBlogCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentPageHeroesBlog = {
   __typename?: 'SiteContentPageHeroesBlog';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentPageHeroesBlogCta>;
+};
+
+export type SiteContentPageHeroesContactCta = {
+  __typename?: 'SiteContentPageHeroesContactCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentPageHeroesContact = {
   __typename?: 'SiteContentPageHeroesContact';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentPageHeroesContactCta>;
 };
 
 export type SiteContentPageHeroes = {
@@ -409,11 +561,31 @@ export type SiteContentAboutHero = {
   scrollLabel?: Maybe<Scalars['String']['output']>;
 };
 
+export type SiteContentAboutMissionCta = {
+  __typename?: 'SiteContentAboutMissionCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentAboutMission = {
   __typename?: 'SiteContentAboutMission';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentAboutMissionCta>;
 };
 
 export type SiteContentAboutStats = {
@@ -425,18 +597,58 @@ export type SiteContentAboutStats = {
   description?: Maybe<Scalars['String']['output']>;
 };
 
+export type SiteContentAboutTimelineIntroCta = {
+  __typename?: 'SiteContentAboutTimelineIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentAboutTimelineIntro = {
   __typename?: 'SiteContentAboutTimelineIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentAboutTimelineIntroCta>;
+};
+
+export type SiteContentAboutValuesIntroCta = {
+  __typename?: 'SiteContentAboutValuesIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentAboutValuesIntro = {
   __typename?: 'SiteContentAboutValuesIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentAboutValuesIntroCta>;
 };
 
 export type SiteContentAboutValues = {
@@ -478,11 +690,31 @@ export type SiteContentAbout = {
   closing?: Maybe<SiteContentAboutClosing>;
 };
 
+export type SiteContentServicesPageIntroCta = {
+  __typename?: 'SiteContentServicesPageIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentServicesPageIntro = {
   __typename?: 'SiteContentServicesPageIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentServicesPageIntroCta>;
 };
 
 export type SiteContentServicesPageHighlights = {
@@ -494,11 +726,31 @@ export type SiteContentServicesPageHighlights = {
   description?: Maybe<Scalars['String']['output']>;
 };
 
+export type SiteContentServicesPageFullListCta = {
+  __typename?: 'SiteContentServicesPageFullListCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentServicesPageFullList = {
   __typename?: 'SiteContentServicesPageFullList';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentServicesPageFullListCta>;
 };
 
 export type SiteContentServicesPageClosingPrimaryCta = {
@@ -534,18 +786,58 @@ export type SiteContentServicesPageDetailAllServicesCta = {
   label?: Maybe<Scalars['String']['output']>;
 };
 
+export type SiteContentServicesPageDetailProcessIntroCta = {
+  __typename?: 'SiteContentServicesPageDetailProcessIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentServicesPageDetailProcessIntro = {
   __typename?: 'SiteContentServicesPageDetailProcessIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentServicesPageDetailProcessIntroCta>;
+};
+
+export type SiteContentServicesPageDetailRelatedIntroCta = {
+  __typename?: 'SiteContentServicesPageDetailRelatedIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentServicesPageDetailRelatedIntro = {
   __typename?: 'SiteContentServicesPageDetailRelatedIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentServicesPageDetailRelatedIntroCta>;
 };
 
 export type SiteContentServicesPageDetailClosingPrimaryCta = {
@@ -582,6 +874,7 @@ export type SiteContentServicesPageDetail = {
 
 export type SiteContentServicesPage = {
   __typename?: 'SiteContentServicesPage';
+  serviceCtaLabel?: Maybe<Scalars['String']['output']>;
   intro?: Maybe<SiteContentServicesPageIntro>;
   highlights?: Maybe<Array<Maybe<SiteContentServicesPageHighlights>>>;
   fullList?: Maybe<SiteContentServicesPageFullList>;
@@ -589,18 +882,77 @@ export type SiteContentServicesPage = {
   detail?: Maybe<SiteContentServicesPageDetail>;
 };
 
-export type SiteContentBlogPage = {
-  __typename?: 'SiteContentBlogPage';
+export type SiteContentBlogPageIntroCta = {
+  __typename?: 'SiteContentBlogPageIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
+export type SiteContentBlogPageIntro = {
+  __typename?: 'SiteContentBlogPageIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentBlogPageIntroCta>;
+};
+
+export type SiteContentBlogPageClosingPrimaryCta = {
+  __typename?: 'SiteContentBlogPageClosingPrimaryCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
+export type SiteContentBlogPageClosing = {
+  __typename?: 'SiteContentBlogPageClosing';
+  eyebrow?: Maybe<Scalars['String']['output']>;
+  primaryCta?: Maybe<SiteContentBlogPageClosingPrimaryCta>;
+};
+
+export type SiteContentBlogPage = {
+  __typename?: 'SiteContentBlogPage';
+  intro?: Maybe<SiteContentBlogPageIntro>;
+  backLabel?: Maybe<Scalars['String']['output']>;
+  closing?: Maybe<SiteContentBlogPageClosing>;
+};
+
+export type SiteContentCaseStudiesPageIncludedIntroCta = {
+  __typename?: 'SiteContentCaseStudiesPageIncludedIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentCaseStudiesPageIncludedIntro = {
   __typename?: 'SiteContentCaseStudiesPageIncludedIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentCaseStudiesPageIncludedIntroCta>;
 };
 
 export type SiteContentCaseStudiesPageClosingPrimaryCta = {
@@ -667,6 +1019,7 @@ export type SiteContentContactPageConsultationRequest = {
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  confidentiality?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentContactPageForm = {
@@ -683,11 +1036,31 @@ export type SiteContentContactPageForm = {
   submitLabel?: Maybe<Scalars['String']['output']>;
 };
 
+export type SiteContentContactPageOtherOptionsIntroCta = {
+  __typename?: 'SiteContentContactPageOtherOptionsIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentContactPageOtherOptionsIntro = {
   __typename?: 'SiteContentContactPageOtherOptionsIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentContactPageOtherOptionsIntroCta>;
 };
 
 export type SiteContentContactPageFinalCta = {
@@ -742,25 +1115,85 @@ export type SiteContentDataAllServiceGroups = {
   items?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
 };
 
+export type SiteContentDataProjectSectionIntroCta = {
+  __typename?: 'SiteContentDataProjectSectionIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentDataProjectSectionIntro = {
   __typename?: 'SiteContentDataProjectSectionIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentDataProjectSectionIntroCta>;
+};
+
+export type SiteContentDataProjectsPageIntroCta = {
+  __typename?: 'SiteContentDataProjectsPageIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentDataProjectsPageIntro = {
   __typename?: 'SiteContentDataProjectsPageIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentDataProjectsPageIntroCta>;
+};
+
+export type SiteContentDataProjectsClosingCtaCta = {
+  __typename?: 'SiteContentDataProjectsClosingCtaCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
 };
 
 export type SiteContentDataProjectsClosingCta = {
   __typename?: 'SiteContentDataProjectsClosingCta';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentDataProjectsClosingCtaCta>;
 };
 
 export type SiteContentDataProjectItems = {
@@ -833,11 +1266,31 @@ export type SiteContentDataBlogPosts = {
   content?: Maybe<Scalars['String']['output']>;
 };
 
+export type SiteContentDataContactContactPageIntroCta = {
+  __typename?: 'SiteContentDataContactContactPageIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentDataContactContactPageIntro = {
   __typename?: 'SiteContentDataContactContactPageIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentDataContactContactPageIntroCta>;
 };
 
 export type SiteContentDataContactContactStrategyConsultationHighlights = {
@@ -864,11 +1317,31 @@ export type SiteContentDataContactContactOptions = {
   external?: Maybe<Scalars['Boolean']['output']>;
 };
 
+export type SiteContentDataContactContactExpectationsIntroCta = {
+  __typename?: 'SiteContentDataContactContactExpectationsIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentDataContactContactExpectationsIntro = {
   __typename?: 'SiteContentDataContactContactExpectationsIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentDataContactContactExpectationsIntroCta>;
 };
 
 export type SiteContentDataContactContactExpectations = {
@@ -878,11 +1351,31 @@ export type SiteContentDataContactContactExpectations = {
   description?: Maybe<Scalars['String']['output']>;
 };
 
+export type SiteContentDataContactContactConversationTopicsIntroCta = {
+  __typename?: 'SiteContentDataContactContactConversationTopicsIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentDataContactContactConversationTopicsIntro = {
   __typename?: 'SiteContentDataContactContactConversationTopicsIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentDataContactContactConversationTopicsIntroCta>;
 };
 
 export type SiteContentDataContactContactConversationTopics = {
@@ -897,11 +1390,31 @@ export type SiteContentDataContactContactFaqs = {
   answer?: Maybe<Scalars['String']['output']>;
 };
 
+export type SiteContentDataContactContactReasonsIntroCta = {
+  __typename?: 'SiteContentDataContactContactReasonsIntroCta';
+  href?: Maybe<Scalars['String']['output']>;
+  label?: Maybe<Scalars['String']['output']>;
+};
+
 export type SiteContentDataContactContactReasonsIntro = {
   __typename?: 'SiteContentDataContactContactReasonsIntro';
   label?: Maybe<Scalars['String']['output']>;
   title?: Maybe<Scalars['String']['output']>;
+  heading?: Maybe<Scalars['String']['output']>;
+  homeLabel?: Maybe<Scalars['String']['output']>;
+  currentLabel?: Maybe<Scalars['String']['output']>;
+  noteLabel?: Maybe<Scalars['String']['output']>;
+  titlePrefix?: Maybe<Scalars['String']['output']>;
+  titleAccent?: Maybe<Scalars['String']['output']>;
+  titleSuffix?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
+  supporting?: Maybe<Scalars['String']['output']>;
+  note?: Maybe<Scalars['String']['output']>;
+  quote?: Maybe<Scalars['String']['output']>;
+  button?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  imageAlt?: Maybe<Scalars['String']['output']>;
+  cta?: Maybe<SiteContentDataContactContactReasonsIntroCta>;
 };
 
 export type SiteContentDataContactContactReasons = {
@@ -1118,12 +1631,23 @@ export type SiteContentHomeServicesPreviewFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  viewAllLabel?: InputMaybe<StringFilter>;
+  scrollLabel?: InputMaybe<StringFilter>;
+  exploreLabel?: InputMaybe<StringFilter>;
+};
+
+export type SiteContentHomeWhyChoosePrChecklistFilter = {
+  number?: InputMaybe<StringFilter>;
+  text?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentHomeWhyChoosePrFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  checklist?: InputMaybe<SiteContentHomeWhyChoosePrChecklistFilter>;
 };
 
 export type SiteContentHomeWhySubscribeCardsFilter = {
@@ -1140,10 +1664,29 @@ export type SiteContentHomeWhySubscribeFilter = {
   cards?: InputMaybe<SiteContentHomeWhySubscribeCardsFilter>;
 };
 
+export type SiteContentHomeWhyChooseUsCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentHomeWhyChooseUsFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentHomeWhyChooseUsCtaFilter>;
 };
 
 export type SiteContentHomeProjectsPreviewPrimaryCtaFilter = {
@@ -1162,10 +1705,29 @@ export type SiteContentHomeProjectsPreviewFilter = {
   secondaryCta?: InputMaybe<SiteContentHomeProjectsPreviewSecondaryCtaFilter>;
 };
 
+export type SiteContentHomeTestimonialsIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentHomeTestimonialsIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentHomeTestimonialsIntroCtaFilter>;
 };
 
 export type SiteContentHomeLetsTalkPrimaryCtaFilter = {
@@ -1186,10 +1748,29 @@ export type SiteContentHomeLetsTalkFilter = {
   secondaryCta?: InputMaybe<SiteContentHomeLetsTalkSecondaryCtaFilter>;
 };
 
+export type SiteContentHomeContactShortCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentHomeContactShortFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentHomeContactShortCtaFilter>;
 };
 
 export type SiteContentHomeFilter = {
@@ -1206,28 +1787,104 @@ export type SiteContentHomeFilter = {
   contactShort?: InputMaybe<SiteContentHomeContactShortFilter>;
 };
 
+export type SiteContentPageHeroesServicesCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentPageHeroesServicesFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentPageHeroesServicesCtaFilter>;
+};
+
+export type SiteContentPageHeroesCaseStudiesCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentPageHeroesCaseStudiesFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentPageHeroesCaseStudiesCtaFilter>;
+};
+
+export type SiteContentPageHeroesBlogCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentPageHeroesBlogFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentPageHeroesBlogCtaFilter>;
+};
+
+export type SiteContentPageHeroesContactCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentPageHeroesContactFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentPageHeroesContactCtaFilter>;
 };
 
 export type SiteContentPageHeroesFilter = {
@@ -1245,10 +1902,29 @@ export type SiteContentAboutHeroFilter = {
   scrollLabel?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentAboutMissionCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentAboutMissionFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentAboutMissionCtaFilter>;
 };
 
 export type NumberFilter = {
@@ -1269,16 +1945,54 @@ export type SiteContentAboutStatsFilter = {
   description?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentAboutTimelineIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentAboutTimelineIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentAboutTimelineIntroCtaFilter>;
+};
+
+export type SiteContentAboutValuesIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentAboutValuesIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentAboutValuesIntroCtaFilter>;
 };
 
 export type SiteContentAboutValuesFilter = {
@@ -1315,10 +2029,29 @@ export type SiteContentAboutFilter = {
   closing?: InputMaybe<SiteContentAboutClosingFilter>;
 };
 
+export type SiteContentServicesPageIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentServicesPageIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentServicesPageIntroCtaFilter>;
 };
 
 export type SiteContentServicesPageHighlightsFilter = {
@@ -1329,10 +2062,29 @@ export type SiteContentServicesPageHighlightsFilter = {
   description?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentServicesPageFullListCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentServicesPageFullListFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentServicesPageFullListCtaFilter>;
 };
 
 export type SiteContentServicesPageClosingPrimaryCtaFilter = {
@@ -1363,16 +2115,54 @@ export type SiteContentServicesPageDetailAllServicesCtaFilter = {
   label?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentServicesPageDetailProcessIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentServicesPageDetailProcessIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentServicesPageDetailProcessIntroCtaFilter>;
+};
+
+export type SiteContentServicesPageDetailRelatedIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentServicesPageDetailRelatedIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentServicesPageDetailRelatedIntroCtaFilter>;
 };
 
 export type SiteContentServicesPageDetailClosingPrimaryCtaFilter = {
@@ -1404,6 +2194,7 @@ export type SiteContentServicesPageDetailFilter = {
 };
 
 export type SiteContentServicesPageFilter = {
+  serviceCtaLabel?: InputMaybe<StringFilter>;
   intro?: InputMaybe<SiteContentServicesPageIntroFilter>;
   highlights?: InputMaybe<SiteContentServicesPageHighlightsFilter>;
   fullList?: InputMaybe<SiteContentServicesPageFullListFilter>;
@@ -1411,16 +2202,70 @@ export type SiteContentServicesPageFilter = {
   detail?: InputMaybe<SiteContentServicesPageDetailFilter>;
 };
 
-export type SiteContentBlogPageFilter = {
+export type SiteContentBlogPageIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type SiteContentBlogPageIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentBlogPageIntroCtaFilter>;
+};
+
+export type SiteContentBlogPageClosingPrimaryCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type SiteContentBlogPageClosingFilter = {
+  eyebrow?: InputMaybe<StringFilter>;
+  primaryCta?: InputMaybe<SiteContentBlogPageClosingPrimaryCtaFilter>;
+};
+
+export type SiteContentBlogPageFilter = {
+  intro?: InputMaybe<SiteContentBlogPageIntroFilter>;
+  backLabel?: InputMaybe<StringFilter>;
+  closing?: InputMaybe<SiteContentBlogPageClosingFilter>;
+};
+
+export type SiteContentCaseStudiesPageIncludedIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentCaseStudiesPageIncludedIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentCaseStudiesPageIncludedIntroCtaFilter>;
 };
 
 export type SiteContentCaseStudiesPageClosingPrimaryCtaFilter = {
@@ -1478,6 +2323,7 @@ export type SiteContentContactPageConsultationRequestFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  confidentiality?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentContactPageFormFilter = {
@@ -1493,10 +2339,29 @@ export type SiteContentContactPageFormFilter = {
   submitLabel?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentContactPageOtherOptionsIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentContactPageOtherOptionsIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentContactPageOtherOptionsIntroCtaFilter>;
 };
 
 export type SiteContentContactPageFinalCtaFilter = {
@@ -1545,22 +2410,79 @@ export type SiteContentDataAllServiceGroupsFilter = {
   items?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentDataProjectSectionIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentDataProjectSectionIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentDataProjectSectionIntroCtaFilter>;
+};
+
+export type SiteContentDataProjectsPageIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentDataProjectsPageIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentDataProjectsPageIntroCtaFilter>;
+};
+
+export type SiteContentDataProjectsClosingCtaCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
 };
 
 export type SiteContentDataProjectsClosingCtaFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentDataProjectsClosingCtaCtaFilter>;
 };
 
 export type SiteContentDataProjectItemsFilter = {
@@ -1627,10 +2549,29 @@ export type SiteContentDataBlogPostsFilter = {
   content?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentDataContactContactPageIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentDataContactContactPageIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentDataContactContactPageIntroCtaFilter>;
 };
 
 export type SiteContentDataContactContactStrategyConsultationHighlightsFilter = {
@@ -1654,10 +2595,29 @@ export type SiteContentDataContactContactOptionsFilter = {
   external?: InputMaybe<BooleanFilter>;
 };
 
+export type SiteContentDataContactContactExpectationsIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentDataContactContactExpectationsIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentDataContactContactExpectationsIntroCtaFilter>;
 };
 
 export type SiteContentDataContactContactExpectationsFilter = {
@@ -1666,10 +2626,29 @@ export type SiteContentDataContactContactExpectationsFilter = {
   description?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentDataContactContactConversationTopicsIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentDataContactContactConversationTopicsIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentDataContactContactConversationTopicsIntroCtaFilter>;
 };
 
 export type SiteContentDataContactContactConversationTopicsFilter = {
@@ -1682,10 +2661,29 @@ export type SiteContentDataContactContactFaqsFilter = {
   answer?: InputMaybe<StringFilter>;
 };
 
+export type SiteContentDataContactContactReasonsIntroCtaFilter = {
+  href?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
 export type SiteContentDataContactContactReasonsIntroFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
+  heading?: InputMaybe<StringFilter>;
+  homeLabel?: InputMaybe<StringFilter>;
+  currentLabel?: InputMaybe<StringFilter>;
+  noteLabel?: InputMaybe<StringFilter>;
+  titlePrefix?: InputMaybe<StringFilter>;
+  titleAccent?: InputMaybe<StringFilter>;
+  titleSuffix?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
+  supporting?: InputMaybe<StringFilter>;
+  note?: InputMaybe<StringFilter>;
+  quote?: InputMaybe<StringFilter>;
+  button?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
+  imageAlt?: InputMaybe<StringFilter>;
+  cta?: InputMaybe<SiteContentDataContactContactReasonsIntroCtaFilter>;
 };
 
 export type SiteContentDataContactContactReasonsFilter = {
@@ -1948,12 +2946,23 @@ export type SiteContentHomeServicesPreviewMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  viewAllLabel?: InputMaybe<Scalars['String']['input']>;
+  scrollLabel?: InputMaybe<Scalars['String']['input']>;
+  exploreLabel?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SiteContentHomeWhyChoosePrChecklistMutation = {
+  number?: InputMaybe<Scalars['String']['input']>;
+  text?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentHomeWhyChoosePrMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  checklist?: InputMaybe<Array<InputMaybe<SiteContentHomeWhyChoosePrChecklistMutation>>>;
 };
 
 export type SiteContentHomeWhySubscribeCardsMutation = {
@@ -1970,10 +2979,29 @@ export type SiteContentHomeWhySubscribeMutation = {
   cards?: InputMaybe<Array<InputMaybe<SiteContentHomeWhySubscribeCardsMutation>>>;
 };
 
+export type SiteContentHomeWhyChooseUsCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentHomeWhyChooseUsMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentHomeWhyChooseUsCtaMutation>;
 };
 
 export type SiteContentHomeProjectsPreviewPrimaryCtaMutation = {
@@ -1992,10 +3020,29 @@ export type SiteContentHomeProjectsPreviewMutation = {
   secondaryCta?: InputMaybe<SiteContentHomeProjectsPreviewSecondaryCtaMutation>;
 };
 
+export type SiteContentHomeTestimonialsIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentHomeTestimonialsIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentHomeTestimonialsIntroCtaMutation>;
 };
 
 export type SiteContentHomeLetsTalkPrimaryCtaMutation = {
@@ -2016,10 +3063,29 @@ export type SiteContentHomeLetsTalkMutation = {
   secondaryCta?: InputMaybe<SiteContentHomeLetsTalkSecondaryCtaMutation>;
 };
 
+export type SiteContentHomeContactShortCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentHomeContactShortMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentHomeContactShortCtaMutation>;
 };
 
 export type SiteContentHomeMutation = {
@@ -2036,28 +3102,104 @@ export type SiteContentHomeMutation = {
   contactShort?: InputMaybe<SiteContentHomeContactShortMutation>;
 };
 
+export type SiteContentPageHeroesServicesCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentPageHeroesServicesMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentPageHeroesServicesCtaMutation>;
+};
+
+export type SiteContentPageHeroesCaseStudiesCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentPageHeroesCaseStudiesMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentPageHeroesCaseStudiesCtaMutation>;
+};
+
+export type SiteContentPageHeroesBlogCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentPageHeroesBlogMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentPageHeroesBlogCtaMutation>;
+};
+
+export type SiteContentPageHeroesContactCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentPageHeroesContactMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentPageHeroesContactCtaMutation>;
 };
 
 export type SiteContentPageHeroesMutation = {
@@ -2075,10 +3217,29 @@ export type SiteContentAboutHeroMutation = {
   scrollLabel?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type SiteContentAboutMissionCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentAboutMissionMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentAboutMissionCtaMutation>;
 };
 
 export type SiteContentAboutStatsMutation = {
@@ -2089,16 +3250,54 @@ export type SiteContentAboutStatsMutation = {
   description?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type SiteContentAboutTimelineIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentAboutTimelineIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentAboutTimelineIntroCtaMutation>;
+};
+
+export type SiteContentAboutValuesIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentAboutValuesIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentAboutValuesIntroCtaMutation>;
 };
 
 export type SiteContentAboutValuesMutation = {
@@ -2135,10 +3334,29 @@ export type SiteContentAboutMutation = {
   closing?: InputMaybe<SiteContentAboutClosingMutation>;
 };
 
+export type SiteContentServicesPageIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentServicesPageIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentServicesPageIntroCtaMutation>;
 };
 
 export type SiteContentServicesPageHighlightsMutation = {
@@ -2149,10 +3367,29 @@ export type SiteContentServicesPageHighlightsMutation = {
   description?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type SiteContentServicesPageFullListCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentServicesPageFullListMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentServicesPageFullListCtaMutation>;
 };
 
 export type SiteContentServicesPageClosingPrimaryCtaMutation = {
@@ -2183,16 +3420,54 @@ export type SiteContentServicesPageDetailAllServicesCtaMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type SiteContentServicesPageDetailProcessIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentServicesPageDetailProcessIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentServicesPageDetailProcessIntroCtaMutation>;
+};
+
+export type SiteContentServicesPageDetailRelatedIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentServicesPageDetailRelatedIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentServicesPageDetailRelatedIntroCtaMutation>;
 };
 
 export type SiteContentServicesPageDetailClosingPrimaryCtaMutation = {
@@ -2224,6 +3499,7 @@ export type SiteContentServicesPageDetailMutation = {
 };
 
 export type SiteContentServicesPageMutation = {
+  serviceCtaLabel?: InputMaybe<Scalars['String']['input']>;
   intro?: InputMaybe<SiteContentServicesPageIntroMutation>;
   highlights?: InputMaybe<Array<InputMaybe<SiteContentServicesPageHighlightsMutation>>>;
   fullList?: InputMaybe<SiteContentServicesPageFullListMutation>;
@@ -2231,16 +3507,70 @@ export type SiteContentServicesPageMutation = {
   detail?: InputMaybe<SiteContentServicesPageDetailMutation>;
 };
 
-export type SiteContentBlogPageMutation = {
+export type SiteContentBlogPageIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SiteContentBlogPageIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentBlogPageIntroCtaMutation>;
+};
+
+export type SiteContentBlogPageClosingPrimaryCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SiteContentBlogPageClosingMutation = {
+  eyebrow?: InputMaybe<Scalars['String']['input']>;
+  primaryCta?: InputMaybe<SiteContentBlogPageClosingPrimaryCtaMutation>;
+};
+
+export type SiteContentBlogPageMutation = {
+  intro?: InputMaybe<SiteContentBlogPageIntroMutation>;
+  backLabel?: InputMaybe<Scalars['String']['input']>;
+  closing?: InputMaybe<SiteContentBlogPageClosingMutation>;
+};
+
+export type SiteContentCaseStudiesPageIncludedIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentCaseStudiesPageIncludedIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentCaseStudiesPageIncludedIntroCtaMutation>;
 };
 
 export type SiteContentCaseStudiesPageClosingPrimaryCtaMutation = {
@@ -2298,6 +3628,7 @@ export type SiteContentContactPageConsultationRequestMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  confidentiality?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentContactPageFormMutation = {
@@ -2313,10 +3644,29 @@ export type SiteContentContactPageFormMutation = {
   submitLabel?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type SiteContentContactPageOtherOptionsIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentContactPageOtherOptionsIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentContactPageOtherOptionsIntroCtaMutation>;
 };
 
 export type SiteContentContactPageFinalCtaMutation = {
@@ -2365,22 +3715,79 @@ export type SiteContentDataAllServiceGroupsMutation = {
   items?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type SiteContentDataProjectSectionIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentDataProjectSectionIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentDataProjectSectionIntroCtaMutation>;
+};
+
+export type SiteContentDataProjectsPageIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentDataProjectsPageIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentDataProjectsPageIntroCtaMutation>;
+};
+
+export type SiteContentDataProjectsClosingCtaCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type SiteContentDataProjectsClosingCtaMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentDataProjectsClosingCtaCtaMutation>;
 };
 
 export type SiteContentDataProjectItemsMutation = {
@@ -2447,10 +3854,29 @@ export type SiteContentDataBlogPostsMutation = {
   content?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type SiteContentDataContactContactPageIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentDataContactContactPageIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentDataContactContactPageIntroCtaMutation>;
 };
 
 export type SiteContentDataContactContactStrategyConsultationHighlightsMutation = {
@@ -2474,10 +3900,29 @@ export type SiteContentDataContactContactOptionsMutation = {
   external?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
+export type SiteContentDataContactContactExpectationsIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentDataContactContactExpectationsIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentDataContactContactExpectationsIntroCtaMutation>;
 };
 
 export type SiteContentDataContactContactExpectationsMutation = {
@@ -2486,10 +3931,29 @@ export type SiteContentDataContactContactExpectationsMutation = {
   description?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type SiteContentDataContactContactConversationTopicsIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentDataContactContactConversationTopicsIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentDataContactContactConversationTopicsIntroCtaMutation>;
 };
 
 export type SiteContentDataContactContactConversationTopicsMutation = {
@@ -2502,10 +3966,29 @@ export type SiteContentDataContactContactFaqsMutation = {
   answer?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type SiteContentDataContactContactReasonsIntroCtaMutation = {
+  href?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type SiteContentDataContactContactReasonsIntroMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
+  heading?: InputMaybe<Scalars['String']['input']>;
+  homeLabel?: InputMaybe<Scalars['String']['input']>;
+  currentLabel?: InputMaybe<Scalars['String']['input']>;
+  noteLabel?: InputMaybe<Scalars['String']['input']>;
+  titlePrefix?: InputMaybe<Scalars['String']['input']>;
+  titleAccent?: InputMaybe<Scalars['String']['input']>;
+  titleSuffix?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
+  supporting?: InputMaybe<Scalars['String']['input']>;
+  note?: InputMaybe<Scalars['String']['input']>;
+  quote?: InputMaybe<Scalars['String']['input']>;
+  button?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+  imageAlt?: InputMaybe<Scalars['String']['input']>;
+  cta?: InputMaybe<SiteContentDataContactContactReasonsIntroCtaMutation>;
 };
 
 export type SiteContentDataContactContactReasonsMutation = {
@@ -2604,14 +4087,14 @@ export type SiteContentMutation = {
   data?: InputMaybe<SiteContentDataMutation>;
 };
 
-export type SiteContentPartsFragment = { __typename: 'SiteContent', navigation?: { __typename: 'SiteContentNavigation', brandPrefix?: string | null, brandAccent?: string | null, servicesDropdownLabel?: string | null, mobileTitle?: string | null, links?: Array<{ __typename: 'SiteContentNavigationLinks', label?: string | null, href?: string | null, hasDropdown?: boolean | null } | null> | null, primaryCta?: { __typename: 'SiteContentNavigationPrimaryCta', href?: string | null, label?: string | null } | null } | null, footer?: { __typename: 'SiteContentFooter', description?: string | null, quickLinksHeading?: string | null, servicesHeading?: string | null, contactHeading?: string | null, address?: string | null, phone?: string | null, email?: string | null, copyright?: string | null, legal?: string | null, socials?: Array<{ __typename: 'SiteContentFooterSocials', type?: string | null, href?: string | null } | null> | null } | null, home?: { __typename: 'SiteContentHome', hero?: { __typename: 'SiteContentHomeHero', eyebrow?: string | null, headingPrefix?: string | null, rotatingWords?: Array<string | null> | null, headingSuffix?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, insightLabel?: string | null, insightItems?: Array<string | null> | null, primaryCta?: { __typename: 'SiteContentHomeHeroPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeHeroSecondaryCta', href?: string | null, label?: string | null } | null } | null, clients?: { __typename: 'SiteContentHomeClients', label?: string | null, rowOne?: Array<string | null> | null, rowTwo?: Array<string | null> | null } | null, whatWeDo?: { __typename: 'SiteContentHomeWhatWeDo', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhatWeDoCta', href?: string | null, label?: string | null } | null } | null, servicesPreview?: { __typename: 'SiteContentHomeServicesPreview', label?: string | null, title?: string | null, description?: string | null } | null, whyChoosePr?: { __typename: 'SiteContentHomeWhyChoosePr', label?: string | null, title?: string | null, description?: string | null } | null, whySubscribe?: { __typename: 'SiteContentHomeWhySubscribe', label?: string | null, title?: string | null, description?: string | null, cards?: Array<{ __typename: 'SiteContentHomeWhySubscribeCards', id?: string | null, icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, whyChooseUs?: { __typename: 'SiteContentHomeWhyChooseUs', label?: string | null, title?: string | null, description?: string | null } | null, projectsPreview?: { __typename: 'SiteContentHomeProjectsPreview', footerText?: string | null, primaryCta?: { __typename: 'SiteContentHomeProjectsPreviewPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeProjectsPreviewSecondaryCta', href?: string | null, label?: string | null } | null } | null, testimonialsIntro?: { __typename: 'SiteContentHomeTestimonialsIntro', label?: string | null, title?: string | null, description?: string | null } | null, letsTalk?: { __typename: 'SiteContentHomeLetsTalk', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentHomeLetsTalkPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeLetsTalkSecondaryCta', href?: string | null, label?: string | null } | null } | null, contactShort?: { __typename: 'SiteContentHomeContactShort', label?: string | null, title?: string | null, description?: string | null } | null } | null, pageHeroes?: { __typename: 'SiteContentPageHeroes', services?: { __typename: 'SiteContentPageHeroesServices', label?: string | null, title?: string | null, description?: string | null } | null, caseStudies?: { __typename: 'SiteContentPageHeroesCaseStudies', label?: string | null, title?: string | null, description?: string | null } | null, blog?: { __typename: 'SiteContentPageHeroesBlog', label?: string | null, title?: string | null, description?: string | null } | null, contact?: { __typename: 'SiteContentPageHeroesContact', label?: string | null, title?: string | null, description?: string | null } | null } | null, about?: { __typename: 'SiteContentAbout', hero?: { __typename: 'SiteContentAboutHero', eyebrow?: string | null, headingLineOne?: string | null, headingLineTwo?: string | null, description?: string | null, scrollLabel?: string | null } | null, mission?: { __typename: 'SiteContentAboutMission', label?: string | null, title?: string | null, description?: string | null } | null, stats?: Array<{ __typename: 'SiteContentAboutStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, timelineIntro?: { __typename: 'SiteContentAboutTimelineIntro', label?: string | null, title?: string | null, description?: string | null } | null, valuesIntro?: { __typename: 'SiteContentAboutValuesIntro', label?: string | null, title?: string | null, description?: string | null } | null, values?: Array<{ __typename: 'SiteContentAboutValues', icon?: string | null, title?: string | null, description?: string | null } | null> | null, closing?: { __typename: 'SiteContentAboutClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentAboutClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentAboutClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null, servicesPage?: { __typename: 'SiteContentServicesPage', intro?: { __typename: 'SiteContentServicesPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, highlights?: Array<{ __typename: 'SiteContentServicesPageHighlights', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, fullList?: { __typename: 'SiteContentServicesPageFullList', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentServicesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentServicesPageDetail', focusLabel?: string | null, whyLabel?: string | null, startCta?: { __typename: 'SiteContentServicesPageDetailStartCta', href?: string | null, label?: string | null } | null, allServicesCta?: { __typename: 'SiteContentServicesPageDetailAllServicesCta', href?: string | null, label?: string | null } | null, processIntro?: { __typename: 'SiteContentServicesPageDetailProcessIntro', label?: string | null, title?: string | null, description?: string | null } | null, relatedIntro?: { __typename: 'SiteContentServicesPageDetailRelatedIntro', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentServicesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, blogPage?: { __typename: 'SiteContentBlogPage', label?: string | null, title?: string | null, description?: string | null } | null, caseStudiesPage?: { __typename: 'SiteContentCaseStudiesPage', includedIntro?: { __typename: 'SiteContentCaseStudiesPageIncludedIntro', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentCaseStudiesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentCaseStudiesPageDetail', backLabel?: string | null, summaryLabel?: string | null, blocks?: Array<string | null> | null, resultsLabel?: string | null, resultsHeading?: string | null, closing?: { __typename: 'SiteContentCaseStudiesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, contactPage?: { __typename: 'SiteContentContactPage', consultationRequest?: { __typename: 'SiteContentContactPageConsultationRequest', label?: string | null, title?: string | null, description?: string | null } | null, form?: { __typename: 'SiteContentContactPageForm', namePlaceholder?: string | null, emailPlaceholder?: string | null, phonePlaceholder?: string | null, companyPlaceholder?: string | null, primarySelectLabel?: string | null, primarySelectOptions?: Array<string | null> | null, secondarySelectLabel?: string | null, secondarySelectOptions?: Array<string | null> | null, messagePlaceholder?: string | null, submitLabel?: string | null } | null, otherOptionsIntro?: { __typename: 'SiteContentContactPageOtherOptionsIntro', label?: string | null, title?: string | null, description?: string | null } | null, finalCta?: { __typename: 'SiteContentContactPageFinalCta', label?: string | null, note?: string | null } | null } | null, data?: { __typename: 'SiteContentData', serviceTickerTags?: Array<string | null> | null, projectCategories?: Array<string | null> | null, homepageFeaturedProjectSlugs?: Array<string | null> | null, services?: Array<{ __typename: 'SiteContentDataServices', slug?: string | null, shortLabel?: string | null, title?: string | null, eyebrow?: string | null, description?: string | null, intro?: string | null, longDescription?: string | null, image?: string | null, heroImage?: string | null, keywords?: Array<string | null> | null, subServices?: Array<string | null> | null, process?: Array<{ __typename: 'SiteContentDataServicesProcess', title?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataServicesMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, allServiceGroups?: Array<{ __typename: 'SiteContentDataAllServiceGroups', title?: string | null, items?: Array<string | null> | null } | null> | null, projectSectionIntro?: { __typename: 'SiteContentDataProjectSectionIntro', label?: string | null, title?: string | null, description?: string | null } | null, projectsPageIntro?: { __typename: 'SiteContentDataProjectsPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, projectsClosingCta?: { __typename: 'SiteContentDataProjectsClosingCta', label?: string | null, title?: string | null, description?: string | null } | null, projectItems?: Array<{ __typename: 'SiteContentDataProjectItems', id?: number | null, slug?: string | null, title?: string | null, category?: string | null, market?: string | null, duration?: string | null, teaserOutcome?: string | null, summary?: string | null, outcomes?: Array<string | null> | null } | null> | null, portfolioItems?: Array<{ __typename: 'SiteContentDataPortfolioItems', id?: number | null, slug?: string | null, category?: string | null, client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null, market?: string | null, engagementDuration?: string | null, situation?: string | null, strategy?: string | null, execution?: string | null, results?: Array<{ __typename: 'SiteContentDataPortfolioItemsResults', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataPortfolioItemsMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, featuredCaseStudy?: { __typename: 'SiteContentDataFeaturedCaseStudy', client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null } | null, blogPosts?: Array<{ __typename: 'SiteContentDataBlogPosts', slug?: string | null, category?: string | null, title?: string | null, excerpt?: string | null, image?: string | null, readTime?: string | null, content?: string | null } | null> | null, contact?: { __typename: 'SiteContentDataContact', contactPageIntro?: { __typename: 'SiteContentDataContactContactPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactStrategyConsultation?: { __typename: 'SiteContentDataContactContactStrategyConsultation', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null, highlights?: Array<{ __typename: 'SiteContentDataContactContactStrategyConsultationHighlights', title?: string | null, description?: string | null } | null> | null } | null, contactOptions?: Array<{ __typename: 'SiteContentDataContactContactOptions', label?: string | null, title?: string | null, description?: string | null, value?: string | null, href?: string | null, external?: boolean | null } | null> | null, contactExpectationsIntro?: { __typename: 'SiteContentDataContactContactExpectationsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactExpectations?: Array<{ __typename: 'SiteContentDataContactContactExpectations', title?: string | null, timeframe?: string | null, description?: string | null } | null> | null, contactConversationTopicsIntro?: { __typename: 'SiteContentDataContactContactConversationTopicsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactConversationTopics?: Array<{ __typename: 'SiteContentDataContactContactConversationTopics', title?: string | null, description?: string | null } | null> | null, contactFaqs?: Array<{ __typename: 'SiteContentDataContactContactFaqs', question?: string | null, answer?: string | null } | null> | null, contactReasonsIntro?: { __typename: 'SiteContentDataContactContactReasonsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactReasons?: Array<{ __typename: 'SiteContentDataContactContactReasons', title?: string | null, description?: string | null } | null> | null } | null, heroStats?: Array<{ __typename: 'SiteContentDataHeroStats', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, statsTicker?: Array<{ __typename: 'SiteContentDataStatsTicker', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, performanceStats?: Array<{ __typename: 'SiteContentDataPerformanceStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, testimonials?: Array<{ __typename: 'SiteContentDataTestimonials', name?: string | null, role?: string | null, quote?: string | null } | null> | null, timeline?: Array<{ __typename: 'SiteContentDataTimeline', year?: string | null, title?: string | null, description?: string | null } | null> | null, teamMembers?: Array<{ __typename: 'SiteContentDataTeamMembers', name?: string | null, role?: string | null, image?: string | null, linkedin?: string | null } | null> | null } | null };
+export type SiteContentPartsFragment = { __typename: 'SiteContent', navigation?: { __typename: 'SiteContentNavigation', brandPrefix?: string | null, brandAccent?: string | null, servicesDropdownLabel?: string | null, mobileTitle?: string | null, links?: Array<{ __typename: 'SiteContentNavigationLinks', label?: string | null, href?: string | null, hasDropdown?: boolean | null } | null> | null, primaryCta?: { __typename: 'SiteContentNavigationPrimaryCta', href?: string | null, label?: string | null } | null } | null, footer?: { __typename: 'SiteContentFooter', description?: string | null, quickLinksHeading?: string | null, servicesHeading?: string | null, contactHeading?: string | null, address?: string | null, phone?: string | null, email?: string | null, copyright?: string | null, legal?: string | null, socials?: Array<{ __typename: 'SiteContentFooterSocials', type?: string | null, href?: string | null } | null> | null } | null, home?: { __typename: 'SiteContentHome', hero?: { __typename: 'SiteContentHomeHero', eyebrow?: string | null, headingPrefix?: string | null, rotatingWords?: Array<string | null> | null, headingSuffix?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, insightLabel?: string | null, insightItems?: Array<string | null> | null, primaryCta?: { __typename: 'SiteContentHomeHeroPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeHeroSecondaryCta', href?: string | null, label?: string | null } | null } | null, clients?: { __typename: 'SiteContentHomeClients', label?: string | null, rowOne?: Array<string | null> | null, rowTwo?: Array<string | null> | null } | null, whatWeDo?: { __typename: 'SiteContentHomeWhatWeDo', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhatWeDoCta', href?: string | null, label?: string | null } | null } | null, servicesPreview?: { __typename: 'SiteContentHomeServicesPreview', label?: string | null, title?: string | null, description?: string | null, viewAllLabel?: string | null, scrollLabel?: string | null, exploreLabel?: string | null } | null, whyChoosePr?: { __typename: 'SiteContentHomeWhyChoosePr', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, checklist?: Array<{ __typename: 'SiteContentHomeWhyChoosePrChecklist', number?: string | null, text?: string | null } | null> | null } | null, whySubscribe?: { __typename: 'SiteContentHomeWhySubscribe', label?: string | null, title?: string | null, description?: string | null, cards?: Array<{ __typename: 'SiteContentHomeWhySubscribeCards', id?: string | null, icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, whyChooseUs?: { __typename: 'SiteContentHomeWhyChooseUs', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhyChooseUsCta', href?: string | null, label?: string | null } | null } | null, projectsPreview?: { __typename: 'SiteContentHomeProjectsPreview', footerText?: string | null, primaryCta?: { __typename: 'SiteContentHomeProjectsPreviewPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeProjectsPreviewSecondaryCta', href?: string | null, label?: string | null } | null } | null, testimonialsIntro?: { __typename: 'SiteContentHomeTestimonialsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeTestimonialsIntroCta', href?: string | null, label?: string | null } | null } | null, letsTalk?: { __typename: 'SiteContentHomeLetsTalk', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentHomeLetsTalkPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeLetsTalkSecondaryCta', href?: string | null, label?: string | null } | null } | null, contactShort?: { __typename: 'SiteContentHomeContactShort', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeContactShortCta', href?: string | null, label?: string | null } | null } | null } | null, pageHeroes?: { __typename: 'SiteContentPageHeroes', services?: { __typename: 'SiteContentPageHeroesServices', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesServicesCta', href?: string | null, label?: string | null } | null } | null, caseStudies?: { __typename: 'SiteContentPageHeroesCaseStudies', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesCaseStudiesCta', href?: string | null, label?: string | null } | null } | null, blog?: { __typename: 'SiteContentPageHeroesBlog', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesBlogCta', href?: string | null, label?: string | null } | null } | null, contact?: { __typename: 'SiteContentPageHeroesContact', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesContactCta', href?: string | null, label?: string | null } | null } | null } | null, about?: { __typename: 'SiteContentAbout', hero?: { __typename: 'SiteContentAboutHero', eyebrow?: string | null, headingLineOne?: string | null, headingLineTwo?: string | null, description?: string | null, scrollLabel?: string | null } | null, mission?: { __typename: 'SiteContentAboutMission', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutMissionCta', href?: string | null, label?: string | null } | null } | null, stats?: Array<{ __typename: 'SiteContentAboutStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, timelineIntro?: { __typename: 'SiteContentAboutTimelineIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutTimelineIntroCta', href?: string | null, label?: string | null } | null } | null, valuesIntro?: { __typename: 'SiteContentAboutValuesIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutValuesIntroCta', href?: string | null, label?: string | null } | null } | null, values?: Array<{ __typename: 'SiteContentAboutValues', icon?: string | null, title?: string | null, description?: string | null } | null> | null, closing?: { __typename: 'SiteContentAboutClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentAboutClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentAboutClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null, servicesPage?: { __typename: 'SiteContentServicesPage', serviceCtaLabel?: string | null, intro?: { __typename: 'SiteContentServicesPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageIntroCta', href?: string | null, label?: string | null } | null } | null, highlights?: Array<{ __typename: 'SiteContentServicesPageHighlights', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, fullList?: { __typename: 'SiteContentServicesPageFullList', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageFullListCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentServicesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentServicesPageDetail', focusLabel?: string | null, whyLabel?: string | null, startCta?: { __typename: 'SiteContentServicesPageDetailStartCta', href?: string | null, label?: string | null } | null, allServicesCta?: { __typename: 'SiteContentServicesPageDetailAllServicesCta', href?: string | null, label?: string | null } | null, processIntro?: { __typename: 'SiteContentServicesPageDetailProcessIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageDetailProcessIntroCta', href?: string | null, label?: string | null } | null } | null, relatedIntro?: { __typename: 'SiteContentServicesPageDetailRelatedIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageDetailRelatedIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentServicesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, blogPage?: { __typename: 'SiteContentBlogPage', backLabel?: string | null, intro?: { __typename: 'SiteContentBlogPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentBlogPageIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentBlogPageClosing', eyebrow?: string | null, primaryCta?: { __typename: 'SiteContentBlogPageClosingPrimaryCta', href?: string | null, label?: string | null } | null } | null } | null, caseStudiesPage?: { __typename: 'SiteContentCaseStudiesPage', includedIntro?: { __typename: 'SiteContentCaseStudiesPageIncludedIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentCaseStudiesPageIncludedIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentCaseStudiesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentCaseStudiesPageDetail', backLabel?: string | null, summaryLabel?: string | null, blocks?: Array<string | null> | null, resultsLabel?: string | null, resultsHeading?: string | null, closing?: { __typename: 'SiteContentCaseStudiesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, contactPage?: { __typename: 'SiteContentContactPage', consultationRequest?: { __typename: 'SiteContentContactPageConsultationRequest', label?: string | null, title?: string | null, description?: string | null, confidentiality?: string | null } | null, form?: { __typename: 'SiteContentContactPageForm', namePlaceholder?: string | null, emailPlaceholder?: string | null, phonePlaceholder?: string | null, companyPlaceholder?: string | null, primarySelectLabel?: string | null, primarySelectOptions?: Array<string | null> | null, secondarySelectLabel?: string | null, secondarySelectOptions?: Array<string | null> | null, messagePlaceholder?: string | null, submitLabel?: string | null } | null, otherOptionsIntro?: { __typename: 'SiteContentContactPageOtherOptionsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentContactPageOtherOptionsIntroCta', href?: string | null, label?: string | null } | null } | null, finalCta?: { __typename: 'SiteContentContactPageFinalCta', label?: string | null, note?: string | null } | null } | null, data?: { __typename: 'SiteContentData', serviceTickerTags?: Array<string | null> | null, projectCategories?: Array<string | null> | null, homepageFeaturedProjectSlugs?: Array<string | null> | null, services?: Array<{ __typename: 'SiteContentDataServices', slug?: string | null, shortLabel?: string | null, title?: string | null, eyebrow?: string | null, description?: string | null, intro?: string | null, longDescription?: string | null, image?: string | null, heroImage?: string | null, keywords?: Array<string | null> | null, subServices?: Array<string | null> | null, process?: Array<{ __typename: 'SiteContentDataServicesProcess', title?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataServicesMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, allServiceGroups?: Array<{ __typename: 'SiteContentDataAllServiceGroups', title?: string | null, items?: Array<string | null> | null } | null> | null, projectSectionIntro?: { __typename: 'SiteContentDataProjectSectionIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectSectionIntroCta', href?: string | null, label?: string | null } | null } | null, projectsPageIntro?: { __typename: 'SiteContentDataProjectsPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectsPageIntroCta', href?: string | null, label?: string | null } | null } | null, projectsClosingCta?: { __typename: 'SiteContentDataProjectsClosingCta', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectsClosingCtaCta', href?: string | null, label?: string | null } | null } | null, projectItems?: Array<{ __typename: 'SiteContentDataProjectItems', id?: number | null, slug?: string | null, title?: string | null, category?: string | null, market?: string | null, duration?: string | null, teaserOutcome?: string | null, summary?: string | null, outcomes?: Array<string | null> | null } | null> | null, portfolioItems?: Array<{ __typename: 'SiteContentDataPortfolioItems', id?: number | null, slug?: string | null, category?: string | null, client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null, market?: string | null, engagementDuration?: string | null, situation?: string | null, strategy?: string | null, execution?: string | null, results?: Array<{ __typename: 'SiteContentDataPortfolioItemsResults', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataPortfolioItemsMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, featuredCaseStudy?: { __typename: 'SiteContentDataFeaturedCaseStudy', client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null } | null, blogPosts?: Array<{ __typename: 'SiteContentDataBlogPosts', slug?: string | null, category?: string | null, title?: string | null, excerpt?: string | null, image?: string | null, readTime?: string | null, content?: string | null } | null> | null, contact?: { __typename: 'SiteContentDataContact', contactPageIntro?: { __typename: 'SiteContentDataContactContactPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactPageIntroCta', href?: string | null, label?: string | null } | null } | null, contactStrategyConsultation?: { __typename: 'SiteContentDataContactContactStrategyConsultation', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null, highlights?: Array<{ __typename: 'SiteContentDataContactContactStrategyConsultationHighlights', title?: string | null, description?: string | null } | null> | null } | null, contactOptions?: Array<{ __typename: 'SiteContentDataContactContactOptions', label?: string | null, title?: string | null, description?: string | null, value?: string | null, href?: string | null, external?: boolean | null } | null> | null, contactExpectationsIntro?: { __typename: 'SiteContentDataContactContactExpectationsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactExpectationsIntroCta', href?: string | null, label?: string | null } | null } | null, contactExpectations?: Array<{ __typename: 'SiteContentDataContactContactExpectations', title?: string | null, timeframe?: string | null, description?: string | null } | null> | null, contactConversationTopicsIntro?: { __typename: 'SiteContentDataContactContactConversationTopicsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactConversationTopicsIntroCta', href?: string | null, label?: string | null } | null } | null, contactConversationTopics?: Array<{ __typename: 'SiteContentDataContactContactConversationTopics', title?: string | null, description?: string | null } | null> | null, contactFaqs?: Array<{ __typename: 'SiteContentDataContactContactFaqs', question?: string | null, answer?: string | null } | null> | null, contactReasonsIntro?: { __typename: 'SiteContentDataContactContactReasonsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactReasonsIntroCta', href?: string | null, label?: string | null } | null } | null, contactReasons?: Array<{ __typename: 'SiteContentDataContactContactReasons', title?: string | null, description?: string | null } | null> | null } | null, heroStats?: Array<{ __typename: 'SiteContentDataHeroStats', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, statsTicker?: Array<{ __typename: 'SiteContentDataStatsTicker', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, performanceStats?: Array<{ __typename: 'SiteContentDataPerformanceStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, testimonials?: Array<{ __typename: 'SiteContentDataTestimonials', name?: string | null, role?: string | null, quote?: string | null } | null> | null, timeline?: Array<{ __typename: 'SiteContentDataTimeline', year?: string | null, title?: string | null, description?: string | null } | null> | null, teamMembers?: Array<{ __typename: 'SiteContentDataTeamMembers', name?: string | null, role?: string | null, image?: string | null, linkedin?: string | null } | null> | null } | null };
 
 export type SiteContentQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type SiteContentQuery = { __typename?: 'Query', siteContent: { __typename: 'SiteContent', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navigation?: { __typename: 'SiteContentNavigation', brandPrefix?: string | null, brandAccent?: string | null, servicesDropdownLabel?: string | null, mobileTitle?: string | null, links?: Array<{ __typename: 'SiteContentNavigationLinks', label?: string | null, href?: string | null, hasDropdown?: boolean | null } | null> | null, primaryCta?: { __typename: 'SiteContentNavigationPrimaryCta', href?: string | null, label?: string | null } | null } | null, footer?: { __typename: 'SiteContentFooter', description?: string | null, quickLinksHeading?: string | null, servicesHeading?: string | null, contactHeading?: string | null, address?: string | null, phone?: string | null, email?: string | null, copyright?: string | null, legal?: string | null, socials?: Array<{ __typename: 'SiteContentFooterSocials', type?: string | null, href?: string | null } | null> | null } | null, home?: { __typename: 'SiteContentHome', hero?: { __typename: 'SiteContentHomeHero', eyebrow?: string | null, headingPrefix?: string | null, rotatingWords?: Array<string | null> | null, headingSuffix?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, insightLabel?: string | null, insightItems?: Array<string | null> | null, primaryCta?: { __typename: 'SiteContentHomeHeroPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeHeroSecondaryCta', href?: string | null, label?: string | null } | null } | null, clients?: { __typename: 'SiteContentHomeClients', label?: string | null, rowOne?: Array<string | null> | null, rowTwo?: Array<string | null> | null } | null, whatWeDo?: { __typename: 'SiteContentHomeWhatWeDo', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhatWeDoCta', href?: string | null, label?: string | null } | null } | null, servicesPreview?: { __typename: 'SiteContentHomeServicesPreview', label?: string | null, title?: string | null, description?: string | null } | null, whyChoosePr?: { __typename: 'SiteContentHomeWhyChoosePr', label?: string | null, title?: string | null, description?: string | null } | null, whySubscribe?: { __typename: 'SiteContentHomeWhySubscribe', label?: string | null, title?: string | null, description?: string | null, cards?: Array<{ __typename: 'SiteContentHomeWhySubscribeCards', id?: string | null, icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, whyChooseUs?: { __typename: 'SiteContentHomeWhyChooseUs', label?: string | null, title?: string | null, description?: string | null } | null, projectsPreview?: { __typename: 'SiteContentHomeProjectsPreview', footerText?: string | null, primaryCta?: { __typename: 'SiteContentHomeProjectsPreviewPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeProjectsPreviewSecondaryCta', href?: string | null, label?: string | null } | null } | null, testimonialsIntro?: { __typename: 'SiteContentHomeTestimonialsIntro', label?: string | null, title?: string | null, description?: string | null } | null, letsTalk?: { __typename: 'SiteContentHomeLetsTalk', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentHomeLetsTalkPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeLetsTalkSecondaryCta', href?: string | null, label?: string | null } | null } | null, contactShort?: { __typename: 'SiteContentHomeContactShort', label?: string | null, title?: string | null, description?: string | null } | null } | null, pageHeroes?: { __typename: 'SiteContentPageHeroes', services?: { __typename: 'SiteContentPageHeroesServices', label?: string | null, title?: string | null, description?: string | null } | null, caseStudies?: { __typename: 'SiteContentPageHeroesCaseStudies', label?: string | null, title?: string | null, description?: string | null } | null, blog?: { __typename: 'SiteContentPageHeroesBlog', label?: string | null, title?: string | null, description?: string | null } | null, contact?: { __typename: 'SiteContentPageHeroesContact', label?: string | null, title?: string | null, description?: string | null } | null } | null, about?: { __typename: 'SiteContentAbout', hero?: { __typename: 'SiteContentAboutHero', eyebrow?: string | null, headingLineOne?: string | null, headingLineTwo?: string | null, description?: string | null, scrollLabel?: string | null } | null, mission?: { __typename: 'SiteContentAboutMission', label?: string | null, title?: string | null, description?: string | null } | null, stats?: Array<{ __typename: 'SiteContentAboutStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, timelineIntro?: { __typename: 'SiteContentAboutTimelineIntro', label?: string | null, title?: string | null, description?: string | null } | null, valuesIntro?: { __typename: 'SiteContentAboutValuesIntro', label?: string | null, title?: string | null, description?: string | null } | null, values?: Array<{ __typename: 'SiteContentAboutValues', icon?: string | null, title?: string | null, description?: string | null } | null> | null, closing?: { __typename: 'SiteContentAboutClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentAboutClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentAboutClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null, servicesPage?: { __typename: 'SiteContentServicesPage', intro?: { __typename: 'SiteContentServicesPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, highlights?: Array<{ __typename: 'SiteContentServicesPageHighlights', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, fullList?: { __typename: 'SiteContentServicesPageFullList', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentServicesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentServicesPageDetail', focusLabel?: string | null, whyLabel?: string | null, startCta?: { __typename: 'SiteContentServicesPageDetailStartCta', href?: string | null, label?: string | null } | null, allServicesCta?: { __typename: 'SiteContentServicesPageDetailAllServicesCta', href?: string | null, label?: string | null } | null, processIntro?: { __typename: 'SiteContentServicesPageDetailProcessIntro', label?: string | null, title?: string | null, description?: string | null } | null, relatedIntro?: { __typename: 'SiteContentServicesPageDetailRelatedIntro', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentServicesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, blogPage?: { __typename: 'SiteContentBlogPage', label?: string | null, title?: string | null, description?: string | null } | null, caseStudiesPage?: { __typename: 'SiteContentCaseStudiesPage', includedIntro?: { __typename: 'SiteContentCaseStudiesPageIncludedIntro', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentCaseStudiesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentCaseStudiesPageDetail', backLabel?: string | null, summaryLabel?: string | null, blocks?: Array<string | null> | null, resultsLabel?: string | null, resultsHeading?: string | null, closing?: { __typename: 'SiteContentCaseStudiesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, contactPage?: { __typename: 'SiteContentContactPage', consultationRequest?: { __typename: 'SiteContentContactPageConsultationRequest', label?: string | null, title?: string | null, description?: string | null } | null, form?: { __typename: 'SiteContentContactPageForm', namePlaceholder?: string | null, emailPlaceholder?: string | null, phonePlaceholder?: string | null, companyPlaceholder?: string | null, primarySelectLabel?: string | null, primarySelectOptions?: Array<string | null> | null, secondarySelectLabel?: string | null, secondarySelectOptions?: Array<string | null> | null, messagePlaceholder?: string | null, submitLabel?: string | null } | null, otherOptionsIntro?: { __typename: 'SiteContentContactPageOtherOptionsIntro', label?: string | null, title?: string | null, description?: string | null } | null, finalCta?: { __typename: 'SiteContentContactPageFinalCta', label?: string | null, note?: string | null } | null } | null, data?: { __typename: 'SiteContentData', serviceTickerTags?: Array<string | null> | null, projectCategories?: Array<string | null> | null, homepageFeaturedProjectSlugs?: Array<string | null> | null, services?: Array<{ __typename: 'SiteContentDataServices', slug?: string | null, shortLabel?: string | null, title?: string | null, eyebrow?: string | null, description?: string | null, intro?: string | null, longDescription?: string | null, image?: string | null, heroImage?: string | null, keywords?: Array<string | null> | null, subServices?: Array<string | null> | null, process?: Array<{ __typename: 'SiteContentDataServicesProcess', title?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataServicesMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, allServiceGroups?: Array<{ __typename: 'SiteContentDataAllServiceGroups', title?: string | null, items?: Array<string | null> | null } | null> | null, projectSectionIntro?: { __typename: 'SiteContentDataProjectSectionIntro', label?: string | null, title?: string | null, description?: string | null } | null, projectsPageIntro?: { __typename: 'SiteContentDataProjectsPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, projectsClosingCta?: { __typename: 'SiteContentDataProjectsClosingCta', label?: string | null, title?: string | null, description?: string | null } | null, projectItems?: Array<{ __typename: 'SiteContentDataProjectItems', id?: number | null, slug?: string | null, title?: string | null, category?: string | null, market?: string | null, duration?: string | null, teaserOutcome?: string | null, summary?: string | null, outcomes?: Array<string | null> | null } | null> | null, portfolioItems?: Array<{ __typename: 'SiteContentDataPortfolioItems', id?: number | null, slug?: string | null, category?: string | null, client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null, market?: string | null, engagementDuration?: string | null, situation?: string | null, strategy?: string | null, execution?: string | null, results?: Array<{ __typename: 'SiteContentDataPortfolioItemsResults', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataPortfolioItemsMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, featuredCaseStudy?: { __typename: 'SiteContentDataFeaturedCaseStudy', client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null } | null, blogPosts?: Array<{ __typename: 'SiteContentDataBlogPosts', slug?: string | null, category?: string | null, title?: string | null, excerpt?: string | null, image?: string | null, readTime?: string | null, content?: string | null } | null> | null, contact?: { __typename: 'SiteContentDataContact', contactPageIntro?: { __typename: 'SiteContentDataContactContactPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactStrategyConsultation?: { __typename: 'SiteContentDataContactContactStrategyConsultation', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null, highlights?: Array<{ __typename: 'SiteContentDataContactContactStrategyConsultationHighlights', title?: string | null, description?: string | null } | null> | null } | null, contactOptions?: Array<{ __typename: 'SiteContentDataContactContactOptions', label?: string | null, title?: string | null, description?: string | null, value?: string | null, href?: string | null, external?: boolean | null } | null> | null, contactExpectationsIntro?: { __typename: 'SiteContentDataContactContactExpectationsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactExpectations?: Array<{ __typename: 'SiteContentDataContactContactExpectations', title?: string | null, timeframe?: string | null, description?: string | null } | null> | null, contactConversationTopicsIntro?: { __typename: 'SiteContentDataContactContactConversationTopicsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactConversationTopics?: Array<{ __typename: 'SiteContentDataContactContactConversationTopics', title?: string | null, description?: string | null } | null> | null, contactFaqs?: Array<{ __typename: 'SiteContentDataContactContactFaqs', question?: string | null, answer?: string | null } | null> | null, contactReasonsIntro?: { __typename: 'SiteContentDataContactContactReasonsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactReasons?: Array<{ __typename: 'SiteContentDataContactContactReasons', title?: string | null, description?: string | null } | null> | null } | null, heroStats?: Array<{ __typename: 'SiteContentDataHeroStats', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, statsTicker?: Array<{ __typename: 'SiteContentDataStatsTicker', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, performanceStats?: Array<{ __typename: 'SiteContentDataPerformanceStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, testimonials?: Array<{ __typename: 'SiteContentDataTestimonials', name?: string | null, role?: string | null, quote?: string | null } | null> | null, timeline?: Array<{ __typename: 'SiteContentDataTimeline', year?: string | null, title?: string | null, description?: string | null } | null> | null, teamMembers?: Array<{ __typename: 'SiteContentDataTeamMembers', name?: string | null, role?: string | null, image?: string | null, linkedin?: string | null } | null> | null } | null } };
+export type SiteContentQuery = { __typename?: 'Query', siteContent: { __typename: 'SiteContent', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navigation?: { __typename: 'SiteContentNavigation', brandPrefix?: string | null, brandAccent?: string | null, servicesDropdownLabel?: string | null, mobileTitle?: string | null, links?: Array<{ __typename: 'SiteContentNavigationLinks', label?: string | null, href?: string | null, hasDropdown?: boolean | null } | null> | null, primaryCta?: { __typename: 'SiteContentNavigationPrimaryCta', href?: string | null, label?: string | null } | null } | null, footer?: { __typename: 'SiteContentFooter', description?: string | null, quickLinksHeading?: string | null, servicesHeading?: string | null, contactHeading?: string | null, address?: string | null, phone?: string | null, email?: string | null, copyright?: string | null, legal?: string | null, socials?: Array<{ __typename: 'SiteContentFooterSocials', type?: string | null, href?: string | null } | null> | null } | null, home?: { __typename: 'SiteContentHome', hero?: { __typename: 'SiteContentHomeHero', eyebrow?: string | null, headingPrefix?: string | null, rotatingWords?: Array<string | null> | null, headingSuffix?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, insightLabel?: string | null, insightItems?: Array<string | null> | null, primaryCta?: { __typename: 'SiteContentHomeHeroPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeHeroSecondaryCta', href?: string | null, label?: string | null } | null } | null, clients?: { __typename: 'SiteContentHomeClients', label?: string | null, rowOne?: Array<string | null> | null, rowTwo?: Array<string | null> | null } | null, whatWeDo?: { __typename: 'SiteContentHomeWhatWeDo', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhatWeDoCta', href?: string | null, label?: string | null } | null } | null, servicesPreview?: { __typename: 'SiteContentHomeServicesPreview', label?: string | null, title?: string | null, description?: string | null, viewAllLabel?: string | null, scrollLabel?: string | null, exploreLabel?: string | null } | null, whyChoosePr?: { __typename: 'SiteContentHomeWhyChoosePr', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, checklist?: Array<{ __typename: 'SiteContentHomeWhyChoosePrChecklist', number?: string | null, text?: string | null } | null> | null } | null, whySubscribe?: { __typename: 'SiteContentHomeWhySubscribe', label?: string | null, title?: string | null, description?: string | null, cards?: Array<{ __typename: 'SiteContentHomeWhySubscribeCards', id?: string | null, icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, whyChooseUs?: { __typename: 'SiteContentHomeWhyChooseUs', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhyChooseUsCta', href?: string | null, label?: string | null } | null } | null, projectsPreview?: { __typename: 'SiteContentHomeProjectsPreview', footerText?: string | null, primaryCta?: { __typename: 'SiteContentHomeProjectsPreviewPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeProjectsPreviewSecondaryCta', href?: string | null, label?: string | null } | null } | null, testimonialsIntro?: { __typename: 'SiteContentHomeTestimonialsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeTestimonialsIntroCta', href?: string | null, label?: string | null } | null } | null, letsTalk?: { __typename: 'SiteContentHomeLetsTalk', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentHomeLetsTalkPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeLetsTalkSecondaryCta', href?: string | null, label?: string | null } | null } | null, contactShort?: { __typename: 'SiteContentHomeContactShort', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeContactShortCta', href?: string | null, label?: string | null } | null } | null } | null, pageHeroes?: { __typename: 'SiteContentPageHeroes', services?: { __typename: 'SiteContentPageHeroesServices', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesServicesCta', href?: string | null, label?: string | null } | null } | null, caseStudies?: { __typename: 'SiteContentPageHeroesCaseStudies', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesCaseStudiesCta', href?: string | null, label?: string | null } | null } | null, blog?: { __typename: 'SiteContentPageHeroesBlog', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesBlogCta', href?: string | null, label?: string | null } | null } | null, contact?: { __typename: 'SiteContentPageHeroesContact', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesContactCta', href?: string | null, label?: string | null } | null } | null } | null, about?: { __typename: 'SiteContentAbout', hero?: { __typename: 'SiteContentAboutHero', eyebrow?: string | null, headingLineOne?: string | null, headingLineTwo?: string | null, description?: string | null, scrollLabel?: string | null } | null, mission?: { __typename: 'SiteContentAboutMission', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutMissionCta', href?: string | null, label?: string | null } | null } | null, stats?: Array<{ __typename: 'SiteContentAboutStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, timelineIntro?: { __typename: 'SiteContentAboutTimelineIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutTimelineIntroCta', href?: string | null, label?: string | null } | null } | null, valuesIntro?: { __typename: 'SiteContentAboutValuesIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutValuesIntroCta', href?: string | null, label?: string | null } | null } | null, values?: Array<{ __typename: 'SiteContentAboutValues', icon?: string | null, title?: string | null, description?: string | null } | null> | null, closing?: { __typename: 'SiteContentAboutClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentAboutClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentAboutClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null, servicesPage?: { __typename: 'SiteContentServicesPage', serviceCtaLabel?: string | null, intro?: { __typename: 'SiteContentServicesPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageIntroCta', href?: string | null, label?: string | null } | null } | null, highlights?: Array<{ __typename: 'SiteContentServicesPageHighlights', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, fullList?: { __typename: 'SiteContentServicesPageFullList', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageFullListCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentServicesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentServicesPageDetail', focusLabel?: string | null, whyLabel?: string | null, startCta?: { __typename: 'SiteContentServicesPageDetailStartCta', href?: string | null, label?: string | null } | null, allServicesCta?: { __typename: 'SiteContentServicesPageDetailAllServicesCta', href?: string | null, label?: string | null } | null, processIntro?: { __typename: 'SiteContentServicesPageDetailProcessIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageDetailProcessIntroCta', href?: string | null, label?: string | null } | null } | null, relatedIntro?: { __typename: 'SiteContentServicesPageDetailRelatedIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageDetailRelatedIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentServicesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, blogPage?: { __typename: 'SiteContentBlogPage', backLabel?: string | null, intro?: { __typename: 'SiteContentBlogPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentBlogPageIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentBlogPageClosing', eyebrow?: string | null, primaryCta?: { __typename: 'SiteContentBlogPageClosingPrimaryCta', href?: string | null, label?: string | null } | null } | null } | null, caseStudiesPage?: { __typename: 'SiteContentCaseStudiesPage', includedIntro?: { __typename: 'SiteContentCaseStudiesPageIncludedIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentCaseStudiesPageIncludedIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentCaseStudiesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentCaseStudiesPageDetail', backLabel?: string | null, summaryLabel?: string | null, blocks?: Array<string | null> | null, resultsLabel?: string | null, resultsHeading?: string | null, closing?: { __typename: 'SiteContentCaseStudiesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, contactPage?: { __typename: 'SiteContentContactPage', consultationRequest?: { __typename: 'SiteContentContactPageConsultationRequest', label?: string | null, title?: string | null, description?: string | null, confidentiality?: string | null } | null, form?: { __typename: 'SiteContentContactPageForm', namePlaceholder?: string | null, emailPlaceholder?: string | null, phonePlaceholder?: string | null, companyPlaceholder?: string | null, primarySelectLabel?: string | null, primarySelectOptions?: Array<string | null> | null, secondarySelectLabel?: string | null, secondarySelectOptions?: Array<string | null> | null, messagePlaceholder?: string | null, submitLabel?: string | null } | null, otherOptionsIntro?: { __typename: 'SiteContentContactPageOtherOptionsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentContactPageOtherOptionsIntroCta', href?: string | null, label?: string | null } | null } | null, finalCta?: { __typename: 'SiteContentContactPageFinalCta', label?: string | null, note?: string | null } | null } | null, data?: { __typename: 'SiteContentData', serviceTickerTags?: Array<string | null> | null, projectCategories?: Array<string | null> | null, homepageFeaturedProjectSlugs?: Array<string | null> | null, services?: Array<{ __typename: 'SiteContentDataServices', slug?: string | null, shortLabel?: string | null, title?: string | null, eyebrow?: string | null, description?: string | null, intro?: string | null, longDescription?: string | null, image?: string | null, heroImage?: string | null, keywords?: Array<string | null> | null, subServices?: Array<string | null> | null, process?: Array<{ __typename: 'SiteContentDataServicesProcess', title?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataServicesMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, allServiceGroups?: Array<{ __typename: 'SiteContentDataAllServiceGroups', title?: string | null, items?: Array<string | null> | null } | null> | null, projectSectionIntro?: { __typename: 'SiteContentDataProjectSectionIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectSectionIntroCta', href?: string | null, label?: string | null } | null } | null, projectsPageIntro?: { __typename: 'SiteContentDataProjectsPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectsPageIntroCta', href?: string | null, label?: string | null } | null } | null, projectsClosingCta?: { __typename: 'SiteContentDataProjectsClosingCta', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectsClosingCtaCta', href?: string | null, label?: string | null } | null } | null, projectItems?: Array<{ __typename: 'SiteContentDataProjectItems', id?: number | null, slug?: string | null, title?: string | null, category?: string | null, market?: string | null, duration?: string | null, teaserOutcome?: string | null, summary?: string | null, outcomes?: Array<string | null> | null } | null> | null, portfolioItems?: Array<{ __typename: 'SiteContentDataPortfolioItems', id?: number | null, slug?: string | null, category?: string | null, client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null, market?: string | null, engagementDuration?: string | null, situation?: string | null, strategy?: string | null, execution?: string | null, results?: Array<{ __typename: 'SiteContentDataPortfolioItemsResults', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataPortfolioItemsMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, featuredCaseStudy?: { __typename: 'SiteContentDataFeaturedCaseStudy', client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null } | null, blogPosts?: Array<{ __typename: 'SiteContentDataBlogPosts', slug?: string | null, category?: string | null, title?: string | null, excerpt?: string | null, image?: string | null, readTime?: string | null, content?: string | null } | null> | null, contact?: { __typename: 'SiteContentDataContact', contactPageIntro?: { __typename: 'SiteContentDataContactContactPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactPageIntroCta', href?: string | null, label?: string | null } | null } | null, contactStrategyConsultation?: { __typename: 'SiteContentDataContactContactStrategyConsultation', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null, highlights?: Array<{ __typename: 'SiteContentDataContactContactStrategyConsultationHighlights', title?: string | null, description?: string | null } | null> | null } | null, contactOptions?: Array<{ __typename: 'SiteContentDataContactContactOptions', label?: string | null, title?: string | null, description?: string | null, value?: string | null, href?: string | null, external?: boolean | null } | null> | null, contactExpectationsIntro?: { __typename: 'SiteContentDataContactContactExpectationsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactExpectationsIntroCta', href?: string | null, label?: string | null } | null } | null, contactExpectations?: Array<{ __typename: 'SiteContentDataContactContactExpectations', title?: string | null, timeframe?: string | null, description?: string | null } | null> | null, contactConversationTopicsIntro?: { __typename: 'SiteContentDataContactContactConversationTopicsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactConversationTopicsIntroCta', href?: string | null, label?: string | null } | null } | null, contactConversationTopics?: Array<{ __typename: 'SiteContentDataContactContactConversationTopics', title?: string | null, description?: string | null } | null> | null, contactFaqs?: Array<{ __typename: 'SiteContentDataContactContactFaqs', question?: string | null, answer?: string | null } | null> | null, contactReasonsIntro?: { __typename: 'SiteContentDataContactContactReasonsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactReasonsIntroCta', href?: string | null, label?: string | null } | null } | null, contactReasons?: Array<{ __typename: 'SiteContentDataContactContactReasons', title?: string | null, description?: string | null } | null> | null } | null, heroStats?: Array<{ __typename: 'SiteContentDataHeroStats', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, statsTicker?: Array<{ __typename: 'SiteContentDataStatsTicker', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, performanceStats?: Array<{ __typename: 'SiteContentDataPerformanceStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, testimonials?: Array<{ __typename: 'SiteContentDataTestimonials', name?: string | null, role?: string | null, quote?: string | null } | null> | null, timeline?: Array<{ __typename: 'SiteContentDataTimeline', year?: string | null, title?: string | null, description?: string | null } | null> | null, teamMembers?: Array<{ __typename: 'SiteContentDataTeamMembers', name?: string | null, role?: string | null, image?: string | null, linkedin?: string | null } | null> | null } | null } };
 
 export type SiteContentConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -2623,7 +4106,7 @@ export type SiteContentConnectionQueryVariables = Exact<{
 }>;
 
 
-export type SiteContentConnectionQuery = { __typename?: 'Query', siteContentConnection: { __typename?: 'SiteContentConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SiteContentConnectionEdges', cursor: string, node?: { __typename: 'SiteContent', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navigation?: { __typename: 'SiteContentNavigation', brandPrefix?: string | null, brandAccent?: string | null, servicesDropdownLabel?: string | null, mobileTitle?: string | null, links?: Array<{ __typename: 'SiteContentNavigationLinks', label?: string | null, href?: string | null, hasDropdown?: boolean | null } | null> | null, primaryCta?: { __typename: 'SiteContentNavigationPrimaryCta', href?: string | null, label?: string | null } | null } | null, footer?: { __typename: 'SiteContentFooter', description?: string | null, quickLinksHeading?: string | null, servicesHeading?: string | null, contactHeading?: string | null, address?: string | null, phone?: string | null, email?: string | null, copyright?: string | null, legal?: string | null, socials?: Array<{ __typename: 'SiteContentFooterSocials', type?: string | null, href?: string | null } | null> | null } | null, home?: { __typename: 'SiteContentHome', hero?: { __typename: 'SiteContentHomeHero', eyebrow?: string | null, headingPrefix?: string | null, rotatingWords?: Array<string | null> | null, headingSuffix?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, insightLabel?: string | null, insightItems?: Array<string | null> | null, primaryCta?: { __typename: 'SiteContentHomeHeroPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeHeroSecondaryCta', href?: string | null, label?: string | null } | null } | null, clients?: { __typename: 'SiteContentHomeClients', label?: string | null, rowOne?: Array<string | null> | null, rowTwo?: Array<string | null> | null } | null, whatWeDo?: { __typename: 'SiteContentHomeWhatWeDo', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhatWeDoCta', href?: string | null, label?: string | null } | null } | null, servicesPreview?: { __typename: 'SiteContentHomeServicesPreview', label?: string | null, title?: string | null, description?: string | null } | null, whyChoosePr?: { __typename: 'SiteContentHomeWhyChoosePr', label?: string | null, title?: string | null, description?: string | null } | null, whySubscribe?: { __typename: 'SiteContentHomeWhySubscribe', label?: string | null, title?: string | null, description?: string | null, cards?: Array<{ __typename: 'SiteContentHomeWhySubscribeCards', id?: string | null, icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, whyChooseUs?: { __typename: 'SiteContentHomeWhyChooseUs', label?: string | null, title?: string | null, description?: string | null } | null, projectsPreview?: { __typename: 'SiteContentHomeProjectsPreview', footerText?: string | null, primaryCta?: { __typename: 'SiteContentHomeProjectsPreviewPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeProjectsPreviewSecondaryCta', href?: string | null, label?: string | null } | null } | null, testimonialsIntro?: { __typename: 'SiteContentHomeTestimonialsIntro', label?: string | null, title?: string | null, description?: string | null } | null, letsTalk?: { __typename: 'SiteContentHomeLetsTalk', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentHomeLetsTalkPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeLetsTalkSecondaryCta', href?: string | null, label?: string | null } | null } | null, contactShort?: { __typename: 'SiteContentHomeContactShort', label?: string | null, title?: string | null, description?: string | null } | null } | null, pageHeroes?: { __typename: 'SiteContentPageHeroes', services?: { __typename: 'SiteContentPageHeroesServices', label?: string | null, title?: string | null, description?: string | null } | null, caseStudies?: { __typename: 'SiteContentPageHeroesCaseStudies', label?: string | null, title?: string | null, description?: string | null } | null, blog?: { __typename: 'SiteContentPageHeroesBlog', label?: string | null, title?: string | null, description?: string | null } | null, contact?: { __typename: 'SiteContentPageHeroesContact', label?: string | null, title?: string | null, description?: string | null } | null } | null, about?: { __typename: 'SiteContentAbout', hero?: { __typename: 'SiteContentAboutHero', eyebrow?: string | null, headingLineOne?: string | null, headingLineTwo?: string | null, description?: string | null, scrollLabel?: string | null } | null, mission?: { __typename: 'SiteContentAboutMission', label?: string | null, title?: string | null, description?: string | null } | null, stats?: Array<{ __typename: 'SiteContentAboutStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, timelineIntro?: { __typename: 'SiteContentAboutTimelineIntro', label?: string | null, title?: string | null, description?: string | null } | null, valuesIntro?: { __typename: 'SiteContentAboutValuesIntro', label?: string | null, title?: string | null, description?: string | null } | null, values?: Array<{ __typename: 'SiteContentAboutValues', icon?: string | null, title?: string | null, description?: string | null } | null> | null, closing?: { __typename: 'SiteContentAboutClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentAboutClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentAboutClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null, servicesPage?: { __typename: 'SiteContentServicesPage', intro?: { __typename: 'SiteContentServicesPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, highlights?: Array<{ __typename: 'SiteContentServicesPageHighlights', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, fullList?: { __typename: 'SiteContentServicesPageFullList', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentServicesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentServicesPageDetail', focusLabel?: string | null, whyLabel?: string | null, startCta?: { __typename: 'SiteContentServicesPageDetailStartCta', href?: string | null, label?: string | null } | null, allServicesCta?: { __typename: 'SiteContentServicesPageDetailAllServicesCta', href?: string | null, label?: string | null } | null, processIntro?: { __typename: 'SiteContentServicesPageDetailProcessIntro', label?: string | null, title?: string | null, description?: string | null } | null, relatedIntro?: { __typename: 'SiteContentServicesPageDetailRelatedIntro', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentServicesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, blogPage?: { __typename: 'SiteContentBlogPage', label?: string | null, title?: string | null, description?: string | null } | null, caseStudiesPage?: { __typename: 'SiteContentCaseStudiesPage', includedIntro?: { __typename: 'SiteContentCaseStudiesPageIncludedIntro', label?: string | null, title?: string | null, description?: string | null } | null, closing?: { __typename: 'SiteContentCaseStudiesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentCaseStudiesPageDetail', backLabel?: string | null, summaryLabel?: string | null, blocks?: Array<string | null> | null, resultsLabel?: string | null, resultsHeading?: string | null, closing?: { __typename: 'SiteContentCaseStudiesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, contactPage?: { __typename: 'SiteContentContactPage', consultationRequest?: { __typename: 'SiteContentContactPageConsultationRequest', label?: string | null, title?: string | null, description?: string | null } | null, form?: { __typename: 'SiteContentContactPageForm', namePlaceholder?: string | null, emailPlaceholder?: string | null, phonePlaceholder?: string | null, companyPlaceholder?: string | null, primarySelectLabel?: string | null, primarySelectOptions?: Array<string | null> | null, secondarySelectLabel?: string | null, secondarySelectOptions?: Array<string | null> | null, messagePlaceholder?: string | null, submitLabel?: string | null } | null, otherOptionsIntro?: { __typename: 'SiteContentContactPageOtherOptionsIntro', label?: string | null, title?: string | null, description?: string | null } | null, finalCta?: { __typename: 'SiteContentContactPageFinalCta', label?: string | null, note?: string | null } | null } | null, data?: { __typename: 'SiteContentData', serviceTickerTags?: Array<string | null> | null, projectCategories?: Array<string | null> | null, homepageFeaturedProjectSlugs?: Array<string | null> | null, services?: Array<{ __typename: 'SiteContentDataServices', slug?: string | null, shortLabel?: string | null, title?: string | null, eyebrow?: string | null, description?: string | null, intro?: string | null, longDescription?: string | null, image?: string | null, heroImage?: string | null, keywords?: Array<string | null> | null, subServices?: Array<string | null> | null, process?: Array<{ __typename: 'SiteContentDataServicesProcess', title?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataServicesMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, allServiceGroups?: Array<{ __typename: 'SiteContentDataAllServiceGroups', title?: string | null, items?: Array<string | null> | null } | null> | null, projectSectionIntro?: { __typename: 'SiteContentDataProjectSectionIntro', label?: string | null, title?: string | null, description?: string | null } | null, projectsPageIntro?: { __typename: 'SiteContentDataProjectsPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, projectsClosingCta?: { __typename: 'SiteContentDataProjectsClosingCta', label?: string | null, title?: string | null, description?: string | null } | null, projectItems?: Array<{ __typename: 'SiteContentDataProjectItems', id?: number | null, slug?: string | null, title?: string | null, category?: string | null, market?: string | null, duration?: string | null, teaserOutcome?: string | null, summary?: string | null, outcomes?: Array<string | null> | null } | null> | null, portfolioItems?: Array<{ __typename: 'SiteContentDataPortfolioItems', id?: number | null, slug?: string | null, category?: string | null, client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null, market?: string | null, engagementDuration?: string | null, situation?: string | null, strategy?: string | null, execution?: string | null, results?: Array<{ __typename: 'SiteContentDataPortfolioItemsResults', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataPortfolioItemsMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, featuredCaseStudy?: { __typename: 'SiteContentDataFeaturedCaseStudy', client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null } | null, blogPosts?: Array<{ __typename: 'SiteContentDataBlogPosts', slug?: string | null, category?: string | null, title?: string | null, excerpt?: string | null, image?: string | null, readTime?: string | null, content?: string | null } | null> | null, contact?: { __typename: 'SiteContentDataContact', contactPageIntro?: { __typename: 'SiteContentDataContactContactPageIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactStrategyConsultation?: { __typename: 'SiteContentDataContactContactStrategyConsultation', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null, highlights?: Array<{ __typename: 'SiteContentDataContactContactStrategyConsultationHighlights', title?: string | null, description?: string | null } | null> | null } | null, contactOptions?: Array<{ __typename: 'SiteContentDataContactContactOptions', label?: string | null, title?: string | null, description?: string | null, value?: string | null, href?: string | null, external?: boolean | null } | null> | null, contactExpectationsIntro?: { __typename: 'SiteContentDataContactContactExpectationsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactExpectations?: Array<{ __typename: 'SiteContentDataContactContactExpectations', title?: string | null, timeframe?: string | null, description?: string | null } | null> | null, contactConversationTopicsIntro?: { __typename: 'SiteContentDataContactContactConversationTopicsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactConversationTopics?: Array<{ __typename: 'SiteContentDataContactContactConversationTopics', title?: string | null, description?: string | null } | null> | null, contactFaqs?: Array<{ __typename: 'SiteContentDataContactContactFaqs', question?: string | null, answer?: string | null } | null> | null, contactReasonsIntro?: { __typename: 'SiteContentDataContactContactReasonsIntro', label?: string | null, title?: string | null, description?: string | null } | null, contactReasons?: Array<{ __typename: 'SiteContentDataContactContactReasons', title?: string | null, description?: string | null } | null> | null } | null, heroStats?: Array<{ __typename: 'SiteContentDataHeroStats', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, statsTicker?: Array<{ __typename: 'SiteContentDataStatsTicker', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, performanceStats?: Array<{ __typename: 'SiteContentDataPerformanceStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, testimonials?: Array<{ __typename: 'SiteContentDataTestimonials', name?: string | null, role?: string | null, quote?: string | null } | null> | null, timeline?: Array<{ __typename: 'SiteContentDataTimeline', year?: string | null, title?: string | null, description?: string | null } | null> | null, teamMembers?: Array<{ __typename: 'SiteContentDataTeamMembers', name?: string | null, role?: string | null, image?: string | null, linkedin?: string | null } | null> | null } | null } | null } | null> | null } };
+export type SiteContentConnectionQuery = { __typename?: 'Query', siteContentConnection: { __typename?: 'SiteContentConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SiteContentConnectionEdges', cursor: string, node?: { __typename: 'SiteContent', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, navigation?: { __typename: 'SiteContentNavigation', brandPrefix?: string | null, brandAccent?: string | null, servicesDropdownLabel?: string | null, mobileTitle?: string | null, links?: Array<{ __typename: 'SiteContentNavigationLinks', label?: string | null, href?: string | null, hasDropdown?: boolean | null } | null> | null, primaryCta?: { __typename: 'SiteContentNavigationPrimaryCta', href?: string | null, label?: string | null } | null } | null, footer?: { __typename: 'SiteContentFooter', description?: string | null, quickLinksHeading?: string | null, servicesHeading?: string | null, contactHeading?: string | null, address?: string | null, phone?: string | null, email?: string | null, copyright?: string | null, legal?: string | null, socials?: Array<{ __typename: 'SiteContentFooterSocials', type?: string | null, href?: string | null } | null> | null } | null, home?: { __typename: 'SiteContentHome', hero?: { __typename: 'SiteContentHomeHero', eyebrow?: string | null, headingPrefix?: string | null, rotatingWords?: Array<string | null> | null, headingSuffix?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, insightLabel?: string | null, insightItems?: Array<string | null> | null, primaryCta?: { __typename: 'SiteContentHomeHeroPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeHeroSecondaryCta', href?: string | null, label?: string | null } | null } | null, clients?: { __typename: 'SiteContentHomeClients', label?: string | null, rowOne?: Array<string | null> | null, rowTwo?: Array<string | null> | null } | null, whatWeDo?: { __typename: 'SiteContentHomeWhatWeDo', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhatWeDoCta', href?: string | null, label?: string | null } | null } | null, servicesPreview?: { __typename: 'SiteContentHomeServicesPreview', label?: string | null, title?: string | null, description?: string | null, viewAllLabel?: string | null, scrollLabel?: string | null, exploreLabel?: string | null } | null, whyChoosePr?: { __typename: 'SiteContentHomeWhyChoosePr', label?: string | null, title?: string | null, description?: string | null, image?: string | null, imageAlt?: string | null, checklist?: Array<{ __typename: 'SiteContentHomeWhyChoosePrChecklist', number?: string | null, text?: string | null } | null> | null } | null, whySubscribe?: { __typename: 'SiteContentHomeWhySubscribe', label?: string | null, title?: string | null, description?: string | null, cards?: Array<{ __typename: 'SiteContentHomeWhySubscribeCards', id?: string | null, icon?: string | null, title?: string | null, description?: string | null } | null> | null } | null, whyChooseUs?: { __typename: 'SiteContentHomeWhyChooseUs', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeWhyChooseUsCta', href?: string | null, label?: string | null } | null } | null, projectsPreview?: { __typename: 'SiteContentHomeProjectsPreview', footerText?: string | null, primaryCta?: { __typename: 'SiteContentHomeProjectsPreviewPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeProjectsPreviewSecondaryCta', href?: string | null, label?: string | null } | null } | null, testimonialsIntro?: { __typename: 'SiteContentHomeTestimonialsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeTestimonialsIntroCta', href?: string | null, label?: string | null } | null } | null, letsTalk?: { __typename: 'SiteContentHomeLetsTalk', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentHomeLetsTalkPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentHomeLetsTalkSecondaryCta', href?: string | null, label?: string | null } | null } | null, contactShort?: { __typename: 'SiteContentHomeContactShort', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentHomeContactShortCta', href?: string | null, label?: string | null } | null } | null } | null, pageHeroes?: { __typename: 'SiteContentPageHeroes', services?: { __typename: 'SiteContentPageHeroesServices', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesServicesCta', href?: string | null, label?: string | null } | null } | null, caseStudies?: { __typename: 'SiteContentPageHeroesCaseStudies', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesCaseStudiesCta', href?: string | null, label?: string | null } | null } | null, blog?: { __typename: 'SiteContentPageHeroesBlog', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesBlogCta', href?: string | null, label?: string | null } | null } | null, contact?: { __typename: 'SiteContentPageHeroesContact', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentPageHeroesContactCta', href?: string | null, label?: string | null } | null } | null } | null, about?: { __typename: 'SiteContentAbout', hero?: { __typename: 'SiteContentAboutHero', eyebrow?: string | null, headingLineOne?: string | null, headingLineTwo?: string | null, description?: string | null, scrollLabel?: string | null } | null, mission?: { __typename: 'SiteContentAboutMission', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutMissionCta', href?: string | null, label?: string | null } | null } | null, stats?: Array<{ __typename: 'SiteContentAboutStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, timelineIntro?: { __typename: 'SiteContentAboutTimelineIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutTimelineIntroCta', href?: string | null, label?: string | null } | null } | null, valuesIntro?: { __typename: 'SiteContentAboutValuesIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentAboutValuesIntroCta', href?: string | null, label?: string | null } | null } | null, values?: Array<{ __typename: 'SiteContentAboutValues', icon?: string | null, title?: string | null, description?: string | null } | null> | null, closing?: { __typename: 'SiteContentAboutClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentAboutClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentAboutClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null, servicesPage?: { __typename: 'SiteContentServicesPage', serviceCtaLabel?: string | null, intro?: { __typename: 'SiteContentServicesPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageIntroCta', href?: string | null, label?: string | null } | null } | null, highlights?: Array<{ __typename: 'SiteContentServicesPageHighlights', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, fullList?: { __typename: 'SiteContentServicesPageFullList', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageFullListCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentServicesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentServicesPageDetail', focusLabel?: string | null, whyLabel?: string | null, startCta?: { __typename: 'SiteContentServicesPageDetailStartCta', href?: string | null, label?: string | null } | null, allServicesCta?: { __typename: 'SiteContentServicesPageDetailAllServicesCta', href?: string | null, label?: string | null } | null, processIntro?: { __typename: 'SiteContentServicesPageDetailProcessIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageDetailProcessIntroCta', href?: string | null, label?: string | null } | null } | null, relatedIntro?: { __typename: 'SiteContentServicesPageDetailRelatedIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentServicesPageDetailRelatedIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentServicesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentServicesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentServicesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, blogPage?: { __typename: 'SiteContentBlogPage', backLabel?: string | null, intro?: { __typename: 'SiteContentBlogPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentBlogPageIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentBlogPageClosing', eyebrow?: string | null, primaryCta?: { __typename: 'SiteContentBlogPageClosingPrimaryCta', href?: string | null, label?: string | null } | null } | null } | null, caseStudiesPage?: { __typename: 'SiteContentCaseStudiesPage', includedIntro?: { __typename: 'SiteContentCaseStudiesPageIncludedIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentCaseStudiesPageIncludedIntroCta', href?: string | null, label?: string | null } | null } | null, closing?: { __typename: 'SiteContentCaseStudiesPageClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null, detail?: { __typename: 'SiteContentCaseStudiesPageDetail', backLabel?: string | null, summaryLabel?: string | null, blocks?: Array<string | null> | null, resultsLabel?: string | null, resultsHeading?: string | null, closing?: { __typename: 'SiteContentCaseStudiesPageDetailClosing', eyebrow?: string | null, heading?: Array<string | null> | null, supporting?: string | null, primaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingPrimaryCta', href?: string | null, label?: string | null } | null, secondaryCta?: { __typename: 'SiteContentCaseStudiesPageDetailClosingSecondaryCta', href?: string | null, label?: string | null } | null } | null } | null } | null, contactPage?: { __typename: 'SiteContentContactPage', consultationRequest?: { __typename: 'SiteContentContactPageConsultationRequest', label?: string | null, title?: string | null, description?: string | null, confidentiality?: string | null } | null, form?: { __typename: 'SiteContentContactPageForm', namePlaceholder?: string | null, emailPlaceholder?: string | null, phonePlaceholder?: string | null, companyPlaceholder?: string | null, primarySelectLabel?: string | null, primarySelectOptions?: Array<string | null> | null, secondarySelectLabel?: string | null, secondarySelectOptions?: Array<string | null> | null, messagePlaceholder?: string | null, submitLabel?: string | null } | null, otherOptionsIntro?: { __typename: 'SiteContentContactPageOtherOptionsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentContactPageOtherOptionsIntroCta', href?: string | null, label?: string | null } | null } | null, finalCta?: { __typename: 'SiteContentContactPageFinalCta', label?: string | null, note?: string | null } | null } | null, data?: { __typename: 'SiteContentData', serviceTickerTags?: Array<string | null> | null, projectCategories?: Array<string | null> | null, homepageFeaturedProjectSlugs?: Array<string | null> | null, services?: Array<{ __typename: 'SiteContentDataServices', slug?: string | null, shortLabel?: string | null, title?: string | null, eyebrow?: string | null, description?: string | null, intro?: string | null, longDescription?: string | null, image?: string | null, heroImage?: string | null, keywords?: Array<string | null> | null, subServices?: Array<string | null> | null, process?: Array<{ __typename: 'SiteContentDataServicesProcess', title?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataServicesMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, allServiceGroups?: Array<{ __typename: 'SiteContentDataAllServiceGroups', title?: string | null, items?: Array<string | null> | null } | null> | null, projectSectionIntro?: { __typename: 'SiteContentDataProjectSectionIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectSectionIntroCta', href?: string | null, label?: string | null } | null } | null, projectsPageIntro?: { __typename: 'SiteContentDataProjectsPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectsPageIntroCta', href?: string | null, label?: string | null } | null } | null, projectsClosingCta?: { __typename: 'SiteContentDataProjectsClosingCta', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataProjectsClosingCtaCta', href?: string | null, label?: string | null } | null } | null, projectItems?: Array<{ __typename: 'SiteContentDataProjectItems', id?: number | null, slug?: string | null, title?: string | null, category?: string | null, market?: string | null, duration?: string | null, teaserOutcome?: string | null, summary?: string | null, outcomes?: Array<string | null> | null } | null> | null, portfolioItems?: Array<{ __typename: 'SiteContentDataPortfolioItems', id?: number | null, slug?: string | null, category?: string | null, client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null, market?: string | null, engagementDuration?: string | null, situation?: string | null, strategy?: string | null, execution?: string | null, results?: Array<{ __typename: 'SiteContentDataPortfolioItemsResults', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, metrics?: Array<{ __typename: 'SiteContentDataPortfolioItemsMetrics', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null } | null> | null, featuredCaseStudy?: { __typename: 'SiteContentDataFeaturedCaseStudy', client?: string | null, title?: string | null, result?: string | null, excerpt?: string | null, image?: string | null } | null, blogPosts?: Array<{ __typename: 'SiteContentDataBlogPosts', slug?: string | null, category?: string | null, title?: string | null, excerpt?: string | null, image?: string | null, readTime?: string | null, content?: string | null } | null> | null, contact?: { __typename: 'SiteContentDataContact', contactPageIntro?: { __typename: 'SiteContentDataContactContactPageIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactPageIntroCta', href?: string | null, label?: string | null } | null } | null, contactStrategyConsultation?: { __typename: 'SiteContentDataContactContactStrategyConsultation', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null, highlights?: Array<{ __typename: 'SiteContentDataContactContactStrategyConsultationHighlights', title?: string | null, description?: string | null } | null> | null } | null, contactOptions?: Array<{ __typename: 'SiteContentDataContactContactOptions', label?: string | null, title?: string | null, description?: string | null, value?: string | null, href?: string | null, external?: boolean | null } | null> | null, contactExpectationsIntro?: { __typename: 'SiteContentDataContactContactExpectationsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactExpectationsIntroCta', href?: string | null, label?: string | null } | null } | null, contactExpectations?: Array<{ __typename: 'SiteContentDataContactContactExpectations', title?: string | null, timeframe?: string | null, description?: string | null } | null> | null, contactConversationTopicsIntro?: { __typename: 'SiteContentDataContactContactConversationTopicsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactConversationTopicsIntroCta', href?: string | null, label?: string | null } | null } | null, contactConversationTopics?: Array<{ __typename: 'SiteContentDataContactContactConversationTopics', title?: string | null, description?: string | null } | null> | null, contactFaqs?: Array<{ __typename: 'SiteContentDataContactContactFaqs', question?: string | null, answer?: string | null } | null> | null, contactReasonsIntro?: { __typename: 'SiteContentDataContactContactReasonsIntro', label?: string | null, title?: string | null, heading?: string | null, homeLabel?: string | null, currentLabel?: string | null, noteLabel?: string | null, titlePrefix?: string | null, titleAccent?: string | null, titleSuffix?: string | null, description?: string | null, supporting?: string | null, note?: string | null, quote?: string | null, button?: string | null, image?: string | null, imageAlt?: string | null, cta?: { __typename: 'SiteContentDataContactContactReasonsIntroCta', href?: string | null, label?: string | null } | null } | null, contactReasons?: Array<{ __typename: 'SiteContentDataContactContactReasons', title?: string | null, description?: string | null } | null> | null } | null, heroStats?: Array<{ __typename: 'SiteContentDataHeroStats', value?: string | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, statsTicker?: Array<{ __typename: 'SiteContentDataStatsTicker', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, performanceStats?: Array<{ __typename: 'SiteContentDataPerformanceStats', value?: number | null, suffix?: string | null, label?: string | null, detail?: string | null, description?: string | null } | null> | null, testimonials?: Array<{ __typename: 'SiteContentDataTestimonials', name?: string | null, role?: string | null, quote?: string | null } | null> | null, timeline?: Array<{ __typename: 'SiteContentDataTimeline', year?: string | null, title?: string | null, description?: string | null } | null> | null, teamMembers?: Array<{ __typename: 'SiteContentDataTeamMembers', name?: string | null, role?: string | null, image?: string | null, linkedin?: string | null } | null> | null } | null } | null } | null> | null } };
 
 export const SiteContentPartsFragmentDoc = gql`
     fragment SiteContentParts on SiteContent {
@@ -2711,12 +4194,22 @@ export const SiteContentPartsFragmentDoc = gql`
       label
       title
       description
+      viewAllLabel
+      scrollLabel
+      exploreLabel
     }
     whyChoosePr {
       __typename
       label
       title
       description
+      image
+      imageAlt
+      checklist {
+        __typename
+        number
+        text
+      }
     }
     whySubscribe {
       __typename
@@ -2735,7 +4228,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     projectsPreview {
       __typename
@@ -2755,7 +4266,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     letsTalk {
       __typename
@@ -2777,7 +4306,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
   }
   pageHeroes {
@@ -2786,25 +4333,97 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     caseStudies {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     blog {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     contact {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
   }
   about {
@@ -2821,7 +4440,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     stats {
       __typename
@@ -2835,13 +4472,49 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     valuesIntro {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     values {
       __typename
@@ -2868,11 +4541,30 @@ export const SiteContentPartsFragmentDoc = gql`
   }
   servicesPage {
     __typename
+    serviceCtaLabel
     intro {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     highlights {
       __typename
@@ -2886,7 +4578,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     closing {
       __typename
@@ -2922,13 +4632,49 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       relatedIntro {
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       closing {
         __typename
@@ -2950,9 +4696,40 @@ export const SiteContentPartsFragmentDoc = gql`
   }
   blogPage {
     __typename
-    label
-    title
-    description
+    intro {
+      __typename
+      label
+      title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
+      description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
+    }
+    backLabel
+    closing {
+      __typename
+      eyebrow
+      primaryCta {
+        __typename
+        href
+        label
+      }
+    }
   }
   caseStudiesPage {
     __typename
@@ -2960,7 +4737,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     closing {
       __typename
@@ -3010,6 +4805,7 @@ export const SiteContentPartsFragmentDoc = gql`
       label
       title
       description
+      confidentiality
     }
     form {
       __typename
@@ -3028,7 +4824,25 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     finalCta {
       __typename
@@ -3076,19 +4890,73 @@ export const SiteContentPartsFragmentDoc = gql`
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     projectsPageIntro {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     projectsClosingCta {
       __typename
       label
       title
+      heading
+      homeLabel
+      currentLabel
+      noteLabel
+      titlePrefix
+      titleAccent
+      titleSuffix
       description
+      supporting
+      note
+      quote
+      button
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
     }
     projectItems {
       __typename
@@ -3159,7 +5027,25 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       contactStrategyConsultation {
         __typename
@@ -3185,7 +5071,25 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       contactExpectations {
         __typename
@@ -3197,7 +5101,25 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       contactConversationTopics {
         __typename
@@ -3213,7 +5135,25 @@ export const SiteContentPartsFragmentDoc = gql`
         __typename
         label
         title
+        heading
+        homeLabel
+        currentLabel
+        noteLabel
+        titlePrefix
+        titleAccent
+        titleSuffix
         description
+        supporting
+        note
+        quote
+        button
+        image
+        imageAlt
+        cta {
+          __typename
+          href
+          label
+        }
       }
       contactReasons {
         __typename

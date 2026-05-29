@@ -7,26 +7,11 @@ import GoldButton from "@/components/ui/GoldButton"
 import SectionLabel from "@/components/ui/SectionLabel"
 import ServiceTagTicker from "@/components/ui/ServiceTagTicker"
 import { allServiceGroups, services } from "@/lib/data/services"
-
-const serviceHighlights = [
-  {
-    value: "05",
-    label: "Core Practices",
-    description: "A focused service stack built to work together, not compete for attention.",
-  },
-  {
-    value: "Integrated",
-    label: "Channel Thinking",
-    description: "Brand, media, digital, creator, and search all stay aligned around one signal.",
-  },
-  {
-    value: "Premium",
-    label: "Execution Standard",
-    description: "Every touchpoint is designed to feel composed, distinctive, and commercially useful.",
-  },
-]
+import { site } from "@/lib/site-content"
 
 export default function Services() {
+  const content = site.servicesPage
+
   return (
     <section className="relative overflow-hidden px-5 py-18 lg:px-16 lg:py-24">
       <div className="pointer-events-none absolute inset-0">
@@ -39,15 +24,15 @@ export default function Services() {
           <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-end">
             <div className="rounded-[36px] border border-[#C9A84C]/15 bg-[#161616] p-8 lg:p-10">
               <SectionLabel
-                label="Services"
-                title="Integrated services built to move reputation, reach, and recall."
-                description="Five core practice areas work together so your brand does not have to choose between visibility and consistency."
+                label={content.intro.label}
+                title={content.intro.title}
+                description={content.intro.description}
                 className="max-w-4xl"
               />
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-              {serviceHighlights.map((item) => (
+              {content.highlights.map((item) => (
                 <div
                   key={item.label}
                   className="rounded-[28px] border border-[#C9A84C]/12 bg-[#161616] p-6"
@@ -155,7 +140,7 @@ export default function Services() {
                       </div>
 
                       <GoldButton href={`/services/${service.slug}`} className="mt-8">
-                        Explore Service
+                        {content.serviceCtaLabel}
                       </GoldButton>
                     </div>
                   </div>
@@ -169,13 +154,13 @@ export default function Services() {
           <div className="mt-24 grid gap-8 xl:grid-cols-[0.88fr_1.12fr]">
             <div className="rounded-[36px] border border-[#C9A84C]/15 bg-[#161616] p-8 lg:p-10">
               <SectionLabel
-                label="Full Service List"
-                title="A broader offering designed around modern brand visibility."
-                description="In addition to our five core practices, we support launch, growth, reputation, and platform visibility through specialist services."
+                label={content.fullList.label}
+                title={content.fullList.title}
+                description={content.fullList.description}
                 className="max-w-3xl"
               />
-              <GoldButton href="/contact" className="mt-8">
-                Talk to the Team
+              <GoldButton href={content.fullList.cta.href} className="mt-8">
+                {content.fullList.cta.label}
               </GoldButton>
             </div>
 

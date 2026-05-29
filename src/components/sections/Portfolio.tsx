@@ -7,8 +7,11 @@ import FadeUp from "@/components/ui/FadeUp"
 import PortfolioCard from "@/components/ui/PortfolioCard"
 import SectionLabel from "@/components/ui/SectionLabel"
 import { featuredCaseStudy, portfolioItems } from "@/lib/data/portfolio"
+import { site } from "@/lib/site-content"
 
 export default function Portfolio() {
+  const page = site.caseStudiesPage
+
   return (
     <section className="px-5 py-18 lg:px-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
@@ -45,9 +48,9 @@ export default function Portfolio() {
         <FadeUp delay={0.1}>
           <div className="mt-16">
             <SectionLabel
-              label="Included Engagements"
-              title="Real client situations, strategic decisions, and measurable outcomes."
-              description="Each case study below starts with a specific business challenge and follows the decisions, execution, and outcomes that changed the trajectory."
+              label={page.includedIntro.label}
+              title={page.includedIntro.title}
+              description={page.includedIntro.description}
               className="max-w-4xl"
             />
           </div>
@@ -64,16 +67,10 @@ export default function Portfolio() {
       </div>
 
       <ClosingCta
-        eyebrow="Why It Matters"
-        heading={[
-          "The strategy in every case followed the",
-          "problem, not a template.",
-        ]}
-        supporting="Each of these engagements started with a specific challenge, not a generic brief. If your situation shares elements with any of the above, a conversation about your context is where useful work begins."
-        primaryCta={{
-          href: "/contact",
-          label: "Schedule a Strategy Call Today",
-        }}
+        eyebrow={page.closing.eyebrow}
+        heading={page.closing.heading}
+        supporting={page.closing.supporting}
+        primaryCta={page.closing.primaryCta}
       />
     </section>
   )

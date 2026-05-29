@@ -1,25 +1,26 @@
 import ServicesSection from "@/components/sections/Services"
 import ClosingCta from "@/components/ui/ClosingCta"
 import PageHero from "@/components/ui/PageHero"
+import { site } from "@/lib/site-content"
 
 export default function ServicesPage() {
+  const hero = site.pageHeroes.services
+  const closing = site.servicesPage.closing
+
   return (
     <>
       <PageHero
-        title="Our Services"
-        description="Five integrated practice areas designed to strengthen reputation, visibility, and growth without losing brand consistency."
-        image="/images/hero/services.jpg"
+        title={hero.title}
+        description={hero.description}
+        image={hero.image}
       />
       <ServicesSection />
       <ClosingCta
-        eyebrow="Need A Tailored Mix?"
-        heading={[
-          "We can shape the right service stack",
-          "around your growth stage.",
-        ]}
-        supporting="Some brands need one sharp capability. Others need an integrated mix across PR, digital, creator, creative, and search. We build around the outcome, not a rigid package."
-        primaryCta={{ href: "/contact", label: "Talk to the Team" }}
-        secondaryCta={{ href: "/contact", label: "Start a Conversation" }}
+        eyebrow={closing.eyebrow}
+        heading={closing.heading}
+        supporting={closing.supporting}
+        primaryCta={closing.primaryCta}
+        secondaryCta={closing.secondaryCta}
       />
     </>
   )

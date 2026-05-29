@@ -7,6 +7,7 @@ import { animate, useInView, useMotionValue } from "framer-motion"
 import FadeUp from "@/components/ui/FadeUp"
 import SectionLabel from "@/components/ui/SectionLabel"
 import { performanceStats } from "@/lib/data/stats"
+import { site } from "@/lib/site-content"
 
 function Stat({
   value,
@@ -63,6 +64,8 @@ function Stat({
 }
 
 export default function WhyChooseUs() {
+  const content = site.home.whyChooseUs
+
   return (
     <section className="relative overflow-hidden bg-[#161616] px-5 py-18 md:py-24 lg:px-16">
       <div className="pointer-events-none absolute inset-0">
@@ -74,8 +77,8 @@ export default function WhyChooseUs() {
         <FadeUp delay={0}>
           <div className="group relative overflow-hidden rounded-[32px] border border-[#C9A84C]/15 shadow-[0_28px_90px_rgba(15,15,15,0.22)]">
             <Image
-              src="/images/sections/why-choose-us.jpg"
-              alt="Campaign planning notes during a workshop"
+              src={content.image}
+              alt={content.imageAlt}
               width={900}
               height={1040}
               className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:scale-[1.05]"
@@ -87,9 +90,9 @@ export default function WhyChooseUs() {
         <FadeUp delay={0.1}>
           <div className="rounded-[32px] border border-[#C9A84C]/10 bg-[linear-gradient(180deg,rgba(22,22,22,0.85)_0%,rgba(15,15,15,0.58)_100%)] p-8 shadow-[0_24px_80px_rgba(15,15,15,0.18)] backdrop-blur-sm lg:p-10">
             <SectionLabel
-              label="Why Choose Us"
-              title="We deliver the kind of communications work that feels considered and measurable."
-              description="Our team blends editorial instinct, strategic discipline, and execution depth. That means clearer messaging, stronger rollout quality, and better alignment between attention and business growth."
+              label={content.label}
+              title={content.title}
+              description={content.description}
             />
             <div className="mt-10 grid gap-5 sm:grid-cols-2">
               {performanceStats.map((stat, index) => (

@@ -5,6 +5,7 @@ import ClosingCta from "@/components/ui/ClosingCta"
 import FadeUp from "@/components/ui/FadeUp"
 import PageHero from "@/components/ui/PageHero"
 import { portfolioItems } from "@/lib/data/portfolio"
+import { site } from "@/lib/site-content"
 
 type CaseStudyPageProps = {
   params: Promise<{
@@ -23,6 +24,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   if (!item) {
     notFound()
   }
+  const detail = site.caseStudiesPage.detail
 
   return (
     <>
@@ -57,7 +59,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 href="/case-studies"
                 className="font-sans text-xs uppercase tracking-[0.24em] text-[#888880] transition-colors duration-300 hover:text-[#C9A84C]"
               >
-                &larr; All Case Studies
+                {detail.backLabel}
               </Link>
             </div>
           </FadeUp>
@@ -65,7 +67,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           <FadeUp delay={0.05}>
             <div className="rounded-[30px] border border-[#C9A84C]/15 bg-[#161616] p-7 lg:p-9">
               <p className="font-ui text-[11px] uppercase tracking-[0.28em] text-[#C9A84C]">
-                Executive Summary
+                {detail.summaryLabel}
               </p>
               <p className="mt-5 max-w-4xl font-serif text-3xl font-light leading-[1.12] text-[#F5F0E8] lg:text-4xl">
                 {item.result}
@@ -92,10 +94,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           </FadeUp>
 
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
-            {[
-              { label: "The Situation", content: item.situation },
-              { label: "The Strategy", content: item.strategy },
-              { label: "The Execution", content: item.execution },
+              {[
+              { label: detail.blocks[0], content: item.situation },
+              { label: detail.blocks[1], content: item.strategy },
+              { label: detail.blocks[2], content: item.execution },
             ].map((block, index) => (
               <FadeUp key={block.label} delay={0.15 + index * 0.05}>
                 <div className="h-full rounded-[28px] border border-[#2A2A2A] bg-[#161616] p-7">
@@ -115,10 +117,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             <div className="mt-14 rounded-[32px] border border-[#C9A84C]/15 bg-[#161616] p-7 lg:p-9">
               <div className="max-w-3xl">
                 <p className="font-ui text-[11px] uppercase tracking-[0.28em] text-[#C9A84C]">
-                  The Results
+                  {detail.resultsLabel}
                 </p>
                 <h2 className="mt-5 font-serif text-4xl font-light leading-[0.98] text-[#F5F0E8]">
-                  Measurable changes that made the engagement matter.
+                  {detail.resultsHeading}
                 </h2>
               </div>
 
@@ -147,11 +149,8 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       </section>
 
       <ClosingCta
-        eyebrow="If your situation shares elements with this engagement"
-        primaryCta={{
-          href: "/contact",
-          label: "Schedule a Strategy Call Today",
-        }}
+        eyebrow={detail.closing.eyebrow}
+        primaryCta={detail.closing.primaryCta}
       />
     </>
   )

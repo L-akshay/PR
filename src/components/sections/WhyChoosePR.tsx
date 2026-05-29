@@ -5,17 +5,8 @@ import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import FadeUp from "@/components/ui/FadeUp"
 import SectionLabel from "@/components/ui/SectionLabel"
-
-const checklist = [
-  { number: "01", text: "Creative PR strategy built around business goals" },
-  { number: "02", text: "Wide media relations across national and niche titles" },
-  { number: "03", text: "Comprehensive campaign orchestration from idea to coverage" },
-  { number: "04", text: "Local and global visibility planning for scaling brands" },
-  { number: "05", text: "Veteran PR specialists with execution depth" },
-  { number: "06", text: "Cost-effective, result-oriented communications programs" },
-  { number: "07", text: "Strong client success track record across categories" },
-  { number: "08", text: "Trust-driven service with measurable reporting" },
-]
+import { heroStats } from "@/lib/data/stats"
+import { site } from "@/lib/site-content"
 
 function StatCard({
   value,
@@ -50,18 +41,20 @@ function StatCard({
 }
 
 export default function WhyChoosePR() {
+  const content = site.home.whyChoosePr
+
   return (
     <section className="bg-[#0F0F0F] px-5 py-20 md:py-24 lg:px-16">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         <FadeUp delay={0}>
           <SectionLabel
-            label="Why Choose A PR Agency"
-            title="The right PR partner should strengthen credibility, speed, and clarity."
-            description="A strong agency does more than secure mentions. It sharpens your story, protects your reputation, builds trust with the right audience, and keeps visibility connected to business outcomes."
+            label={content.label}
+            title={content.title}
+            description={content.description}
           />
 
           <div className="mt-10">
-            {checklist.map((item, index) => (
+            {content.checklist.map((item, index) => (
               <motion.div
                 key={item.number}
                 initial={{ opacity: 0, x: -20 }}
@@ -97,8 +90,8 @@ export default function WhyChoosePR() {
           <div className="relative">
             <div className="group relative hidden aspect-[5/4] overflow-hidden rounded-[32px] border border-[#C9A84C]/15 shadow-[0_24px_70px_rgba(15,15,15,0.18)] sm:block xl:aspect-[11/10]">
               <Image
-                src="/images/sections/why-choose-pr.jpg"
-                alt="Audience at a media event"
+                src={content.image}
+                alt={content.imageAlt}
                 width={900}
                 height={1040}
                 className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:scale-[1.04] group-active:scale-[1.04]"
@@ -109,8 +102,8 @@ export default function WhyChoosePR() {
               <div className="pointer-events-none absolute inset-6 hidden lg:flex">
                 <div className="mt-auto">
                   <StatCard
-                    value="500+"
-                    label="Brands Elevated"
+                    value={heroStats[0]?.value ?? ""}
+                    label={heroStats[0]?.label ?? ""}
                     delay={0.4}
                     className="w-[240px] xl:w-[260px]"
                   />
@@ -118,14 +111,14 @@ export default function WhyChoosePR() {
 
                 <div className="ml-auto flex h-full flex-col justify-between items-end">
                   <StatCard
-                    value="95%"
-                    label="Client Retention"
+                    value={heroStats[2]?.value ?? ""}
+                    label={heroStats[2]?.label ?? ""}
                     delay={0.5}
                     className="w-[220px] xl:w-[240px]"
                   />
                   <StatCard
-                    value="8+"
-                    label="Years Experience"
+                    value={heroStats[1]?.value ?? ""}
+                    label={heroStats[1]?.label ?? ""}
                     delay={0.6}
                     className="w-[220px] xl:w-[240px]"
                   />
@@ -135,20 +128,20 @@ export default function WhyChoosePR() {
 
             <div className="relative z-10 mx-auto grid max-w-[270px] grid-cols-1 justify-items-center gap-3 sm:max-w-none sm:grid-cols-2 sm:justify-items-stretch lg:hidden">
               <StatCard
-                value="500+"
-                label="Brands Elevated"
+                value={heroStats[0]?.value ?? ""}
+                label={heroStats[0]?.label ?? ""}
                 delay={0.4}
                 className="w-full"
               />
               <StatCard
-                value="95%"
-                label="Client Retention"
+                value={heroStats[2]?.value ?? ""}
+                label={heroStats[2]?.label ?? ""}
                 delay={0.5}
                 className="w-full"
               />
               <StatCard
-                value="8+"
-                label="Years Experience"
+                value={heroStats[1]?.value ?? ""}
+                label={heroStats[1]?.label ?? ""}
                 delay={0.6}
                 className="w-full sm:col-span-2 sm:max-w-[calc(50%-0.375rem)]"
               />

@@ -7,9 +7,8 @@ import { AnimatePresence, motion } from "framer-motion"
 import GoldButton from "@/components/ui/GoldButton"
 import GhostButton from "@/components/ui/GhostButton"
 import FadeUp from "@/components/ui/FadeUp"
+import { site } from "@/lib/site-content"
 import { heroStats } from "@/lib/data/stats"
-
-const rotatingWords = ["Loudest", "Strongest", "Boldest", "Sharpest"] as const
 
 const particles = Array.from({ length: 20 }, (_, index) => ({
   id: index,
@@ -23,6 +22,8 @@ const particles = Array.from({ length: 20 }, (_, index) => ({
 
 export default function Hero() {
   const [activeWord, setActiveWord] = React.useState(0)
+  const hero = site.home.hero
+  const rotatingWords = hero.rotatingWords
 
   React.useEffect(() => {
     const timer = window.setInterval(() => {
@@ -30,14 +31,14 @@ export default function Hero() {
     }, 2500)
 
     return () => window.clearInterval(timer)
-  }, [])
+  }, [rotatingWords.length])
 
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden px-5 pt-32 pb-16 lg:px-16">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero/agency-office.jpg"
-          alt="Media interview in a studio setting"
+          src={hero.image}
+          alt={hero.imageAlt}
           fill
           priority
           sizes="100vw"
@@ -78,13 +79,13 @@ export default function Hero() {
         <div>
           <FadeUp delay={0}>
             <p className="font-sans text-xs uppercase tracking-[0.32em] text-[#C9A84C]">
-              Premium PR and Growth Communications
+              {hero.eyebrow}
             </p>
           </FadeUp>
 
           <FadeUp delay={0.1}>
             <h1 className="mt-7 max-w-5xl font-serif text-[clamp(40px,8vw,88px)] font-light leading-[0.9] text-[#F5F0E8]">
-              We Are Your Brand&apos;s{" "}
+              {hero.headingPrefix}{" "}
               <span className="relative inline-grid grid-cols-1 grid-rows-1 align-baseline text-[#C9A84C] italic [line-height:1.08]">
                 {rotatingWords.map((word) => (
                   <span
@@ -113,22 +114,20 @@ export default function Hero() {
                   </AnimatePresence>
                 </span>
               </span>{" "}
-              Voice
+              {hero.headingSuffix}
             </h1>
           </FadeUp>
 
           <FadeUp delay={0.2}>
             <p className="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-[#888880]">
-              We shape the stories, media moments, creative systems, and digital
-              campaigns that help ambitious brands look sharper, sound clearer,
-              and grow with conviction.
+              {hero.description}
             </p>
           </FadeUp>
 
           <FadeUp delay={0.3}>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <GoldButton href="/contact">Start a Conversation</GoldButton>
-              <GhostButton href="/services">Explore Services</GhostButton>
+              <GoldButton href={hero.primaryCta.href}>{hero.primaryCta.label}</GoldButton>
+              <GhostButton href={hero.secondaryCta.href}>{hero.secondaryCta.label}</GhostButton>
             </div>
           </FadeUp>
 
@@ -156,14 +155,10 @@ export default function Hero() {
         <FadeUp delay={0.4} className="hidden xl:block">
           <div className="rounded-[32px] border border-[#C9A84C]/15 bg-[rgba(22,22,22,0.72)] p-8 backdrop-blur-sm">
             <p className="font-sans text-xs uppercase tracking-[0.24em] text-[#C9A84C]">
-              Editorial Precision
+              {hero.insightLabel}
             </p>
             <div className="mt-6 space-y-6">
-              {[
-                "Public narratives that strengthen trust and visibility",
-                "Digital campaigns built for attention and action",
-                "Creative systems that make premium brands feel unmistakable",
-              ].map((item) => (
+              {hero.insightItems.map((item) => (
                 <div key={item} className="flex gap-4">
                   <span className="mt-2 h-px w-10 bg-[#C9A84C]" />
                   <p className="font-sans text-sm leading-relaxed text-[#888880]">

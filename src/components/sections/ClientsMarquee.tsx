@@ -1,14 +1,6 @@
 "use client"
 
-const rowOne = [
-  "Google", "Meta", "Times of India", "NDTV",
-  "Reuters", "Bloomberg", "BBC", "Forbes",
-]
-
-const rowTwo = [
-  "Economic Times", "Hindustan Times", "The Hindu",
-  "Mint", "Zee News", "ABP News", "Business Standard",
-]
+import { site } from "@/lib/site-content"
 
 function MarqueeRow({ items, direction }: { items: string[], direction: "left" | "right" }) {
   const duplicated = [...items, ...items, ...items]
@@ -32,6 +24,8 @@ function MarqueeRow({ items, direction }: { items: string[], direction: "left" |
 }
 
 export default function ClientsMarquee() {
+  const clients = site.home.clients
+
   return (
     <section className="relative overflow-hidden border-y border-[#C9A84C]/10 bg-[#0F0F0F] py-12">
       <div className="pointer-events-none absolute inset-0">
@@ -40,7 +34,7 @@ export default function ClientsMarquee() {
       </div>
 
       <p className="relative mb-8 text-center font-ui text-[11px] uppercase tracking-[0.34em] text-[#888880]">
-        Our Team Has Worked With
+        {clients.label}
       </p>
       <div
         className="relative overflow-hidden"
@@ -50,8 +44,8 @@ export default function ClientsMarquee() {
         }}
       >
         <div className="space-y-1">
-          <MarqueeRow items={rowOne} direction="left" />
-          <MarqueeRow items={rowTwo} direction="right" />
+          <MarqueeRow items={clients.rowOne} direction="left" />
+          <MarqueeRow items={clients.rowTwo} direction="right" />
         </div>
       </div>
     </section>

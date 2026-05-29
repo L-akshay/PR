@@ -62,7 +62,21 @@ const intro = (name: string, label?: string): TinaField => ({
   fields: [
     text("label", "Label"),
     text("title", "Title"),
+    text("heading", "Heading"),
+    text("homeLabel", "Home Label"),
+    text("currentLabel", "Current Label"),
+    text("noteLabel", "Note Label"),
+    text("titlePrefix", "Title Prefix"),
+    text("titleAccent", "Title Accent"),
+    text("titleSuffix", "Title Suffix"),
     textarea("description", "Description"),
+    textarea("supporting", "Supporting Copy"),
+    textarea("note", "Note"),
+    textarea("quote", "Quote"),
+    text("button", "Button Label"),
+    image("image", "Image"),
+    text("imageAlt", "Image Alt"),
+    link("cta", "CTA"),
   ],
 })
 
@@ -332,8 +346,38 @@ export default defineConfig({
                   link("cta", "CTA"),
                 ],
               },
-              intro("servicesPreview", "Services Preview"),
-              intro("whyChoosePr", "Why Choose PR"),
+              {
+                type: "object",
+                name: "servicesPreview",
+                label: "Services Preview",
+                fields: [
+                  text("label", "Label"),
+                  text("title", "Title"),
+                  textarea("description", "Description"),
+                  text("viewAllLabel", "View All Label"),
+                  text("scrollLabel", "Scroll Label"),
+                  text("exploreLabel", "Explore Label"),
+                ],
+              },
+              {
+                type: "object",
+                name: "whyChoosePr",
+                label: "Why Choose PR",
+                fields: [
+                  text("label", "Label"),
+                  text("title", "Title"),
+                  textarea("description", "Description"),
+                  image("image", "Image"),
+                  text("imageAlt", "Image Alt"),
+                  {
+                    type: "object",
+                    name: "checklist",
+                    label: "Checklist",
+                    list: true,
+                    fields: [text("number", "Number"), textarea("text", "Text")],
+                  },
+                ],
+              },
               {
                 type: "object",
                 name: "whySubscribe",
@@ -423,6 +467,7 @@ export default defineConfig({
             name: "servicesPage",
             label: "Services Page",
             fields: [
+              text("serviceCtaLabel", "Service CTA Label"),
               intro("intro", "Intro"),
               metric("highlights", "Highlights"),
               intro("fullList", "Full Service List"),
@@ -443,7 +488,21 @@ export default defineConfig({
               },
             ],
           },
-          intro("blogPage", "Blog Page"),
+          {
+            type: "object",
+            name: "blogPage",
+            label: "Blog Page",
+            fields: [
+              intro("intro", "Intro"),
+              text("backLabel", "Back Label"),
+              {
+                type: "object",
+                name: "closing",
+                label: "Closing CTA",
+                fields: [text("eyebrow", "Eyebrow"), link("primaryCta", "Primary CTA")],
+              },
+            ],
+          },
           {
             type: "object",
             name: "caseStudiesPage",
@@ -471,7 +530,17 @@ export default defineConfig({
             name: "contactPage",
             label: "Contact Page",
             fields: [
-              intro("consultationRequest", "Consultation Request"),
+              {
+                type: "object",
+                name: "consultationRequest",
+                label: "Consultation Request",
+                fields: [
+                  text("label", "Label"),
+                  text("title", "Title"),
+                  textarea("description", "Description"),
+                  textarea("confidentiality", "Confidentiality Note"),
+                ],
+              },
               {
                 type: "object",
                 name: "form",

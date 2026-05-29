@@ -5,21 +5,25 @@ import FadeUp from "@/components/ui/FadeUp"
 import PageHero from "@/components/ui/PageHero"
 import SectionLabel from "@/components/ui/SectionLabel"
 import { blogPosts } from "@/lib/data/blog"
+import { site } from "@/lib/site-content"
 
 export default function BlogPage() {
+  const hero = site.pageHeroes.blog
+  const intro = site.blogPage.intro
+
   return (
     <>
       <PageHero
-        title="Blog"
-        description="Perspectives on communications, growth, creative direction, and the systems that help modern brands stay visible."
-        image="/images/hero/blog.jpg"
+        title={hero.title}
+        description={hero.description}
+        image={hero.image}
       />
       <section className="px-5 py-18 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <FadeUp delay={0}>
             <SectionLabel
-              label="Latest Thinking"
-              title="Ideas for brands that want sharper communication."
+              label={intro.label}
+              title={intro.title}
               className="max-w-4xl"
             />
           </FadeUp>

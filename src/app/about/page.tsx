@@ -20,50 +20,16 @@ import {
 
 import ClosingCta from "@/components/ui/ClosingCta"
 import { timeline } from "@/lib/data/timeline"
+import { site } from "@/lib/site-content"
 
 const EASE = [0.25, 0.1, 0.25, 1] as const
 
-const values: {
-  icon: LucideIcon
-  title: string
-  description: string
-}[] = [
-  {
-    icon: Lightbulb,
-    title: "Clarity",
-    description:
-      "We simplify complexity into communication that teams, media, and audiences can understand immediately.",
-  },
-  {
-    icon: Handshake,
-    title: "Trust",
-    description:
-      "Long-term relationships matter more than short bursts of noise, so we protect credibility at every step.",
-  },
-  {
-    icon: Globe2,
-    title: "Reach",
-    description:
-      "We think in terms of amplification, distribution, and where narratives travel best.",
-  },
-  {
-    icon: Gem,
-    title: "Craft",
-    description:
-      "Every deck, pitch, story angle, and creative asset should feel considered, premium, and ready for scrutiny.",
-  },
-]
-
-const stats: {
-  value: number
-  suffix: string
-  label: string
-}[] = [
-  { value: 500, suffix: "+", label: "Brands" },
-  { value: 8, suffix: "+", label: "Years" },
-  { value: 95, suffix: "%", label: "Retention" },
-  { value: 50, suffix: "M+", label: "Impressions" },
-]
+const valueIcons: Record<string, LucideIcon> = {
+  gem: Gem,
+  globe: Globe2,
+  handshake: Handshake,
+  lightbulb: Lightbulb,
+}
 
 function usePrefersReducedMotion() {
   return React.useSyncExternalStore(
@@ -153,6 +119,7 @@ function CountUp({
 
 function AboutHero() {
   const reduced = usePrefersReducedMotion()
+  const hero = site.about.hero
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 pt-36 pb-20 lg:px-16 lg:pt-44">
@@ -196,7 +163,7 @@ function AboutHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE }}
         >
-          — The NovaPR Studio —
+          {hero.eyebrow}
         </motion.p>
 
         <motion.h1
@@ -205,9 +172,9 @@ function AboutHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: EASE, delay: 0.15 }}
         >
-          <span className="block font-light">A communications house</span>
+          <span className="block font-light">{hero.headingLineOne}</span>
           <span className="mt-2 block font-light italic text-[#C9A84C]">
-            built for ambitious brands.
+            {hero.headingLineTwo}
           </span>
         </motion.h1>
 
@@ -224,8 +191,7 @@ function AboutHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}
         >
-          Strategy, story, and execution in one considered room — for brands
-          that want sharper visibility and a presence that earns trust.
+          {hero.description}
         </motion.p>
       </div>
 
@@ -237,7 +203,7 @@ function AboutHero() {
         transition={{ duration: 1, ease: EASE, delay: 1.1 }}
       >
         <span className="font-sans text-[10px] uppercase tracking-[0.42em] text-[#888880]">
-          Scroll
+          {hero.scrollLabel}
         </span>
         <motion.span
           className="inline-flex"
@@ -318,6 +284,7 @@ function MissionSection() {
   const reduced = usePrefersReducedMotion()
   const imageRef = React.useRef<HTMLDivElement | null>(null)
   const imageInView = useInView(imageRef, { once: true, margin: "-80px" })
+  const mission = site.about.mission
 
   return (
     <section className="relative px-5 py-24 lg:px-16 lg:py-32">
@@ -331,23 +298,20 @@ function MissionSection() {
           </span>
           <RevealUp delay={0.1} className="mt-4 lg:mt-10">
             <p className="font-sans text-[11px] uppercase tracking-[0.36em] text-[#C9A84C]">
-              Mission &amp; Vision
+              {mission.label}
             </p>
           </RevealUp>
         </div>
 
         <div>
           <WordReveal
-            text="We help ambitious brands communicate with more authority — building editorial systems that make them easier to trust, easier to notice, and easier to remember."
+            text={mission.quote}
             className="font-serif text-[clamp(28px,4.2vw,56px)] font-light italic leading-[1.15] text-[#C9A84C]"
           />
 
           <RevealUp delay={0.35} className="mt-12 max-w-2xl">
             <p className="font-sans text-base leading-relaxed text-[#888880] sm:text-lg">
-              Our vision is to be the agency brands call when they need both
-              editorial sharpness and modern growth thinking in one room —
-              where strategy, story, and execution live under a single
-              standard.
+              {mission.description}
             </p>
           </RevealUp>
         </div>
@@ -360,8 +324,8 @@ function MissionSection() {
           style={{ aspectRatio: "21 / 9" }}
         >
           <Image
-            src="/images/hero/case-studies.jpg"
-            alt="Workshop table during a planning session"
+            src={mission.image}
+            alt={mission.imageAlt}
             fill
             sizes="(min-width: 1024px) 1200px, 100vw"
             className="object-cover"
@@ -383,6 +347,8 @@ function MissionSection() {
 }
 
 function StatsBar() {
+  const stats = site.about.stats
+
   return (
     <section className="relative border-y border-[#C9A84C]/30 bg-[#161616] px-5 py-14 lg:px-16 lg:py-16">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 md:grid-cols-4 md:gap-y-0">
@@ -412,19 +378,21 @@ function StatsBar() {
 }
 
 function TimelineSection() {
+  const intro = site.about.timelineIntro
+
   return (
     <section className="relative overflow-hidden bg-[#161616] px-5 py-24 lg:px-16 lg:py-32">
       <div className="mx-auto max-w-7xl">
         <RevealUp>
           <p className="font-sans text-[11px] uppercase tracking-[0.36em] text-[#C9A84C]">
-            Our Story
+            {intro.label}
           </p>
         </RevealUp>
         <RevealUp delay={0.1} className="mt-5 max-w-3xl">
           <h2 className="font-serif text-[clamp(32px,4.8vw,60px)] font-light leading-[0.98] text-[#F5F0E8]">
-            A timeline shaped by steady{" "}
-            <span className="italic text-[#C9A84C]">expansion</span> and sharper
-            capability.
+            {intro.titlePrefix}{" "}
+            <span className="italic text-[#C9A84C]">{intro.titleAccent}</span>{" "}
+            {intro.titleSuffix}
           </h2>
         </RevealUp>
 
@@ -460,7 +428,7 @@ function TimelineSection() {
 
         <div className="relative mt-16 hidden lg:block">
           <div
-            className="-mx-5 overflow-x-auto pb-6 lg:-mx-16"
+            className="-mx-5 overflow-x-auto overflow-y-hidden pb-6 lg:-mx-16"
             style={{ scrollbarWidth: "thin" }}
           >
             <div className="relative min-w-max px-5 lg:px-16">
@@ -503,13 +471,13 @@ function ValueRow({
   value,
   index,
 }: {
-  value: (typeof values)[number]
+  value: (typeof site.about.values)[number]
   index: number
 }) {
   const ref = React.useRef<HTMLDivElement | null>(null)
   const isInView = useInView(ref, { once: true, margin: "-80px" })
   const reduced = usePrefersReducedMotion()
-  const Icon = value.icon
+  const Icon = valueIcons[value.icon] ?? Lightbulb
   const isEven = index % 2 === 0
   const slideFrom = isEven ? -60 : 60
 
@@ -569,18 +537,22 @@ function ValueRow({
 }
 
 function ValuesSection() {
+  const intro = site.about.valuesIntro
+  const values = site.about.values
+
   return (
     <section className="px-5 py-24 lg:px-16 lg:py-32">
       <div className="mx-auto max-w-7xl">
         <RevealUp>
           <p className="font-sans text-[11px] uppercase tracking-[0.36em] text-[#C9A84C]">
-            Values
+            {intro.label}
           </p>
         </RevealUp>
         <RevealUp delay={0.1} className="mt-5 max-w-3xl">
           <h2 className="font-serif text-[clamp(32px,4.8vw,60px)] font-light leading-[0.98] text-[#F5F0E8]">
-            The principles{" "}
-            <span className="italic text-[#C9A84C]">behind</span> how we work.
+            {intro.titlePrefix}{" "}
+            <span className="italic text-[#C9A84C]">{intro.titleAccent}</span>{" "}
+            {intro.titleSuffix}
           </h2>
         </RevealUp>
 
@@ -595,6 +567,8 @@ function ValuesSection() {
 }
 
 export default function AboutPage() {
+  const closing = site.about.closing
+
   return (
     <>
       <AboutHero />
@@ -603,16 +577,11 @@ export default function AboutPage() {
       <TimelineSection />
       <ValuesSection />
       <ClosingCta
-        eyebrow="Next Step"
-        heading={
-          <>
-            Let&apos;s build the next{" "}
-            <span className="italic text-[#C9A84C]">chapter</span> together.
-          </>
-        }
-        supporting="If you need a communications partner that can think strategically and execute beautifully, we should talk."
-        primaryCta={{ href: "/contact", label: "Contact Us" }}
-        secondaryCta={{ href: "/services", label: "Explore Services" }}
+        eyebrow={closing.eyebrow}
+        heading={closing.heading}
+        supporting={closing.supporting}
+        primaryCta={closing.primaryCta}
+        secondaryCta={closing.secondaryCta}
       />
     </>
   )

@@ -1,4 +1,4 @@
-import { data } from "@/lib/site-content"
+import { data, site } from "@/lib/site-content"
 
 export type ContactOption = (typeof data.contact.contactOptions)[number]
 export type ContactExpectation = (typeof data.contact.contactExpectations)[number]
@@ -9,6 +9,7 @@ export type ContactReason = (typeof data.contact.contactReasons)[number]
 export const contactPageIntro = data.contact.contactPageIntro
 export const contactStrategyConsultation = data.contact.contactStrategyConsultation
 export const contactOptions = data.contact.contactOptions
+export const otherOptionsIntro = site.contactPage.otherOptionsIntro
 export const contactExpectationsIntro = data.contact.contactExpectationsIntro
 export const contactExpectations = data.contact.contactExpectations
 export const contactConversationTopicsIntro =

@@ -11,10 +11,13 @@ import {
   projectCategories,
   projectSectionIntro,
 } from "@/lib/data/projects"
+import { site } from "@/lib/site-content"
 
 const EASE = [0.22, 0.08, 0.2, 1] as const
 
 export default function ProjectsPreview() {
+  const content = site.home.projectsPreview
+
   return (
     <section
       id="projects"
@@ -126,16 +129,16 @@ export default function ProjectsPreview() {
           className="mt-16 flex flex-col items-start gap-6 border-t border-[#C9A84C]/12 pt-10 sm:flex-row sm:items-center sm:justify-between"
         >
           <p className="max-w-xl font-ui text-[14px] leading-[1.85] text-[#888880] sm:text-[15px]">
-            View the full portfolio and strategic case studies.
+            {content.footerText}
           </p>
 
           <div className="flex flex-wrap items-center gap-5">
-            <GoldButton href="/projects">Explore Projects</GoldButton>
+            <GoldButton href={content.primaryCta.href}>{content.primaryCta.label}</GoldButton>
             <Link
-              href="/projects"
+              href={content.secondaryCta.href}
               className="group inline-flex min-h-11 items-center gap-2 font-ui text-xs uppercase tracking-[0.26em] text-[#C9A84C] transition-colors duration-[700ms] hover:text-[#F5F0E8]"
             >
-              View All
+              {content.secondaryCta.label}
               <ArrowRight className="size-4 transition-transform duration-[700ms] ease-[cubic-bezier(0.22,0.08,0.2,1)] group-hover:translate-x-1" />
             </Link>
           </div>

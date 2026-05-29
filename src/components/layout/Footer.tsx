@@ -13,6 +13,7 @@ import {
   footerQuickLinks,
   serviceNavigationLinks,
 } from "@/constants/navigation"
+import { site } from "@/lib/site-content"
 
 const socials = [
   { icon: Camera, href: "#" },
@@ -22,6 +23,9 @@ const socials = [
 ]
 
 export default function Footer() {
+  const footer = site.footer
+  const navigation = site.navigation
+
   return (
     <footer className="relative overflow-hidden border-t border-[#C9A84C]/15 bg-[#161616] px-5 pt-16 pb-8 lg:px-16">
       <div className="pointer-events-none absolute inset-0">
@@ -34,21 +38,20 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-[1.25fr_0.9fr_1fr_1fr] lg:gap-12">
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="font-serif text-3xl font-light tracking-[0.01em] text-[#F5F0E8]">
-              Nova<span className="text-[#C9A84C]">PR</span>
+              {navigation.brandPrefix}<span className="text-[#C9A84C]">{navigation.brandAccent}</span>
             </Link>
             <p className="mt-5 max-w-sm font-ui text-[15px] leading-[1.9] text-[#888880]">
-              We combine sharp strategy, editorial thinking, creative clarity,
-              and disciplined execution to help ambitious brands earn attention
-              that lasts.
+              {footer.description}
             </p>
             <div className="mt-7 flex gap-3">
-              {socials.map((item) => {
+              {socials.map((item, index) => {
                 const Icon = item.icon
+                const href = footer.socials[index]?.href ?? item.href
 
                 return (
                   <Link
-                    key={item.href + Icon.displayName}
-                    href={item.href}
+                    key={`${href}-${index}`}
+                    href={href}
                     className="inline-flex size-11 items-center justify-center rounded-full border border-[#2A2A2A] text-[#888880] transition-all duration-700 hover:-translate-y-1 hover:border-[#C9A84C] hover:bg-[#0F0F0F] hover:text-[#C9A84C]"
                   >
                     <Icon className="size-4" />
@@ -60,7 +63,7 @@ export default function Footer() {
 
           <div className="min-w-0">
             <h3 className="mb-4 font-ui text-[11px] uppercase tracking-[0.3em] text-[#C9A84C] sm:mb-6">
-              Quick Links
+              {footer.quickLinksHeading}
             </h3>
             <ul className="space-y-1.5 sm:space-y-3">
               {footerQuickLinks.map((item) => (
@@ -81,7 +84,7 @@ export default function Footer() {
 
           <div className="min-w-0">
             <h3 className="mb-4 font-ui text-[11px] uppercase tracking-[0.3em] text-[#C9A84C] sm:mb-6">
-              Services
+              {footer.servicesHeading}
             </h3>
             <ul className="space-y-1.5 sm:space-y-3">
               {serviceNavigationLinks.map((item) => (
@@ -102,20 +105,20 @@ export default function Footer() {
 
           <div className="col-span-2 lg:col-span-1">
             <h3 className="mb-4 font-ui text-[11px] uppercase tracking-[0.3em] text-[#C9A84C] sm:mb-6">
-              Contact
+              {footer.contactHeading}
             </h3>
             <div className="space-y-5 font-ui text-sm text-[#888880]">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-[#C9A84C]" />
-                <span>3rd Floor, 211, Phase 3, Okhla, New Delhi, India</span>
+                <span>{footer.address}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="size-4 shrink-0 text-[#C9A84C]" />
-                <span>+91 93325 52737</span>
+                <span>{footer.phone}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="size-4 shrink-0 text-[#C9A84C]" />
-                <span>hello@novapr.in</span>
+                <span>{footer.email}</span>
               </div>
             </div>
           </div>
@@ -124,8 +127,8 @@ export default function Footer() {
         <div className="my-8 h-px w-full bg-[#C9A84C]/15" />
 
         <div className="flex flex-col gap-4 text-center font-ui text-[11px] uppercase tracking-[0.16em] text-[#888880] md:flex-row md:items-center md:justify-between md:text-left">
-          <p>NovaPR (c) 2026. All rights reserved.</p>
-          <p>Privacy Policy | Terms & Conditions</p>
+          <p>{footer.copyright}</p>
+          <p>{footer.legal}</p>
         </div>
       </div>
     </footer>

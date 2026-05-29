@@ -1,16 +1,16 @@
 import ClosingCta from "@/components/ui/ClosingCta"
+import { site } from "@/lib/site-content"
 
 export default function LetsTalk() {
+  const content = site.home.letsTalk
+
   return (
     <ClosingCta
-      eyebrow="Let's Talk"
-      heading={[
-        "Ready to build a brand story",
-        "that carries further?",
-      ]}
-      supporting="Whether you are launching, repositioning, scaling, or repairing perception, we can design the communications system around it."
-      primaryCta={{ href: "/contact", label: "Start a Conversation" }}
-      secondaryCta={{ href: "/projects", label: "See All Projects" }}
+      eyebrow={content.eyebrow}
+      heading={content.heading}
+      supporting={content.supporting}
+      primaryCta={content.primaryCta}
+      secondaryCta={content.secondaryCta}
     />
   )
 }

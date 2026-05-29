@@ -2,12 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 
 import type { Service } from "@/lib/data/services"
+import { site } from "@/lib/site-content"
 
 type ServiceCardProps = {
   service: Service
 }
 
 export default function ServiceCard({ service }: ServiceCardProps) {
+  const ctaLabel = site.servicesPage.serviceCtaLabel
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-[30px] border border-[#C9A84C]/15 bg-[#161616]">
       <div className="relative overflow-hidden">
@@ -52,7 +55,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           href={`/services/${service.slug}`}
           className="mt-7 inline-flex min-h-11 items-center font-ui text-[11px] uppercase tracking-[0.26em] text-[#C9A84C] transition-colors duration-700 hover:text-[#F5F0E8]"
         >
-          Explore Service -&gt;
+          {ctaLabel} -&gt;
         </Link>
       </div>
     </article>

@@ -37,10 +37,10 @@ export default function ProjectsHero() {
             href="/"
             className="transition-colors duration-[700ms] hover:text-[#C9A84C]"
           >
-            Home
+            {projectsPageIntro.homeLabel}
           </Link>
           <span className="text-[#C9A84C]">/</span>
-          <span className="text-[#F5F0E8]">Projects</span>
+          <span className="text-[#F5F0E8]">{projectsPageIntro.currentLabel}</span>
         </motion.div>
 
         <motion.div
@@ -88,7 +88,7 @@ export default function ProjectsHero() {
             >
               <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[#C9A84C]/50 to-transparent" />
               <p className="font-ui text-[10px] uppercase tracking-[0.32em] text-[#C9A84C]">
-                Editorial Note
+                {projectsPageIntro.noteLabel}
               </p>
               <p className="mt-5 font-ui text-[15px] leading-[1.9] text-[#888880] sm:text-[16px]">
                 {projectsPageIntro.note}

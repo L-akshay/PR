@@ -4,6 +4,7 @@ import FadeUp from "@/components/ui/FadeUp"
 import SectionLabel from "@/components/ui/SectionLabel"
 import TestimonialCard from "@/components/ui/TestimonialCard"
 import { testimonials } from "@/lib/data/testimonials"
+import { site } from "@/lib/site-content"
 
 type TestimonialMarqueeRowProps = {
   items: typeof testimonials
@@ -40,6 +41,8 @@ function TestimonialMarqueeRow({
 }
 
 export default function Testimonials() {
+  const intro = site.home.testimonialsIntro
+
   return (
     <section className="relative overflow-hidden bg-[#0F0F0F] px-5 py-18 md:py-24 lg:px-16">
       <div className="pointer-events-none absolute inset-0">
@@ -50,9 +53,9 @@ export default function Testimonials() {
       <div className="relative mx-auto max-w-7xl">
         <FadeUp delay={0}>
           <SectionLabel
-            label="Testimonials"
-            title="Some great words from our clients"
-            description="The strongest proof of our work is what clients say after the campaigns go live and the results start compounding."
+            label={intro.label}
+            title={intro.title}
+            description={intro.description}
             align="center"
             className="max-w-4xl"
           />
