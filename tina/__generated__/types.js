@@ -1,0 +1,745 @@
+export function gql(strings, ...args) {
+  let str = "";
+  strings.forEach((string, i) => {
+    str += string + (args[i] || "");
+  });
+  return str;
+}
+export const SiteContentPartsFragmentDoc = gql`
+    fragment SiteContentParts on SiteContent {
+  __typename
+  navigation {
+    __typename
+    brandPrefix
+    brandAccent
+    links {
+      __typename
+      label
+      href
+      hasDropdown
+    }
+    servicesDropdownLabel
+    primaryCta {
+      __typename
+      href
+      label
+    }
+    mobileTitle
+  }
+  footer {
+    __typename
+    description
+    quickLinksHeading
+    servicesHeading
+    contactHeading
+    address
+    phone
+    email
+    copyright
+    legal
+    socials {
+      __typename
+      type
+      href
+    }
+  }
+  home {
+    __typename
+    hero {
+      __typename
+      eyebrow
+      headingPrefix
+      rotatingWords
+      headingSuffix
+      description
+      image
+      imageAlt
+      primaryCta {
+        __typename
+        href
+        label
+      }
+      secondaryCta {
+        __typename
+        href
+        label
+      }
+      insightLabel
+      insightItems
+    }
+    clients {
+      __typename
+      label
+      rowOne
+      rowTwo
+    }
+    whatWeDo {
+      __typename
+      label
+      title
+      description
+      image
+      imageAlt
+      cta {
+        __typename
+        href
+        label
+      }
+    }
+    servicesPreview {
+      __typename
+      label
+      title
+      description
+    }
+    whyChoosePr {
+      __typename
+      label
+      title
+      description
+    }
+    whySubscribe {
+      __typename
+      label
+      title
+      description
+      cards {
+        __typename
+        id
+        icon
+        title
+        description
+      }
+    }
+    whyChooseUs {
+      __typename
+      label
+      title
+      description
+    }
+    projectsPreview {
+      __typename
+      footerText
+      primaryCta {
+        __typename
+        href
+        label
+      }
+      secondaryCta {
+        __typename
+        href
+        label
+      }
+    }
+    testimonialsIntro {
+      __typename
+      label
+      title
+      description
+    }
+    letsTalk {
+      __typename
+      eyebrow
+      heading
+      supporting
+      primaryCta {
+        __typename
+        href
+        label
+      }
+      secondaryCta {
+        __typename
+        href
+        label
+      }
+    }
+    contactShort {
+      __typename
+      label
+      title
+      description
+    }
+  }
+  pageHeroes {
+    __typename
+    services {
+      __typename
+      label
+      title
+      description
+    }
+    caseStudies {
+      __typename
+      label
+      title
+      description
+    }
+    blog {
+      __typename
+      label
+      title
+      description
+    }
+    contact {
+      __typename
+      label
+      title
+      description
+    }
+  }
+  about {
+    __typename
+    hero {
+      __typename
+      eyebrow
+      headingLineOne
+      headingLineTwo
+      description
+      scrollLabel
+    }
+    mission {
+      __typename
+      label
+      title
+      description
+    }
+    stats {
+      __typename
+      value
+      suffix
+      label
+      detail
+      description
+    }
+    timelineIntro {
+      __typename
+      label
+      title
+      description
+    }
+    valuesIntro {
+      __typename
+      label
+      title
+      description
+    }
+    values {
+      __typename
+      icon
+      title
+      description
+    }
+    closing {
+      __typename
+      eyebrow
+      heading
+      supporting
+      primaryCta {
+        __typename
+        href
+        label
+      }
+      secondaryCta {
+        __typename
+        href
+        label
+      }
+    }
+  }
+  servicesPage {
+    __typename
+    intro {
+      __typename
+      label
+      title
+      description
+    }
+    highlights {
+      __typename
+      value
+      suffix
+      label
+      detail
+      description
+    }
+    fullList {
+      __typename
+      label
+      title
+      description
+    }
+    closing {
+      __typename
+      eyebrow
+      heading
+      supporting
+      primaryCta {
+        __typename
+        href
+        label
+      }
+      secondaryCta {
+        __typename
+        href
+        label
+      }
+    }
+    detail {
+      __typename
+      focusLabel
+      whyLabel
+      startCta {
+        __typename
+        href
+        label
+      }
+      allServicesCta {
+        __typename
+        href
+        label
+      }
+      processIntro {
+        __typename
+        label
+        title
+        description
+      }
+      relatedIntro {
+        __typename
+        label
+        title
+        description
+      }
+      closing {
+        __typename
+        eyebrow
+        heading
+        supporting
+        primaryCta {
+          __typename
+          href
+          label
+        }
+        secondaryCta {
+          __typename
+          href
+          label
+        }
+      }
+    }
+  }
+  blogPage {
+    __typename
+    label
+    title
+    description
+  }
+  caseStudiesPage {
+    __typename
+    includedIntro {
+      __typename
+      label
+      title
+      description
+    }
+    closing {
+      __typename
+      eyebrow
+      heading
+      supporting
+      primaryCta {
+        __typename
+        href
+        label
+      }
+      secondaryCta {
+        __typename
+        href
+        label
+      }
+    }
+    detail {
+      __typename
+      backLabel
+      summaryLabel
+      blocks
+      resultsLabel
+      resultsHeading
+      closing {
+        __typename
+        eyebrow
+        heading
+        supporting
+        primaryCta {
+          __typename
+          href
+          label
+        }
+        secondaryCta {
+          __typename
+          href
+          label
+        }
+      }
+    }
+  }
+  contactPage {
+    __typename
+    consultationRequest {
+      __typename
+      label
+      title
+      description
+    }
+    form {
+      __typename
+      namePlaceholder
+      emailPlaceholder
+      phonePlaceholder
+      companyPlaceholder
+      primarySelectLabel
+      primarySelectOptions
+      secondarySelectLabel
+      secondarySelectOptions
+      messagePlaceholder
+      submitLabel
+    }
+    otherOptionsIntro {
+      __typename
+      label
+      title
+      description
+    }
+    finalCta {
+      __typename
+      label
+      note
+    }
+  }
+  data {
+    __typename
+    services {
+      __typename
+      slug
+      shortLabel
+      title
+      eyebrow
+      description
+      intro
+      longDescription
+      image
+      heroImage
+      keywords
+      subServices
+      process {
+        __typename
+        title
+        description
+      }
+      metrics {
+        __typename
+        value
+        suffix
+        label
+        detail
+        description
+      }
+    }
+    serviceTickerTags
+    allServiceGroups {
+      __typename
+      title
+      items
+    }
+    projectCategories
+    projectSectionIntro {
+      __typename
+      label
+      title
+      description
+    }
+    projectsPageIntro {
+      __typename
+      label
+      title
+      description
+    }
+    projectsClosingCta {
+      __typename
+      label
+      title
+      description
+    }
+    projectItems {
+      __typename
+      id
+      slug
+      title
+      category
+      market
+      duration
+      teaserOutcome
+      summary
+      outcomes
+    }
+    homepageFeaturedProjectSlugs
+    portfolioItems {
+      __typename
+      id
+      slug
+      category
+      client
+      title
+      result
+      excerpt
+      image
+      market
+      engagementDuration
+      situation
+      strategy
+      execution
+      results {
+        __typename
+        value
+        suffix
+        label
+        detail
+        description
+      }
+      metrics {
+        __typename
+        value
+        suffix
+        label
+        detail
+        description
+      }
+    }
+    featuredCaseStudy {
+      __typename
+      client
+      title
+      result
+      excerpt
+      image
+    }
+    blogPosts {
+      __typename
+      slug
+      category
+      title
+      excerpt
+      image
+      readTime
+      content
+    }
+    contact {
+      __typename
+      contactPageIntro {
+        __typename
+        label
+        title
+        description
+      }
+      contactStrategyConsultation {
+        __typename
+        label
+        title
+        paragraphs
+        highlights {
+          __typename
+          title
+          description
+        }
+      }
+      contactOptions {
+        __typename
+        label
+        title
+        description
+        value
+        href
+        external
+      }
+      contactExpectationsIntro {
+        __typename
+        label
+        title
+        description
+      }
+      contactExpectations {
+        __typename
+        title
+        timeframe
+        description
+      }
+      contactConversationTopicsIntro {
+        __typename
+        label
+        title
+        description
+      }
+      contactConversationTopics {
+        __typename
+        title
+        description
+      }
+      contactFaqs {
+        __typename
+        question
+        answer
+      }
+      contactReasonsIntro {
+        __typename
+        label
+        title
+        description
+      }
+      contactReasons {
+        __typename
+        title
+        description
+      }
+    }
+    heroStats {
+      __typename
+      value
+      suffix
+      label
+      detail
+      description
+    }
+    statsTicker {
+      __typename
+      value
+      suffix
+      label
+      detail
+      description
+    }
+    performanceStats {
+      __typename
+      value
+      suffix
+      label
+      detail
+      description
+    }
+    testimonials {
+      __typename
+      name
+      role
+      quote
+    }
+    timeline {
+      __typename
+      year
+      title
+      description
+    }
+    teamMembers {
+      __typename
+      name
+      role
+      image
+      linkedin
+    }
+  }
+}
+    `;
+export const SiteContentDocument = gql`
+    query siteContent($relativePath: String!) {
+  siteContent(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...SiteContentParts
+  }
+}
+    ${SiteContentPartsFragmentDoc}`;
+export const SiteContentConnectionDocument = gql`
+    query siteContentConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SiteContentFilter) {
+  siteContentConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...SiteContentParts
+      }
+    }
+  }
+}
+    ${SiteContentPartsFragmentDoc}`;
+export function getSdk(requester) {
+  return {
+    siteContent(variables, options) {
+      return requester(SiteContentDocument, variables, options);
+    },
+    siteContentConnection(variables, options) {
+      return requester(SiteContentConnectionDocument, variables, options);
+    }
+  };
+}
+import { createClient } from "tinacms/dist/client";
+const generateRequester = (client) => {
+  const requester = async (doc, vars, options) => {
+    let url = client.apiUrl;
+    if (options?.branch) {
+      const index = client.apiUrl.lastIndexOf("/");
+      url = client.apiUrl.substring(0, index + 1) + options.branch;
+    }
+    const data = await client.request({
+      query: doc,
+      variables: vars,
+      url
+    }, options);
+    return { data: data?.data, errors: data?.errors, query: doc, variables: vars || {} };
+  };
+  return requester;
+};
+export const ExperimentalGetTinaClient = () => getSdk(
+  generateRequester(
+    createClient({
+      url: "http://localhost:4001/graphql",
+      queries
+    })
+  )
+);
+export const queries = (client) => {
+  const requester = generateRequester(client);
+  return getSdk(requester);
+};

@@ -207,7 +207,10 @@ export default function Contact() {
 
           <div className="mt-10 grid gap-5 lg:grid-cols-3 lg:items-stretch">
             {contactOptions.map((option, index) => {
-              const Icon = contactOptionIcons[option.label]
+              const Icon =
+                contactOptionIcons[
+                  option.label as keyof typeof contactOptionIcons
+                ] ?? Mail
 
               return (
                 <FadeUp key={option.label} delay={Math.min(0.05 * (index + 1), 0.18)}>

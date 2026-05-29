@@ -1,0 +1,1612 @@
+{
+  "navigation": {
+    "brandPrefix": "Nova",
+    "brandAccent": "PR",
+    "links": [
+      {
+        "label": "Home",
+        "href": "/",
+        "hasDropdown": false
+      },
+      {
+        "label": "About Us",
+        "href": "/about",
+        "hasDropdown": false
+      },
+      {
+        "label": "Services",
+        "href": "/services",
+        "hasDropdown": true
+      },
+      {
+        "label": "Projects",
+        "href": "/projects",
+        "hasDropdown": false
+      },
+      {
+        "label": "Case Studies",
+        "href": "/case-studies",
+        "hasDropdown": false
+      },
+      {
+        "label": "Blog",
+        "href": "/blog",
+        "hasDropdown": false
+      },
+      {
+        "label": "Contact Us",
+        "href": "/contact",
+        "hasDropdown": false
+      }
+    ],
+    "servicesDropdownLabel": "Our Services",
+    "primaryCta": {
+      "href": "/contact",
+      "label": "Start a Conversation"
+    },
+    "mobileTitle": "Navigation"
+  },
+  "footer": {
+    "description": "We combine sharp strategy, editorial thinking, creative clarity, and disciplined execution to help ambitious brands earn attention that lasts.",
+    "quickLinksHeading": "Quick Links",
+    "servicesHeading": "Services",
+    "contactHeading": "Contact",
+    "address": "3rd Floor, 211, Phase 3, Okhla, New Delhi, India",
+    "phone": "+91 93325 52737",
+    "email": "hello@novapr.in",
+    "copyright": "NovaPR (c) 2026. All rights reserved.",
+    "legal": "Privacy Policy | Terms & Conditions",
+    "socials": [
+      {
+        "type": "camera",
+        "href": "#"
+      },
+      {
+        "type": "send",
+        "href": "#"
+      },
+      {
+        "type": "briefcase",
+        "href": "#"
+      },
+      {
+        "type": "message",
+        "href": "#"
+      }
+    ]
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Premium PR and Growth Communications",
+      "headingPrefix": "We Are Your Brand's",
+      "rotatingWords": [
+        "Loudest",
+        "Strongest",
+        "Boldest",
+        "Sharpest"
+      ],
+      "headingSuffix": "Voice",
+      "description": "We shape the stories, media moments, creative systems, and digital campaigns that help ambitious brands look sharper, sound clearer, and grow with conviction.",
+      "image": "/images/hero/agency-office.jpg",
+      "imageAlt": "Media interview in a studio setting",
+      "primaryCta": {
+        "href": "/contact",
+        "label": "Start a Conversation"
+      },
+      "secondaryCta": {
+        "href": "/services",
+        "label": "Explore Services"
+      },
+      "insightLabel": "Editorial Precision",
+      "insightItems": [
+        "Public narratives that strengthen trust and visibility",
+        "Digital campaigns built for attention and action",
+        "Creative systems that make premium brands feel unmistakable"
+      ]
+    },
+    "clients": {
+      "label": "Our Team Has Worked With",
+      "rowOne": [
+        "Google",
+        "Meta",
+        "Times of India",
+        "NDTV",
+        "Reuters",
+        "Bloomberg",
+        "BBC",
+        "Forbes"
+      ],
+      "rowTwo": [
+        "Economic Times",
+        "Hindustan Times",
+        "The Hindu",
+        "Mint",
+        "Zee News",
+        "ABP News",
+        "Business Standard"
+      ]
+    },
+    "whatWeDo": {
+      "label": "What We Do",
+      "title": "A strategic PR partner built for brands that want sharper presence.",
+      "description": "We connect editorial thinking, media access, creative direction, digital performance, and search visibility into one disciplined growth engine. That means fewer disconnected vendors and a far stronger brand signal across every touchpoint.",
+      "image": "/images/sections/what-we-do.jpg",
+      "imageAlt": "Workshop collaboration around a planning board",
+      "cta": {
+        "href": "/about",
+        "label": "Discover Who We Are"
+      }
+    },
+    "servicesPreview": {
+      "label": "Services",
+      "title": "Integrated services built to move reputation, reach, and recall.",
+      "description": "Five core practice areas work together so your brand does not have to choose between visibility and consistency.",
+      "viewAllLabel": "View All Services ->",
+      "scrollLabel": "Scroll to explore",
+      "exploreLabel": "Explore Service ->"
+    },
+    "whyChoosePr": {
+      "label": "Why Choose A PR Agency",
+      "title": "The right PR partner should strengthen credibility, speed, and clarity.",
+      "description": "A strong agency does more than secure mentions. It sharpens your story, protects your reputation, builds trust with the right audience, and keeps visibility connected to business outcomes.",
+      "image": "/images/sections/why-choose-pr.jpg",
+      "imageAlt": "Audience at a media event",
+      "checklist": [
+        {
+          "number": "01",
+          "text": "Creative PR strategy built around business goals"
+        },
+        {
+          "number": "02",
+          "text": "Wide media relations across national and niche titles"
+        },
+        {
+          "number": "03",
+          "text": "Comprehensive campaign orchestration from idea to coverage"
+        },
+        {
+          "number": "04",
+          "text": "Local and global visibility planning for scaling brands"
+        },
+        {
+          "number": "05",
+          "text": "Veteran PR specialists with execution depth"
+        },
+        {
+          "number": "06",
+          "text": "Cost-effective, result-oriented communications programs"
+        },
+        {
+          "number": "07",
+          "text": "Strong client success track record across categories"
+        },
+        {
+          "number": "08",
+          "text": "Trust-driven service with measurable reporting"
+        }
+      ]
+    },
+    "whySubscribe": {
+      "label": "Why Subscribe",
+      "title": "Why should brands invest in PR services?",
+      "description": "PR works best when it strengthens both perception and performance. The value is not only in visibility - it is in the trust, momentum, and long-term brand memory that visibility creates.",
+      "cards": [
+        {
+          "id": "01",
+          "icon": "shield",
+          "title": "Build authenticity and credibility",
+          "description": "Thoughtful PR creates third-party validation that helps your audience trust the brand before the sales conversation even starts."
+        },
+        {
+          "id": "02",
+          "icon": "trending",
+          "title": "Take your growth story further",
+          "description": "Strong communications make momentum visible, giving investors, customers, and partners a clearer reason to pay attention."
+        },
+        {
+          "id": "03",
+          "icon": "alert",
+          "title": "Manage sensitive moments well",
+          "description": "A disciplined PR team helps brands respond faster, communicate clearly, and protect long-term reputation under pressure."
+        },
+        {
+          "id": "04",
+          "icon": "users",
+          "title": "Shape brand perception",
+          "description": "Consistency across coverage, messaging, and storytelling builds memory and makes your brand feel more credible over time."
+        },
+        {
+          "id": "05",
+          "icon": "globe",
+          "title": "Scale across markets",
+          "description": "Communications systems that travel well help brands expand into new sectors, cities, and audiences without losing clarity."
+        },
+        {
+          "id": "06",
+          "icon": "barChart",
+          "title": "Stay accountable to outcomes",
+          "description": "The best PR work is measured against visibility, sentiment, reach, and the business signals that matter most."
+        }
+      ]
+    },
+    "whyChooseUs": {
+      "label": "Why Choose Us",
+      "title": "We deliver the kind of communications work that feels considered and measurable.",
+      "description": "Our team blends editorial instinct, strategic discipline, and execution depth. That means clearer messaging, stronger rollout quality, and better alignment between attention and business growth.",
+      "image": "/images/sections/why-choose-us.jpg",
+      "imageAlt": "Campaign planning notes during a workshop"
+    },
+    "projectsPreview": {
+      "footerText": "View the full portfolio and strategic case studies.",
+      "primaryCta": {
+        "href": "/projects",
+        "label": "Explore Projects"
+      },
+      "secondaryCta": {
+        "href": "/projects",
+        "label": "View All"
+      }
+    },
+    "testimonialsIntro": {
+      "label": "Testimonials",
+      "title": "Some great words from our clients",
+      "description": "The strongest proof of our work is what clients say after the campaigns go live and the results start compounding."
+    },
+    "letsTalk": {
+      "eyebrow": "Let's Talk",
+      "heading": [
+        "Ready to build a brand story",
+        "that carries further?"
+      ],
+      "supporting": "Whether you are launching, repositioning, scaling, or repairing perception, we can design the communications system around it.",
+      "primaryCta": {
+        "href": "/contact",
+        "label": "Start a Conversation"
+      },
+      "secondaryCta": {
+        "href": "/projects",
+        "label": "See All Projects"
+      }
+    },
+    "contactShort": {
+      "label": "Contact",
+      "title": "Start the conversation.",
+      "description": "Share a few details and we will come back with the right next step.",
+      "cta": {
+        "href": "/contact",
+        "label": "See full contact"
+      }
+    }
+  },
+  "pageHeroes": {
+    "services": {
+      "title": "Our Services",
+      "description": "Five integrated practice areas designed to strengthen reputation, visibility, and growth without losing brand consistency.",
+      "image": "/images/hero/services.jpg"
+    },
+    "caseStudies": {
+      "title": "Case Studies"
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Perspectives on communications, growth, creative direction, and the systems that help modern brands stay visible.",
+      "image": "/images/hero/blog.jpg"
+    },
+    "contact": {
+      "title": "Start With a Conversation",
+      "description": "The most useful first step is a direct discussion about your situation and what communications strategy could realistically do for your goals.",
+      "image": "/images/hero/contact.jpg"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "- The NovaPR Studio -",
+      "headingLineOne": "A communications house",
+      "headingLineTwo": "built for ambitious brands.",
+      "description": "Strategy, story, and execution in one considered room - for brands that want sharper visibility and a presence that earns trust.",
+      "scrollLabel": "Scroll"
+    },
+    "mission": {
+      "label": "Mission & Vision",
+      "quote": "We help ambitious brands communicate with more authority - building editorial systems that make them easier to trust, easier to notice, and easier to remember.",
+      "description": "Our vision is to be the agency brands call when they need both editorial sharpness and modern growth thinking in one room - where strategy, story, and execution live under a single standard.",
+      "image": "/images/hero/case-studies.jpg",
+      "imageAlt": "Workshop table during a planning session"
+    },
+    "stats": [
+      {
+        "value": 500,
+        "suffix": "+",
+        "label": "Brands"
+      },
+      {
+        "value": 8,
+        "suffix": "+",
+        "label": "Years"
+      },
+      {
+        "value": 95,
+        "suffix": "%",
+        "label": "Retention"
+      },
+      {
+        "value": 50,
+        "suffix": "M+",
+        "label": "Impressions"
+      }
+    ],
+    "timelineIntro": {
+      "label": "Our Story",
+      "titlePrefix": "A timeline shaped by steady",
+      "titleAccent": "expansion",
+      "titleSuffix": "and sharper capability."
+    },
+    "valuesIntro": {
+      "label": "Values",
+      "titlePrefix": "The principles",
+      "titleAccent": "behind",
+      "titleSuffix": "how we work."
+    },
+    "values": [
+      {
+        "icon": "lightbulb",
+        "title": "Clarity",
+        "description": "We simplify complexity into communication that teams, media, and audiences can understand immediately."
+      },
+      {
+        "icon": "handshake",
+        "title": "Trust",
+        "description": "Long-term relationships matter more than short bursts of noise, so we protect credibility at every step."
+      },
+      {
+        "icon": "globe",
+        "title": "Reach",
+        "description": "We think in terms of amplification, distribution, and where narratives travel best."
+      },
+      {
+        "icon": "gem",
+        "title": "Craft",
+        "description": "Every deck, pitch, story angle, and creative asset should feel considered, premium, and ready for scrutiny."
+      }
+    ],
+    "closing": {
+      "eyebrow": "Next Step",
+      "heading": [
+        "Let's build the next",
+        "chapter together."
+      ],
+      "supporting": "If you need a communications partner that can think strategically and execute beautifully, we should talk.",
+      "primaryCta": {
+        "href": "/contact",
+        "label": "Contact Us"
+      },
+      "secondaryCta": {
+        "href": "/services",
+        "label": "Explore Services"
+      }
+    }
+  },
+  "servicesPage": {
+    "intro": {
+      "label": "Services",
+      "title": "Integrated services built to move reputation, reach, and recall.",
+      "description": "Five core practice areas work together so your brand does not have to choose between visibility and consistency."
+    },
+    "highlights": [
+      {
+        "value": "05",
+        "label": "Core Practices",
+        "description": "A focused service stack built to work together, not compete for attention."
+      },
+      {
+        "value": "Integrated",
+        "label": "Channel Thinking",
+        "description": "Brand, media, digital, creator, and search all stay aligned around one signal."
+      },
+      {
+        "value": "Premium",
+        "label": "Execution Standard",
+        "description": "Every touchpoint is designed to feel composed, distinctive, and commercially useful."
+      }
+    ],
+    "fullList": {
+      "label": "Full Service List",
+      "title": "A broader offering designed around modern brand visibility.",
+      "description": "In addition to our five core practices, we support launch, growth, reputation, and platform visibility through specialist services.",
+      "cta": {
+        "href": "/contact",
+        "label": "Talk to the Team"
+      }
+    },
+    "closing": {
+      "eyebrow": "Need A Tailored Mix?",
+      "heading": [
+        "We can shape the right service stack",
+        "around your growth stage."
+      ],
+      "supporting": "Some brands need one sharp capability. Others need an integrated mix across PR, digital, creator, creative, and search. We build around the outcome, not a rigid package.",
+      "primaryCta": {
+        "href": "/contact",
+        "label": "Talk to the Team"
+      },
+      "secondaryCta": {
+        "href": "/contact",
+        "label": "Start a Conversation"
+      }
+    },
+    "detail": {
+      "focusLabel": "Service Focus",
+      "whyLabel": "Why It Matters",
+      "startCta": {
+        "href": "/contact",
+        "label": "Start a Conversation"
+      },
+      "allServicesCta": {
+        "href": "/services",
+        "label": "See All Services"
+      },
+      "processIntro": {
+        "label": "Process",
+        "title": "A clear process that keeps execution sharp.",
+        "description": "Each phase is designed to carry the same standard from planning through rollout."
+      },
+      "relatedIntro": {
+        "label": "Related Services",
+        "title": "Adjacent capabilities that strengthen the same outcome."
+      },
+      "closing": {
+        "eyebrow": "Need A Tailored Mix?",
+        "heading": [
+          "We can shape the right service stack",
+          "around your growth stage."
+        ],
+        "supporting": "If this service is part of a wider brand move, we can combine it with the right PR, digital, creator, creative, or search support instead of forcing it into a one-size-fits-all package.",
+        "primaryCta": {
+          "href": "/contact",
+          "label": "Talk to the Team"
+        },
+        "secondaryCta": {
+          "href": "/services",
+          "label": "See All Services"
+        }
+      }
+    }
+  },
+  "blogPage": {
+    "intro": {
+      "label": "Latest Thinking",
+      "title": "Ideas for brands that want sharper communication."
+    },
+    "backLabel": "<- All Posts",
+    "closing": {
+      "eyebrow": "Want to work with us?",
+      "primaryCta": {
+        "href": "/contact",
+        "label": "Start a Conversation"
+      }
+    }
+  },
+  "caseStudiesPage": {
+    "includedIntro": {
+      "label": "Included Engagements",
+      "title": "Real client situations, strategic decisions, and measurable outcomes.",
+      "description": "Each case study below starts with a specific business challenge and follows the decisions, execution, and outcomes that changed the trajectory."
+    },
+    "closing": {
+      "eyebrow": "Why It Matters",
+      "heading": [
+        "The strategy in every case followed the",
+        "problem, not a template."
+      ],
+      "supporting": "Each of these engagements started with a specific challenge, not a generic brief. If your situation shares elements with any of the above, a conversation about your context is where useful work begins.",
+      "primaryCta": {
+        "href": "/contact",
+        "label": "Schedule a Strategy Call Today"
+      }
+    },
+    "detail": {
+      "backLabel": "<- All Case Studies",
+      "summaryLabel": "Executive Summary",
+      "blocks": [
+        "The Situation",
+        "The Strategy",
+        "The Execution"
+      ],
+      "resultsLabel": "The Results",
+      "resultsHeading": "Measurable changes that made the engagement matter.",
+      "closing": {
+        "eyebrow": "If your situation shares elements with this engagement",
+        "primaryCta": {
+          "href": "/contact",
+          "label": "Schedule a Strategy Call Today"
+        }
+      }
+    }
+  },
+  "contactPage": {
+    "consultationRequest": {
+      "label": "Consultation Request",
+      "title": "Tell us where things stand and what has to change.",
+      "description": "Share your current communications position, the commercial objective in front of you, and the challenge or opportunity you need to address. We will come back with the right next step.",
+      "confidentiality": "Confidential from the first conversation. If your situation requires an NDA before the consultation, we are comfortable signing one."
+    },
+    "form": {
+      "namePlaceholder": "Full Name",
+      "emailPlaceholder": "Email Address",
+      "phonePlaceholder": "Phone Number",
+      "companyPlaceholder": "Company Name",
+      "primarySelectLabel": "Primary Objective",
+      "primarySelectOptions": [
+        "Strategy Consultation",
+        "Launch or Market Entry",
+        "Thought Leadership",
+        "Reputation or Crisis Support",
+        "Investor or Funding Communications",
+        "Not Sure Yet"
+      ],
+      "secondarySelectLabel": "Timing",
+      "secondarySelectOptions": [
+        "Immediate",
+        "Within 30 Days",
+        "Within 90 Days",
+        "Exploring Options"
+      ],
+      "messagePlaceholder": "Tell us about your current communications position, your commercial objective, and the specific challenge or opportunity you want to address.",
+      "submitLabel": "Request Consultation"
+    },
+    "otherOptionsIntro": {
+      "label": "Other Contact Options",
+      "title": "Choose the route that best fits the kind of conversation you need.",
+      "description": "The strategy consultation is the primary path, but we also handle detailed email enquiries, network introductions, and journalist requests directly."
+    },
+    "finalCta": {
+      "label": "Book The First Conversation",
+      "note": "The first conversation costs nothing and commits you to nothing."
+    }
+  },
+  "data": {
+    "services": [
+      {
+        "slug": "public-relations",
+        "shortLabel": "Public Relations",
+        "title": "Public Relations",
+        "eyebrow": "Earned authority with narrative precision",
+        "description": "From reputation shaping to earned-media momentum, we build strategic PR programs that position brands with clarity, authority, and staying power.",
+        "intro": "We design high-trust communications programs that connect leadership, business milestones, and media opportunities into one clear public story.",
+        "longDescription": "Our PR team works across corporate communications, founder visibility, media relations, and sensitive reputation moments. We build the story architecture first, then activate the right mix of journalists, publications, speaking moments, and narratives that keep your brand in the conversation for the right reasons.",
+        "image": "/images/services/public-relations.jpg",
+        "heroImage": "/images/services/public-relations-hero.jpg",
+        "keywords": [
+          "Media Relations",
+          "Corporate Communications",
+          "Crisis Counsel",
+          "Leadership Positioning"
+        ],
+        "subServices": [
+          "Media outreach and journalist relations",
+          "Corporate communication strategy",
+          "Founder and executive profiling",
+          "Product launch PR",
+          "Crisis response planning",
+          "Awards and recognition support"
+        ],
+        "process": [
+          {
+            "title": "Narrative Mapping",
+            "description": "We sharpen the message, audience, and proof points that make your story media-ready."
+          },
+          {
+            "title": "Media Architecture",
+            "description": "We identify the right outlets, editorial hooks, timing windows, and spokesperson angles."
+          },
+          {
+            "title": "Active Outreach",
+            "description": "We run disciplined pitching, interview coordination, briefing support, and coverage follow-through."
+          },
+          {
+            "title": "Momentum Reporting",
+            "description": "We translate coverage, sentiment, and share of voice into clear business-facing reporting."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "180+",
+            "label": "National Placements",
+            "detail": "High-authority stories secured across top-tier and sector media."
+          },
+          {
+            "value": "4.3x",
+            "label": "Share of Voice Lift",
+            "detail": "Measured improvement against category competitors over six months."
+          },
+          {
+            "value": "72hr",
+            "label": "Crisis Turnaround",
+            "detail": "Rapid-response communications workflows during sensitive situations."
+          }
+        ]
+      },
+      {
+        "slug": "social-digital-marketing",
+        "shortLabel": "Social & Digital Marketing",
+        "title": "Social & Digital Marketing",
+        "eyebrow": "Conversation, content, and conversion in one system",
+        "description": "We translate audience insight into digital systems that grow attention, shape conversations, and convert visibility into measurable action.",
+        "intro": "Our social and digital programs are built to keep brands culturally present while staying grounded in performance and reporting.",
+        "longDescription": "From content calendars and paid amplification to campaign storytelling and reporting frameworks, we create digital ecosystems that feel premium and perform consistently. Every touchpoint is designed to strengthen brand memory, audience engagement, and measurable growth.",
+        "image": "/images/services/social-digital-marketing.jpg",
+        "heroImage": "/images/services/social-digital-marketing-hero.jpg",
+        "keywords": [
+          "Social Strategy",
+          "Paid Growth",
+          "Content Systems",
+          "Performance Reporting"
+        ],
+        "subServices": [
+          "Social media strategy and planning",
+          "Performance marketing support",
+          "Content marketing and campaign storytelling",
+          "Community and engagement management",
+          "Paid media creative coordination",
+          "Reporting and optimization dashboards"
+        ],
+        "process": [
+          {
+            "title": "Audience and Channel Audit",
+            "description": "We identify where attention already exists and where growth will be the most efficient."
+          },
+          {
+            "title": "Content and Campaign Design",
+            "description": "We build platform-native ideas, message pillars, and campaign assets that fit the brand voice."
+          },
+          {
+            "title": "Launch and Optimize",
+            "description": "We coordinate posting, paid amplification, and iterative improvement using live performance signals."
+          },
+          {
+            "title": "Measure What Matters",
+            "description": "We report on awareness, engagement, leads, and conversion to keep the work accountable."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "310%",
+            "label": "Engagement Growth",
+            "detail": "Lift in audience interaction after a three-month content overhaul."
+          },
+          {
+            "value": "2.8x",
+            "label": "Lead Efficiency",
+            "detail": "Improved cost-to-inquiry across paid and organic campaign layers."
+          },
+          {
+            "value": "12M+",
+            "label": "Campaign Reach",
+            "detail": "Combined organic and paid impressions across launch cycles."
+          }
+        ]
+      },
+      {
+        "slug": "influencer-marketing",
+        "shortLabel": "Influencer Marketing",
+        "title": "Influencer Marketing",
+        "eyebrow": "Creator partnerships with brand fit and commercial intent",
+        "description": "Our influencer programs are built on relevance, resonance, and reach, helping brands collaborate with voices that genuinely move culture.",
+        "intro": "We match brands with creators whose audience trust can drive both visibility and action, not just vanity numbers.",
+        "longDescription": "Influencer work performs best when the partnership feels believable. We combine creator discovery, narrative planning, and campaign operations to make every collaboration feel aligned with the brand while still native to the creator's world. The outcome is stronger recall, stronger trust, and stronger downstream performance.",
+        "image": "/images/services/influencer-marketing.jpg",
+        "heroImage": "/images/services/influencer-marketing-hero.jpg",
+        "keywords": [
+          "Creator Strategy",
+          "Partnership Management",
+          "Launch Buzz",
+          "Performance Tracking"
+        ],
+        "subServices": [
+          "Creator identification and outreach",
+          "Influencer brief development",
+          "Campaign negotiation and management",
+          "Launch seeding and product drops",
+          "Performance and compliance tracking",
+          "Always-on creator advocacy programs"
+        ],
+        "process": [
+          {
+            "title": "Creator Fit Analysis",
+            "description": "We shortlist voices based on audience overlap, credibility, tone, and content quality."
+          },
+          {
+            "title": "Campaign Structuring",
+            "description": "We define deliverables, messaging direction, timelines, and success benchmarks."
+          },
+          {
+            "title": "Execution Management",
+            "description": "We coordinate approvals, posting schedules, asset delivery, and live troubleshooting."
+          },
+          {
+            "title": "Impact Review",
+            "description": "We evaluate reach, engagement, traffic, saves, and branded search movement."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "140+",
+            "label": "Creator Partnerships",
+            "detail": "Campaigns activated across macro, mid-tier, and niche voices."
+          },
+          {
+            "value": "9.6%",
+            "label": "Average Engagement",
+            "detail": "Sustained above-category interaction across selected campaigns."
+          },
+          {
+            "value": "6.1x",
+            "label": "Content Reuse Value",
+            "detail": "Additional media and social mileage from creator-generated assets."
+          }
+        ]
+      },
+      {
+        "slug": "creative-studio",
+        "shortLabel": "Creative Studio",
+        "title": "Creative Studio",
+        "eyebrow": "Visual systems that make a premium first impression",
+        "description": "We craft identities, visual systems, and brand worlds that feel premium, memorable, and unmistakably aligned with your market position.",
+        "intro": "Our creative studio shapes the visual and verbal expression that helps brands look composed, distinctive, and campaign-ready.",
+        "longDescription": "Whether you need a sharper brand identity, campaign art direction, launch visuals, or social-first creative, we build design systems that carry authority across channels. The work is rooted in strategy, then expressed through typography, composition, language, and assets that feel deliberately premium.",
+        "image": "/images/services/creative-studio.jpg",
+        "heroImage": "/images/services/creative-studio-hero.jpg",
+        "keywords": [
+          "Brand Identity",
+          "Campaign Design",
+          "Art Direction",
+          "Content Production"
+        ],
+        "subServices": [
+          "Brand identity refresh and systems",
+          "Campaign art direction",
+          "Social content design",
+          "Pitch and presentation design",
+          "Launch visuals and brand assets",
+          "Photography and video direction"
+        ],
+        "process": [
+          {
+            "title": "Brand Signal Audit",
+            "description": "We review the current visual language, category references, and audience expectations."
+          },
+          {
+            "title": "Creative Direction",
+            "description": "We establish mood, typography, composition cues, and visual rules for consistency."
+          },
+          {
+            "title": "Asset Production",
+            "description": "We create the design toolkit, campaign assets, and layouts needed for rollout."
+          },
+          {
+            "title": "Application Support",
+            "description": "We guide teams on how the system translates into social, web, PR, and launch moments."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "70+",
+            "label": "Campaign Systems",
+            "detail": "Brand and launch visual systems delivered across sectors."
+          },
+          {
+            "value": "48hr",
+            "label": "Rapid Turnaround",
+            "detail": "Fast creative support for media opportunities and live campaigns."
+          },
+          {
+            "value": "3.4x",
+            "label": "Content Efficiency",
+            "detail": "Improvement in reusable creative output across channels."
+          }
+        ]
+      },
+      {
+        "slug": "seo-search-strategy",
+        "shortLabel": "SEO & Search Strategy",
+        "title": "SEO & Search Strategy",
+        "eyebrow": "Visibility that compounds over time",
+        "description": "We build search visibility with a strategic mix of technical clarity, editorial value, and content systems designed to win long-term demand.",
+        "intro": "Search is one of the highest-leverage growth channels when brand messaging, content, and technical performance work together.",
+        "longDescription": "Our search programs look beyond rankings alone. We structure content around intent, build topical authority, and strengthen site fundamentals so brands become easier to discover and easier to trust. The result is demand capture that keeps improving long after launch.",
+        "image": "/images/services/seo-search-strategy.jpg",
+        "heroImage": "/images/services/seo-search-strategy-hero.jpg",
+        "keywords": [
+          "Technical SEO",
+          "Search Intent",
+          "Editorial Strategy",
+          "Organic Demand"
+        ],
+        "subServices": [
+          "Technical SEO audits",
+          "Keyword and intent mapping",
+          "Content strategy and page briefs",
+          "On-page optimization",
+          "Search console and analytics review",
+          "Authority-building editorial roadmaps"
+        ],
+        "process": [
+          {
+            "title": "Search Landscape Audit",
+            "description": "We map competitive gaps, search intent clusters, and technical performance issues."
+          },
+          {
+            "title": "Content Opportunity Planning",
+            "description": "We prioritize pages and themes that can unlock demand with clear commercial relevance."
+          },
+          {
+            "title": "Optimization Rollout",
+            "description": "We improve site structure, metadata, copy direction, and internal linking systems."
+          },
+          {
+            "title": "Authority and Reporting",
+            "description": "We track growth in rankings, traffic quality, and conversion-ready organic visits."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "220%",
+            "label": "Organic Growth",
+            "detail": "Increase in non-branded sessions after search strategy implementation."
+          },
+          {
+            "value": "85%",
+            "label": "Page One Coverage",
+            "detail": "Priority keyword clusters ranking on page one over campaign cycles."
+          },
+          {
+            "value": "4.9x",
+            "label": "Intent Match Lift",
+            "detail": "Better alignment between search demand and conversion pages."
+          }
+        ]
+      }
+    ],
+    "serviceTickerTags": [
+      "Public Relations",
+      "Social Media Marketing",
+      "Performance Marketing",
+      "Creative Studio",
+      "Influencer Marketing",
+      "SEO & Search Strategy"
+    ],
+    "allServiceGroups": [
+      {
+        "title": "Public Relations",
+        "items": [
+          "Media Relations",
+          "Investor Relations",
+          "Employer Branding",
+          "Crisis Management",
+          "Govt & Public Affairs",
+          "Awards & Recognition",
+          "Corporate Communication",
+          "Event & Press Conference",
+          "CSR Communications"
+        ]
+      },
+      {
+        "title": "Campaign & Growth",
+        "items": [
+          "PR Campaigns",
+          "Social Media Marketing",
+          "Performance Marketing",
+          "Content Marketing",
+          "Podcast Marketing",
+          "Meme Marketing",
+          "Twitter Trending",
+          "Social Media Management"
+        ]
+      },
+      {
+        "title": "Creative & Search",
+        "items": [
+          "Influencer Marketing",
+          "Creative Studio",
+          "Viral Marketing",
+          "Personal Branding",
+          "Wikipedia Page Creation",
+          "Social Verification Support",
+          "Google Knowledge Panel",
+          "SEO & Search Strategy"
+        ]
+      }
+    ],
+    "projectCategories": [
+      "Product Launch",
+      "Executive Visibility",
+      "Crisis Communications",
+      "Market Entry",
+      "Investor Communications"
+    ],
+    "projectSectionIntro": {
+      "label": "Projects",
+      "title": "A curated look at how strategy becomes visibility.",
+      "supporting": "Selected engagements across launches, executive visibility, crisis communications, market entry, and investor communications."
+    },
+    "projectsPageIntro": {
+      "label": "Projects",
+      "heading": "A curated look at the campaigns and engagements that demonstrate how we apply PR strategy across different industries, objectives, and markets.",
+      "supporting": "These are not our most glamorous projects. They are our most instructive ones.",
+      "note": "Project portfolios in PR are awkward by nature. Confidentiality matters. Clients do not always want their communications strategy documented publicly. What we can share is a representative set of campaign types, the strategic thinking behind them, and the measurable outcomes produced. The industries and company sizes vary. The methodology does not."
+    },
+    "projectsClosingCta": {
+      "heading": "Every project begins with a conversation about your specific situation.",
+      "supporting": "If any of the above resonates with a challenge you are navigating, that is the right place to start.",
+      "button": "Schedule a Project Discussion"
+    },
+    "projectItems": [
+      {
+        "id": 1,
+        "slug": "b2b-software-launch",
+        "title": "Media Launch Campaign: B2B Software Platform",
+        "category": "Product Launch",
+        "market": "US + UK",
+        "duration": "8 weeks",
+        "teaserOutcome": "14 coordinated media briefings across two markets.",
+        "summary": "A coordinated product launch campaign for a B2B software platform entering competitive US and UK markets simultaneously. The challenge was creating coherent coverage across two geographically distinct media ecosystems with different editorial priorities and relationship networks. We developed a dual-market briefing strategy with market-specific news angles that gave journalists in each market a locally relevant story connected to a single global narrative.",
+        "outcomes": [
+          "14 coordinated media briefings across US and UK in a 3-week window",
+          "Launch day coverage in 6 publications without press release mass distribution",
+          "Zero conflicting narratives between US and UK coverage",
+          "Product now indexed positively in category search results within 6 weeks"
+        ]
+      },
+      {
+        "id": 2,
+        "slug": "financial-executive-thought-leadership",
+        "title": "Thought Leadership Programme: Financial Services Executive",
+        "category": "Executive Visibility",
+        "market": "UK + Canada",
+        "duration": "12 months",
+        "teaserOutcome": "18 bylined articles placed in target publications.",
+        "summary": "A 12-month thought leadership programme for the CEO of a financial services firm seeking editorial presence in UK and Canadian business media. Starting from zero media relationships, we developed a bylined content programme tied to regulatory and market developments in the executive's area of expertise. Editorial relationships in four target publications were developed and maintained throughout the engagement.",
+        "outcomes": [
+          "18 bylined articles placed in target business and finance publications",
+          "CEO cited as industry commentator by two journalists unprompted within 10 months",
+          "Speaking invitation from a major financial services conference in month 11",
+          "Firm shortlisted for industry award citing the executive's published perspective as supporting evidence"
+        ]
+      },
+      {
+        "id": 3,
+        "slug": "consumer-healthcare-crisis",
+        "title": "Crisis Response Management: Consumer Healthcare Brand",
+        "category": "Crisis Communications",
+        "market": "Australia + UK",
+        "duration": "Active management 3 weeks, recovery 5 months",
+        "teaserOutcome": "Active negative coverage cycle concluded within 3 weeks.",
+        "summary": "An acute reputation event for a consumer healthcare company involving a third-party supplier failure that generated negative coverage across national media in two markets simultaneously. We were engaged on day three of active coverage. Immediate priorities were media monitoring, spokesperson briefing, and developing a response statement that acknowledged the situation without amplifying it. The recovery phase involved a structured transparency programme and a quality assurance editorial campaign.",
+        "outcomes": [
+          "Media response statement approved and published within 48 hours of engagement start",
+          "Active negative coverage cycle concluded within 3 weeks",
+          "No major publication ran a follow-up negative story after the initial cycle",
+          "Brand sentiment returned to neutral within 90 days based on monitoring data",
+          "Crisis communications playbook delivered as a programme deliverable"
+        ]
+      },
+      {
+        "id": 4,
+        "slug": "professional-services-us-entry",
+        "title": "Market Entry Campaign: Professional Services Firm in US Market",
+        "category": "Market Entry",
+        "market": "United States",
+        "duration": "10 months",
+        "teaserOutcome": "11 articles placed in US-targeted publications over 10 months.",
+        "summary": "A professional services firm with strong credentials in Europe needed editorial credibility in the US market before committing to physical expansion. US buyers in this category consistently reference media presence as a trust signal. We developed a 10-month pre-entry PR programme that established the firm's senior partners in US trade and business media before the official market entry announcement.",
+        "outcomes": [
+          "11 articles placed in US-targeted publications over 10 months",
+          "Two partner profiles in national business outlets ahead of launch",
+          "US market entry announcement covered organically in 5 publications",
+          "Firm reported positive brand recognition in first-round US client conversations"
+        ]
+      },
+      {
+        "id": 5,
+        "slug": "pre-series-b-investor-visibility",
+        "title": "Investor Visibility Programme: Pre-Series B Startup",
+        "category": "Investor Communications",
+        "market": "UK + US",
+        "duration": "6 months",
+        "teaserOutcome": "Series B announcement covered across 11 publications.",
+        "summary": "A startup preparing for a Series B round needed media credibility in publications that institutional investors in their category actively read. Their challenge was not a lack of substance. They had strong metrics and a compelling product. The challenge was that their story had never been told publicly in a way that matched the quality of their internal narrative. We developed a structured pre-round visibility programme that gave journalists the context and narrative tools to write compelling stories independently.",
+        "outcomes": [
+          "Founder profiled in 3 relevant publications before round announcement",
+          "Series B announcement covered across 11 publications without mass press release distribution",
+          "Lead investor cited company's media presence in a public statement post-round",
+          "Organic follow-on coverage in 4 additional publications within 45 days of announcement"
+        ]
+      }
+    ],
+    "homepageFeaturedProjectSlugs": [
+      "b2b-software-launch",
+      "financial-executive-thought-leadership",
+      "pre-series-b-investor-visibility"
+    ],
+    "portfolioItems": [
+      {
+        "id": 1,
+        "slug": "saas-platform-us-market-entry",
+        "category": "SaaS",
+        "client": "UK-Founded SaaS Platform",
+        "title": "SaaS Platform Enters Competitive US Market",
+        "result": "24 original US articles, 2.1 million estimated readers reached, and a 38% rise in inbound demo requests over 9 months.",
+        "excerpt": "A growing SaaS company needed earned authority in the United States before unfamiliar buyers would take the brand seriously against well-funded local competitors.",
+        "image": "/images/case-studies/saas-market-entry.jpg",
+        "market": "United States",
+        "engagementDuration": "9 months",
+        "situation": "A UK-founded SaaS company had built a strong product and a growing European customer base. The US market was the next logical step, but the brand had almost no media presence in American trade publications and no established credibility with US buyers who were unfamiliar with the company name. Their category was crowded with well-funded American competitors who dominated the editorial conversation. Entering required more than advertising. It required earned authority.",
+        "strategy": "We identified three distinct audiences: enterprise procurement teams reading vertical trade media, technology journalists covering the software category, and investor influencers active on LinkedIn and financial news platforms. Instead of distributing press releases uniformly, we built a tiered content strategy that gave each audience a reason to engage. For trade media, we developed a series of data-backed opinion pieces positioning the company's founders as category experts. For technology journalists, we arranged product briefings tied to a genuine product milestone. For investor audiences, we coordinated a CEO commentary campaign around regulatory changes affecting the software category.",
+        "execution": "Over nine months, we secured initial coverage in two US technology trade publications, developed an ongoing byline relationship with one vertical industry outlet, and managed a product launch news cycle that generated coordinated coverage across seven publications within a 72-hour window. Crisis preparation materials were developed for a regulatory question that arose mid-engagement, which the team navigated without negative press.",
+        "results": [
+          {
+            "label": "Media Placements Secured",
+            "value": "24 original articles",
+            "detail": "Placed in US publications over a 9-month engagement."
+          },
+          {
+            "label": "Audience Reach",
+            "value": "2.1 million readers",
+            "detail": "Estimated across placed articles using publisher-reported figures."
+          },
+          {
+            "label": "Inbound Lead Impact",
+            "value": "+38%",
+            "detail": "Increase in US inbound demo requests over the engagement period."
+          },
+          {
+            "label": "Investor Visibility",
+            "value": "First-time financial press coverage",
+            "detail": "CEO quoted in two financial technology news publications."
+          },
+          {
+            "label": "Narrative Outcome",
+            "value": "Global solution positioning",
+            "detail": "The company shifted from being seen as a European platform to a global solution with proven European scale."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "24",
+            "label": "US Articles"
+          },
+          {
+            "value": "2.1M",
+            "label": "Estimated Reach"
+          },
+          {
+            "value": "+38%",
+            "label": "Demo Requests"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "slug": "consumer-brand-reputation-rebuild",
+        "category": "Consumer Goods",
+        "client": "Consumer Goods Brand",
+        "title": "Consumer Brand Rebuilds Reputation After Product Recall",
+        "result": "Brand sentiment moved from net negative to net neutral within 90 days, while positive stories claimed 4 of the top 10 Google results within 6 months.",
+        "excerpt": "After a recall damaged trust and search visibility, the challenge was to rebuild credibility without looking defensive or rushing back into promotion.",
+        "image": "/images/case-studies/consumer-reputation-rebuild.jpg",
+        "market": "United Kingdom",
+        "engagementDuration": "6 months",
+        "situation": "A consumer goods brand had issued a product recall affecting a mid-range product line. The recall was handled correctly from a regulatory standpoint, but the media coverage had been disproportionate and remained indexed in search results. Consumer trust scores had declined visibly in brand tracking data. The company needed a structured communications recovery that rebuilt credibility without appearing defensive or dismissive of the original issue.",
+        "strategy": "Reputation recovery after a product crisis has one non-negotiable principle: transparency before promotion. We advised against any attempt to suppress the original coverage or pivot to positive stories too quickly, both of which signal defensiveness and often generate additional scrutiny. Instead, we built a structured 90-day transparency programme that led with the company's internal response measures, quality improvements made as a direct result of the recall, and consumer communication initiatives. The promotional recovery followed, not preceded, the credibility rebuilding phase.",
+        "execution": "We developed a CEO-authored accountability statement distributed through national consumer media, a quality improvement editorial series for trade publications, and a customer outreach communications package that gave the company's service team consistent messaging. A media monitoring protocol was established with clear escalation criteria. The company participated in an industry roundtable on product safety standards, earning positive contextual coverage.",
+        "results": [
+          {
+            "label": "Sentiment Shift",
+            "value": "Net neutral in 90 days",
+            "detail": "Media monitoring moved from net negative to net neutral inside the first 90 days."
+          },
+          {
+            "label": "Positive Coverage",
+            "value": "11 mentions",
+            "detail": "Positive editorial mentions landed in national consumer press within 6 months."
+          },
+          {
+            "label": "Search Narrative",
+            "value": "4 of top 10 results",
+            "detail": "Positive stories occupied four of the first ten Google results for the brand name within 6 months."
+          },
+          {
+            "label": "Consumer Trust",
+            "value": "Recovered to within 8 points",
+            "detail": "Internal brand tracking showed trust scores returning close to the pre-recall baseline."
+          },
+          {
+            "label": "Crisis Preparation",
+            "value": "Full playbook delivered",
+            "detail": "A future-ready crisis communications playbook was created for the client team."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "90",
+            "label": "Days to Neutral"
+          },
+          {
+            "value": "11",
+            "label": "Positive Mentions"
+          },
+          {
+            "value": "4/10",
+            "label": "Top Search Results"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "slug": "professional-services-thought-leadership-platform",
+        "category": "Professional Services",
+        "client": "Management Consultancy",
+        "title": "Professional Services Firm Builds Thought Leadership Platform",
+        "result": "22 bylined articles, two recurring publication relationships, and a 340% combined LinkedIn audience increase across partner profiles.",
+        "excerpt": "A respected consultancy was winning on referrals but losing visibility in competitive pitches because larger firms owned the editorial conversation.",
+        "image": "/images/case-studies/professional-services-thought-leadership.jpg",
+        "market": "Canada and USA",
+        "engagementDuration": "12 months",
+        "situation": "A mid-size management consultancy had strong client retention and a good internal reputation but was effectively invisible in the editorial conversation of its category. Larger competitors commanded thought leadership in major business publications. The firm was winning business through referrals but losing consideration in competitive pitches where brand recognition played a role. Senior partners had valuable perspectives but no established publication relationships and no content infrastructure to express them consistently.",
+        "strategy": "We identified two senior partners whose areas of expertise intersected with high-interest editorial topics in the business press: organisational change management and digital transformation governance. Rather than pursuing broad coverage, we focused on establishing genuine depth in a small number of relevant publications over 12 months. Credibility compounds in PR - a second article in the same publication is worth more than two articles in two different outlets because it signals editorial endorsement, not just one-time placement.",
+        "execution": "We developed a content calendar of six major opinion pieces per partner per year, each tied to current business news and supported by original research or client-anonymised case evidence. Journalist relationship development targeted specific editors at four target publications. Speaking opportunity submissions were coordinated with the content calendar to create reinforcing signals. A LinkedIn editorial programme ran alongside earned media to ensure partner visibility between placements.",
+        "results": [
+          {
+            "label": "Publication Relationships",
+            "value": "2 ongoing contributor relationships",
+            "detail": "Established with major business publications relevant to the firm's category."
+          },
+          {
+            "label": "Thought Leadership Volume",
+            "value": "22 bylined articles",
+            "detail": "Placed across target publications over a 12-month engagement."
+          },
+          {
+            "label": "Speaking Engagements",
+            "value": "3 invitations received",
+            "detail": "Two conference speaking opportunities were ultimately accepted."
+          },
+          {
+            "label": "Pitch Impact",
+            "value": "4 pitch debrief mentions",
+            "detail": "The firm reported positive brand-recognition feedback in four competitive pitch debriefs."
+          },
+          {
+            "label": "LinkedIn Reach",
+            "value": "+340%",
+            "detail": "The two partner profiles grew their combined audiences by 340% during the programme."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "22",
+            "label": "Bylined Articles"
+          },
+          {
+            "value": "2",
+            "label": "Contributor Relationships"
+          },
+          {
+            "value": "+340%",
+            "label": "LinkedIn Audience Growth"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "slug": "fintech-series-a-media-visibility",
+        "category": "Fintech",
+        "client": "Fintech Startup",
+        "title": "Startup Achieves Media Visibility Before Series A Round",
+        "result": "The Series A announcement was covered by 9 publications without press release distribution, followed by 3 organic mentions after the round closed.",
+        "excerpt": "The company needed institutional media credibility before investor conversations intensified, with a founder story journalists could tell without heavy company control.",
+        "image": "/images/case-studies/fintech-investor-visibility.jpg",
+        "market": "Australia and UK",
+        "engagementDuration": "5 months",
+        "situation": "A fintech startup approaching a Series A funding round needed institutional media credibility before investor conversations intensified. Sophisticated investors in this category do background research and often factor in the quality of a company's editorial presence when assessing brand maturity. The company had a strong product and compelling founder story but no media history and no relationships with financial or technology journalists.",
+        "strategy": "We focused the engagement on two outcomes: securing coverage in publications that investors in this category actively read, and creating a coherent founder narrative that journalists could tell without the company needing to control every word. The second objective is often underestimated. When a journalist can write a compelling story about a founder from public information alone, unprompted mentions begin to occur. The goal was to make the company easy to cover, not just willing to be covered.",
+        "execution": "A founder narrative document was developed as the strategic foundation. This covered origin story, market problem framing, and differentiation argument in journalistically usable terms. Targeted briefings were arranged with reporters at fintech, startup, and business news outlets across Australia and the UK. A data-driven research piece on payment friction in the SME sector was produced to give journalists a news hook independent of the company's own milestones.",
+        "results": [
+          {
+            "label": "Pre-Round Coverage",
+            "value": "2 founder profiles",
+            "detail": "The founder was profiled in two relevant fintech publications before the funding round announcement."
+          },
+          {
+            "label": "Round Announcement Reach",
+            "value": "9 publications",
+            "detail": "Series A coverage landed across nine outlets without distributing a press release."
+          },
+          {
+            "label": "Journalist Relationships",
+            "value": "6 target reporters",
+            "detail": "Active contact was established with journalists across fintech, startup, and business outlets."
+          },
+          {
+            "label": "Investor Commentary",
+            "value": "Credibility signal acknowledged",
+            "detail": "The lead investor publicly cited the company's media presence as a credibility signal."
+          },
+          {
+            "label": "Follow-On Coverage",
+            "value": "3 organic mentions",
+            "detail": "Three publications mentioned the company within 60 days of the round close without outreach."
+          }
+        ],
+        "metrics": [
+          {
+            "value": "9",
+            "label": "Round Coverage Placements"
+          },
+          {
+            "value": "6",
+            "label": "Reporter Relationships"
+          },
+          {
+            "value": "3",
+            "label": "Organic Follow-On Mentions"
+          }
+        ]
+      }
+    ],
+    "featuredCaseStudy": {
+      "client": "Page 1 | Case Studies",
+      "title": "Results That Speak Before We Do",
+      "result": "Four client engagements. Different industries, different goals, different starting points. The common thread is a clear PR strategy executed with editorial discipline and measurable outcomes.",
+      "excerpt": "The cases below document real client challenges, the strategic decisions we made, how we executed, and what changed as a result. We present them because the specifics are more credible than generalised claims.",
+      "image": "/images/case-studies/featured-results.jpg"
+    },
+    "blogPosts": [
+      {
+        "slug": "modern-brands-credibility",
+        "category": "PR Strategy",
+        "readTime": "5 min read",
+        "title": "How modern brands build credibility before they buy attention",
+        "excerpt": "A look at why narrative clarity and third-party validation still outperform pure spend when trust is the real constraint.",
+        "image": "/images/blog/modern-brands-credibility.jpg",
+        "content": "Credibility is not something you can buy outright. You can rent attention through paid media, but the moment the spend stops, so does the visibility. The brands that grow with staying power are the ones that invest in the infrastructure of trust before they scale the infrastructure of reach.\n\nThat infrastructure starts with narrative clarity. Most brands try to communicate too much too early — features, pricing, company backstory, team credentials, and mission statements all competing for the same first impression. The result is a message that leaves the audience without a clear reason to care.\n\nThe brands that earn media coverage, referrals, and long-term customer loyalty tend to do one thing well before anything else: they decide what they stand for in one sentence, and they make sure every public-facing touchpoint reflects that sentence consistently.\n\nThird-party validation — coverage, awards, analyst mentions, customer stories — compounds this effect. When a journalist writes about your brand, they're lending their credibility to your story. When a customer shares their experience publicly, they're reducing the risk for the next buyer. These signals build over time and create a foundation that paid spend cannot replicate.\n\nThe practical takeaway: before increasing your media budget, audit your narrative. If you can't explain what your brand stands for in one clear sentence, no amount of spend will make the message land."
+      },
+      {
+        "slug": "social-strategy-as-system",
+        "category": "Social & Growth",
+        "readTime": "4 min read",
+        "title": "What changes when social strategy is treated like a system, not a calendar",
+        "excerpt": "Better planning, stronger feedback loops, and content that compounds instead of starting from zero every week.",
+        "image": "/images/blog/social-strategy-as-system.jpg",
+        "content": "Most social media teams operate on a calendar. They plan content week by week, react to platform trends as they emerge, and measure performance post by post. This approach produces activity, but it rarely produces momentum.\n\nThe difference between a social presence that compounds and one that flatlines is almost always structural. Brands that build audiences consistently treat social as a system — with repeatable content formats, clear audience feedback loops, and a publishing rhythm that creates expectation rather than surprise.\n\nA content system starts with a small number of defined formats: the type of posts your audience reliably responds to, structured so they can be produced quickly and consistently. Once you have two or three formats that work, the question shifts from \"what should we post today\" to \"how do we improve our existing formats and expand our reach.\"\n\nFeedback loops matter as much as the content itself. Knowing which posts drive saves, shares, and profile visits — versus which ones generate comments but no downstream action — allows you to allocate creative energy where it compounds rather than where it just performs.\n\nThe calendar approach will always feel more urgent than it is. The system approach will always feel slower than it is. The difference shows up at month six."
+      },
+      {
+        "slug": "design-cues-premium-brands",
+        "category": "Creative",
+        "readTime": "6 min read",
+        "title": "Design cues that make a brand feel premium before anyone reads the copy",
+        "excerpt": "Typography, spacing, contrast, and composition signals shape perception faster than most teams realize.",
+        "image": "/images/blog/design-cues-premium-brands.jpg",
+        "content": "Perception forms in milliseconds. Before a visitor reads your headline, before they register your value proposition, before they decide whether to scroll — they have already formed an impression based entirely on visual signals.\n\nTypography is the most powerful of these signals and the most consistently underestimated. The weight, spacing, and hierarchy of your type communicates authority or uncertainty, precision or casualness, before a single word is parsed. Brands that feel premium almost always use type with more restraint — fewer sizes, more consistent weights, and generous letter-spacing on labels and navigation.\n\nSpacing is the second signal. Crowded layouts feel cheap regardless of the quality of the content inside them. Premium brands give their content room to breathe. The white space is not empty — it is doing active work, directing attention and signaling that the brand is not anxious to fill every pixel.\n\nContrast is the third. Not just color contrast, but compositional contrast: the interplay between large and small, heavy and light, image and text. Flat, evenly-weighted layouts feel safe but forgettable. Layouts with clear hierarchy and deliberate contrast feel considered.\n\nNone of this requires a large design budget. It requires decisions — made early and held consistently — about what the visual language of the brand is allowed to say."
+      },
+      {
+        "slug": "brand-and-search-together",
+        "category": "Search",
+        "readTime": "5 min read",
+        "title": "Why brand and search teams should stop planning in isolation",
+        "excerpt": "Search captures demand, but demand is often created by stronger stories, better signals, and better brand memory.",
+        "image": "/images/blog/brand-and-search-together.jpg",
+        "content": "Search is a demand-capture channel. It works by intercepting people who are already looking for something. What it cannot do on its own is create the demand it captures.\n\nThat demand is created upstream — by brand exposure, word of mouth, media coverage, social presence, and the accumulated memory people carry about your category. When someone types your brand name into a search engine, it is almost never the first time they have encountered you. The search is the endpoint of a longer journey that started somewhere else.\n\nThis is why brand teams and search teams that plan independently tend to underperform relative to teams that share data and intent signals. Brand teams have access to the stories that are landing with audiences. Search teams have access to the specific language people use when they are ready to act. When these two data sets inform each other, both channels become more effective.\n\nPractically, this means search teams should be involved in campaign planning from the start — not to optimize press releases for keywords, but to understand what language choices will be reinforced across paid, earned, and owned media. And brand teams should treat rising search volumes around specific topics as signal that those narratives are gaining traction and deserve more investment.\n\nThe brands with the most durable organic visibility are almost always the ones with the strongest brand presence. That is not a coincidence."
+      }
+    ],
+    "contact": {
+      "contactPageIntro": {
+        "label": "Page 6 | Contact",
+        "title": "Start With a Conversation",
+        "description": "The most useful first step is always a direct discussion about your situation. A real conversation with someone who can give you an honest assessment of what communications strategy could do for your goals."
+      },
+      "contactStrategyConsultation": {
+        "label": "Primary Contact: Strategy Consultation",
+        "title": "A direct assessment of where communications strategy can genuinely help.",
+        "paragraphs": [
+          "A strategy consultation is a 30-minute conversation covering your current communications position, your commercial objectives, and the specific challenge or opportunity you are trying to address.",
+          "At the end, you will have a clear sense of whether PR is the right lever for your goals, what an engagement with NovaPR would look like, and what results are realistically achievable in what timeframe.",
+          "No obligation follows. Some consultations confirm that PR is the right investment and we agree to scope an engagement. Others clarify that a different approach would better serve your goals, and we say so. Either outcome is useful for you."
+        ],
+        "highlights": [
+          {
+            "title": "30 minutes",
+            "description": "Structured conversation focused on goals, position, and pressure points."
+          },
+          {
+            "title": "No obligation",
+            "description": "If PR is not the right lever, we will tell you directly."
+          },
+          {
+            "title": "Within 2 business days",
+            "description": "Most consultations are scheduled inside that window after request."
+          }
+        ]
+      },
+      "contactOptions": [
+        {
+          "label": "Email",
+          "title": "Detailed enquiries, RFPs, or first questions.",
+          "description": "For detailed enquiries, RFP submissions, or initial questions before scheduling a call. We respond within one business day.",
+          "value": "hello@novapr.co",
+          "href": "mailto:hello@novapr.co"
+        },
+        {
+          "label": "LinkedIn",
+          "title": "Professional introductions through your network.",
+          "description": "For professional introductions and initial contact from the network. We check and respond to LinkedIn messages during business hours.",
+          "value": "linkedin.com/company/novapr",
+          "href": "https://www.linkedin.com/company/novapr",
+          "external": true
+        },
+        {
+          "label": "For Press Enquiries",
+          "title": "Direct access for journalists and commentary requests.",
+          "description": "Journalists seeking expert commentary on communications, PR industry matters, or brand strategy can reach us directly. We respond to media enquiries within four hours during business hours.",
+          "value": "press@novapr.co",
+          "href": "mailto:press@novapr.co"
+        }
+      ],
+      "contactExpectationsIntro": {
+        "label": "What To Expect",
+        "title": "The first response is senior, direct, and substantive.",
+        "description": "When you reach out to NovaPR, you are contacted by a senior member of the team, not an account coordinator or business development representative. The first conversation is prepared, practical, and focused on your communications landscape rather than a generic agency pitch."
+      },
+      "contactExpectations": [
+        {
+          "title": "Strategy consultation booking",
+          "timeframe": "Confirmed within 4 business hours",
+          "description": "Most requests are scheduled within 2 business days of first contact."
+        },
+        {
+          "title": "Email enquiry response",
+          "timeframe": "Within 1 business day",
+          "description": "Useful for detailed briefs, RFPs, and questions before scheduling a call."
+        },
+        {
+          "title": "LinkedIn message",
+          "timeframe": "Within 1 business day",
+          "description": "Responses are handled during business hours for network-led introductions."
+        },
+        {
+          "title": "Press enquiry",
+          "timeframe": "Within 4 hours",
+          "description": "Media requests are prioritized during business hours for timely commentary."
+        }
+      ],
+      "contactConversationTopicsIntro": {
+        "label": "What We Cover In The First Conversation",
+        "title": "A useful first call should leave you clearer than before it started.",
+        "description": "The first conversation covers the commercial context, the communications gap, and the level of urgency around the situation you are navigating now."
+      },
+      "contactConversationTopics": [
+        {
+          "title": "Current media presence",
+          "description": "Where you currently stand in the editorial landscape and the gap between where you are and where you need to be."
+        },
+        {
+          "title": "Commercial objectives",
+          "description": "What the business is trying to achieve and how communications strategy could realistically connect to that outcome."
+        },
+        {
+          "title": "Challenge or opportunity",
+          "description": "The specific launch, market entry, reputation issue, funding event, or visibility gap driving the conversation."
+        },
+        {
+          "title": "Realistic engagement shape",
+          "description": "What a credible scope, timeline, and investment range would look like if the work is a fit."
+        },
+        {
+          "title": "Immediate communications pressure",
+          "description": "Any active or anticipated situation that may require faster strategic attention or reactive preparation."
+        },
+        {
+          "title": "Honest fit assessment",
+          "description": "Whether PR is the right tool for your objective right now, or whether another route would serve you better."
+        }
+      ],
+      "contactFaqs": [
+        {
+          "question": "Do I need to prepare anything for the first call?",
+          "answer": "No formal preparation is needed. The more you can tell us about your commercial situation and what a successful outcome looks like, the more productive the conversation will be. But we are comfortable working from a brief description of the challenge."
+        },
+        {
+          "question": "We are not based in the UK. Can we still work with you?",
+          "answer": "Yes. We work with clients across the UK, US, Canada, and Australia. Most client relationships are managed entirely remotely, and time zone coordination is discussed during initial scoping."
+        },
+        {
+          "question": "We are at an early stage. Are we too small to engage?",
+          "answer": "It depends on the objective. Early-stage companies often have legitimate communications needs such as pre-funding visibility, founder profile building, or market entry preparation. We assess fit honestly during the consultation."
+        },
+        {
+          "question": "Can we engage on a project basis rather than a retained relationship?",
+          "answer": "Yes. Some engagements are project-defined, such as a launch campaign, a crisis response, or a thought leadership programme with a defined duration. We discuss structure during the consultation based on your objectives."
+        },
+        {
+          "question": "How confidential are our conversations?",
+          "answer": "Entirely. We do not discuss current or prospective client situations with anyone outside the direct engagement team. Confidentiality is a baseline, not a selling point."
+        },
+        {
+          "question": "Do you sign NDAs before initial conversations?",
+          "answer": "Yes. We are willing to sign an NDA before any conversation that requires it. For most initial consultations we work under an assumption of confidentiality without a formal document, but we will sign one if your situation requires it."
+        }
+      ],
+      "contactReasonsIntro": {
+        "label": "Why This Conversation Is Worth Having",
+        "title": "Clarity is valuable even before an engagement exists.",
+        "description": "The first conversation costs nothing and commits you to nothing. It is simply the most efficient way to determine whether NovaPR can genuinely help with what you are trying to achieve."
+      },
+      "contactReasons": [
+        {
+          "title": "Clarity on whether PR is the right investment",
+          "description": "Not every commercial challenge requires a PR solution. We are direct about this and will tell you if another approach is more likely to serve your goals."
+        },
+        {
+          "title": "Honest timeline expectations",
+          "description": "We will tell you what is achievable in 90 days, six months, and 12 months based on your starting position rather than promising unrealistic momentum to win a retainer."
+        },
+        {
+          "title": "No pressure to proceed",
+          "description": "The consultation is informational in both directions. We are assessing fit as much as you are, because engagements that start without it rarely produce good results."
+        },
+        {
+          "title": "Immediate strategic value",
+          "description": "Most consultations produce at least one concrete insight or reframing of the communications challenge that is useful immediately, whether or not an engagement follows."
+        }
+      ]
+    },
+    "heroStats": [
+      {
+        "value": "500+",
+        "label": "Brands Elevated"
+      },
+      {
+        "value": "8+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "95%",
+        "label": "Client Retention"
+      }
+    ],
+    "statsTicker": [
+      {
+        "value": 500,
+        "suffix": "+",
+        "label": "Brands Elevated"
+      },
+      {
+        "value": 50,
+        "suffix": "M+",
+        "label": "Media Impressions"
+      },
+      {
+        "value": 8,
+        "suffix": "+",
+        "label": "Years of Excellence"
+      },
+      {
+        "value": 98,
+        "suffix": "%",
+        "label": "Campaign Success Rate"
+      }
+    ],
+    "performanceStats": [
+      {
+        "value": 90,
+        "label": "First Principle Thinking",
+        "description": "Strategy shaped from business realities, not templates."
+      },
+      {
+        "value": 95,
+        "label": "International Network",
+        "description": "Cross-market relationships that expand the media horizon."
+      },
+      {
+        "value": 90,
+        "label": "Real Results Delivered",
+        "description": "Measured against visibility, sentiment, and conversion impact."
+      },
+      {
+        "value": 100,
+        "label": "Expert Knowledge",
+        "description": "Specialist execution across PR, growth, creative, and search."
+      }
+    ],
+    "testimonials": [
+      {
+        "name": "Ravi Reddy",
+        "role": "Brand Manager, Way2News",
+        "quote": "NovaPR achieved ROI excellence with their promotion strategies. Their cost-effective approach and focus on measurable results significantly contributed to our brand's success."
+      },
+      {
+        "name": "Sumit Mall",
+        "role": "Head of Communications, Heal Foundation",
+        "quote": "NovaPR's PR efforts generated impactful results. Their dedication amplified our message, connected us with a broader audience, and created a genuine partnership."
+      },
+      {
+        "name": "Sanket Narkar",
+        "role": "Head of Marketing, Physics Wallah",
+        "quote": "We soared to new heights with NovaPR's PR prowess. Their expertise elevated our visibility and market presence, and the personalized attention truly set them apart."
+      },
+      {
+        "name": "Gayatri GL",
+        "role": "Brand Manager, Coin Fantasy",
+        "quote": "We found a reliable partner in NovaPR. Their consistent support strengthened our brand image and built trust among our most important stakeholders."
+      },
+      {
+        "name": "Abhishek Sarkar",
+        "role": "Assistant Manager PR, GM Modular",
+        "quote": "NovaPR delivers results. Since partnering with them, we have seen a measurable boost in recognition and a stronger response to every campaign launch."
+      },
+      {
+        "name": "Ashok Reddy",
+        "role": "Marketing Manager, GrabOn",
+        "quote": "Their strategic brilliance helped our campaigns resonate with the right audience at the right time, and that momentum translated into real business growth."
+      }
+    ],
+    "timeline": [
+      {
+        "year": "2016",
+        "title": "NovaPR takes shape",
+        "description": "The agency began with a focused belief that brands deserved communications partners who could think strategically and execute quickly."
+      },
+      {
+        "year": "2018",
+        "title": "Early national campaigns",
+        "description": "We started building launch campaigns and high-visibility media programs for fast-scaling businesses entering competitive markets."
+      },
+      {
+        "year": "2020",
+        "title": "Digital and PR under one roof",
+        "description": "We expanded into integrated social and digital strategy so brand storytelling and audience growth could work together."
+      },
+      {
+        "year": "2022",
+        "title": "Creative studio launch",
+        "description": "A dedicated creative layer helped our clients translate strategy into premium visual systems, campaigns, and launch assets."
+      },
+      {
+        "year": "2024",
+        "title": "Influencer and creator expansion",
+        "description": "We added a creator partnerships practice to connect brands with cultural voices that move awareness and action."
+      },
+      {
+        "year": "2026",
+        "title": "Scaling the next chapter",
+        "description": "Today, NovaPR operates as a multi-disciplinary growth and reputation partner for brands that want sharper presence and stronger outcomes."
+      }
+    ],
+    "teamMembers": [
+      {
+        "name": "Aarav Mehta",
+        "role": "Founder & Strategy Director",
+        "image": "/images/team/aarav-mehta.jpg",
+        "linkedin": "#"
+      },
+      {
+        "name": "Rhea Kapoor",
+        "role": "Head of Public Relations",
+        "image": "/images/team/rhea-kapoor.jpg",
+        "linkedin": "#"
+      },
+      {
+        "name": "Kabir Sethi",
+        "role": "Creative Lead",
+        "image": "/images/team/kabir-sethi.jpg",
+        "linkedin": "#"
+      },
+      {
+        "name": "Myra Nair",
+        "role": "Digital Growth Strategist",
+        "image": "/images/team/myra-nair.jpg",
+        "linkedin": "#"
+      }
+    ]
+  }
+}
