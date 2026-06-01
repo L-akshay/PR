@@ -206,6 +206,21 @@ body {
   animation: projects-closing-drift 16s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
+@keyframes fade-up-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-up-reveal {
+  animation: fade-up-reveal 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee-left,
   .animate-marquee-right,
@@ -213,8 +228,11 @@ body {
   .animate-float-orb-reverse,
   .animate-project-drift,
   .animate-gold-dot-pulse,
-  .animate-projects-closing-drift {
+  .animate-projects-closing-drift,
+  .animate-fade-up-reveal {
     animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   *,
