@@ -30,7 +30,7 @@ function Card({ card, index }: { card: CardContent; index: number }) {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 32 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.6,
@@ -62,7 +62,7 @@ function Card({ card, index }: { card: CardContent; index: number }) {
       <div className="mt-auto h-px w-full overflow-hidden bg-transparent">
         <motion.div
           className="h-full origin-left bg-[#C9A84C]/30"
-          initial={{ scaleX: 0 }}
+          initial={false}
           animate={{ scaleX: 1 }}
           transition={{
             duration: 0.8,

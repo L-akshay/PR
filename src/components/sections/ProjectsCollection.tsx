@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { AnimatePresence, motion } from "framer-motion"
 
 import ProjectCaseStudy from "@/components/ui/ProjectCaseStudy"
 import ProjectFilter, {
@@ -10,8 +9,6 @@ import ProjectFilter, {
 import { projectCategories, projectItems } from "@/lib/data/projects"
 
 const FILTER_OPTIONS: ProjectFilterValue[] = ["All", ...projectCategories]
-
-const EASE = [0.22, 0.08, 0.2, 1] as const
 
 export default function ProjectsCollection() {
   const [active, setActive] = React.useState<ProjectFilterValue>("All")
@@ -46,10 +43,7 @@ export default function ProjectsCollection() {
       <div ref={sentinelRef} className="h-px w-full" aria-hidden />
 
       <div className="sticky top-24 z-30 -mx-5 px-5 lg:-mx-16 lg:px-16">
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: EASE }}
+        <div
           className={`mx-auto max-w-7xl py-4 transition-all duration-[700ms] ease-[cubic-bezier(0.22,0.08,0.2,1)] ${
             stuck
               ? "bg-[#0F0F0F]/92 backdrop-blur-xl shadow-[0_22px_60px_-30px_rgba(15,15,15,0.8)]"
@@ -66,39 +60,30 @@ export default function ProjectsCollection() {
               onChange={setActive}
             />
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <div className="relative mx-auto mt-12 max-w-7xl">
-        <AnimatePresence mode="popLayout">
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.55, ease: EASE }}
-            className="flex flex-col gap-10 lg:gap-14"
-          >
-            {filtered.map((project, index) => (
-              <ProjectCaseStudy
-                key={project.id}
-                project={project}
-                index={index}
-              />
-            ))}
+        <div key={active} className="flex flex-col gap-10 animate-fade-up-reveal lg:gap-14">
+          {filtered.map((project, index) => (
+            <ProjectCaseStudy
+              key={project.id}
+              project={project}
+              index={index}
+            />
+          ))}
 
-            {filtered.length === 0 ? (
-              <div className="rounded-[28px] border border-[#C9A84C]/12 bg-[#141414] p-10 text-center">
-                <p className="font-ui text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
-                  No projects
-                </p>
-                <p className="mt-4 font-serif text-2xl font-light text-[#F5F0E8]">
-                  Nothing filed under this category yet.
-                </p>
-              </div>
-            ) : null}
-          </motion.div>
-        </AnimatePresence>
+          {filtered.length === 0 ? (
+            <div className="rounded-[28px] border border-[#C9A84C]/12 bg-[#141414] p-10 text-center">
+              <p className="font-ui text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+                No projects
+              </p>
+              <p className="mt-4 font-serif text-2xl font-light text-[#F5F0E8]">
+                Nothing filed under this category yet.
+              </p>
+            </div>
+          ) : null}
+        </div>
       </div>
     </section>
   )

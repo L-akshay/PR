@@ -5,7 +5,6 @@ import Image from "next/image"
 import {
   animate,
   motion,
-  useInView,
   useMotionValue,
   type Variants,
 } from "framer-motion"
@@ -52,26 +51,15 @@ function RevealUp({
   delay?: number
   className?: string
 }) {
-  const ref = React.useRef<HTMLDivElement | null>(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
-  const reduced = usePrefersReducedMotion()
-
+  // CSS reveal so content is never held invisible by framer-motion in
+  // production builds (mount animations don't fire until first interaction).
   return (
-    <motion.div
-      ref={ref}
-      className={className}
-      initial={reduced ? false : { opacity: 0, y: 32 }}
-      animate={
-        reduced
-          ? { opacity: 1, y: 0 }
-          : isInView
-            ? { opacity: 1, y: 0 }
-            : { opacity: 0, y: 32 }
-      }
-      transition={{ duration: 0.7, ease: EASE, delay }}
+    <div
+      className={`animate-fade-up-reveal ${className ?? ""}`}
+      style={{ animationDelay: `${delay}s` }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -86,10 +74,9 @@ function CountUp({
   delay?: number
   className?: string
 }) {
-  const ref = React.useRef<HTMLSpanElement | null>(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
   const motionValue = useMotionValue(0)
-  const [display, setDisplay] = React.useState(0)
+  // Seed with the real value so it is correct even if the count-up never runs.
+  const [display, setDisplay] = React.useState(value)
   const reduced = usePrefersReducedMotion()
 
   React.useEffect(() => {
@@ -100,17 +87,17 @@ function CountUp({
   }, [motionValue])
 
   React.useEffect(() => {
-    if (reduced || !isInView) return
+    if (reduced) return
     const controls = animate(motionValue, value, {
       duration: 1.6,
       delay,
       ease: "easeOut",
     })
     return () => controls.stop()
-  }, [delay, isInView, motionValue, reduced, value])
+  }, [delay, motionValue, reduced, value])
 
   return (
-    <span ref={ref} className={className}>
+    <span className={className}>
       {reduced ? value : display}
       {suffix}
     </span>
@@ -132,13 +119,13 @@ function AboutHero() {
               "linear-gradient(rgba(201,168,76,1) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,1) 1px, transparent 1px)",
             backgroundSize: "96px 96px",
           }}
-          initial={reduced ? false : { opacity: 0 }}
+          initial={false}
           animate={{ opacity: 0.06 }}
           transition={{ duration: 1.4, ease: EASE }}
         />
         <motion.div
           className="absolute left-1/2 top-1/2 h-[70vh] w-[70vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.22)_0%,rgba(201,168,76,0)_70%)]"
-          initial={reduced ? false : { opacity: 0, scale: 0.9 }}
+          initial={false}
           animate={
             reduced
               ? { opacity: 1, scale: 1 }
@@ -159,7 +146,7 @@ function AboutHero() {
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center text-center">
         <motion.p
           className="font-sans text-[11px] uppercase tracking-[0.42em] text-[#C9A84C]"
-          initial={reduced ? false : { opacity: 0, y: 12 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: EASE }}
         >
@@ -168,7 +155,7 @@ function AboutHero() {
 
         <motion.h1
           className="mt-10 font-serif text-[clamp(44px,9vw,132px)] leading-[0.92] text-[#F5F0E8]"
-          initial={reduced ? false : { opacity: 0, y: 32 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: EASE, delay: 0.15 }}
         >
@@ -180,14 +167,14 @@ function AboutHero() {
 
         <motion.div
           className="mt-12 h-px w-full max-w-xl origin-center bg-[#C9A84C]"
-          initial={reduced ? false : { scaleX: 0 }}
+          initial={false}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.2, ease: EASE, delay: 0.5 }}
         />
 
         <motion.p
           className="mt-10 max-w-2xl font-sans text-base leading-relaxed text-[#888880] sm:text-lg"
-          initial={reduced ? false : { opacity: 0, y: 16 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}
         >
@@ -198,7 +185,7 @@ function AboutHero() {
       <motion.div
         aria-hidden
         className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3 text-[#C9A84C]"
-        initial={reduced ? false : { opacity: 0 }}
+        initial={false}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: EASE, delay: 1.1 }}
       >
@@ -234,8 +221,6 @@ function WordReveal({
   className?: string
   delay?: number
 }) {
-  const ref = React.useRef<HTMLDivElement | null>(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
   const reduced = usePrefersReducedMotion()
   const words = text.split(" ")
 
@@ -260,11 +245,10 @@ function WordReveal({
 
   return (
     <motion.div
-      ref={ref}
       className={className}
       variants={container}
-      initial="hidden"
-      animate={isInView || reduced ? "visible" : "hidden"}
+      initial={false}
+      animate="visible"
     >
       {words.map((w, index) => (
         <motion.span
@@ -281,9 +265,7 @@ function WordReveal({
 }
 
 function MissionSection() {
-  const reduced = usePrefersReducedMotion()
   const imageRef = React.useRef<HTMLDivElement | null>(null)
-  const imageInView = useInView(imageRef, { once: true, margin: "-80px" })
   const mission = site.about.mission
 
   return (
@@ -334,10 +316,8 @@ function MissionSection() {
           <motion.div
             className="absolute inset-0 bg-[#C9A84C]"
             style={{ transformOrigin: "right" }}
-            initial={reduced ? false : { scaleX: 1 }}
-            animate={
-              reduced || imageInView ? { scaleX: 0 } : { scaleX: 1 }
-            }
+            initial={false}
+            animate={{ scaleX: 0 }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.1 }}
           />
         </div>
@@ -474,27 +454,11 @@ function ValueRow({
   value: (typeof site.about.values)[number]
   index: number
 }) {
-  const ref = React.useRef<HTMLDivElement | null>(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
-  const reduced = usePrefersReducedMotion()
   const Icon = valueIcons[value.icon] ?? Lightbulb
   const isEven = index % 2 === 0
-  const slideFrom = isEven ? -60 : 60
 
   return (
-    <motion.article
-      ref={ref}
-      className="group relative py-14 lg:py-20"
-      initial={reduced ? false : { opacity: 0, x: slideFrom }}
-      animate={
-        reduced
-          ? { opacity: 1, x: 0 }
-          : isInView
-            ? { opacity: 1, x: 0 }
-            : { opacity: 0, x: slideFrom }
-      }
-      transition={{ duration: 0.7, ease: EASE }}
-    >
+    <article className="group relative py-14 animate-fade-up-reveal lg:py-20">
       <div
         className={`mx-auto flex max-w-5xl flex-col gap-6 lg:max-w-6xl ${
           isEven ? "lg:items-start lg:text-left" : "lg:items-end lg:text-right"
@@ -532,7 +496,7 @@ function ValueRow({
           {value.description}
         </p>
       </div>
-    </motion.article>
+    </article>
   )
 }
 

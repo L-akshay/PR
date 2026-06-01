@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { animate, useInView, useMotionValue } from "framer-motion"
+import { animate, useMotionValue } from "framer-motion"
 
 type AnimatedStatValueProps = {
   value: number
@@ -18,10 +18,9 @@ export default function AnimatedStatValue({
   duration = 1.4,
   className,
 }: AnimatedStatValueProps) {
-  const ref = React.useRef<HTMLSpanElement | null>(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
   const motionValue = useMotionValue(0)
-  const [display, setDisplay] = React.useState(0)
+  // Seed with the real value so it is correct even if the count-up never runs.
+  const [display, setDisplay] = React.useState(value)
 
   React.useEffect(() => {
     const unsubscribe = motionValue.on("change", (latest) => {
@@ -32,10 +31,6 @@ export default function AnimatedStatValue({
   }, [motionValue])
 
   React.useEffect(() => {
-    if (!isInView) {
-      return
-    }
-
     const controls = animate(motionValue, value, {
       duration,
       delay,
@@ -43,10 +38,10 @@ export default function AnimatedStatValue({
     })
 
     return () => controls.stop()
-  }, [delay, duration, isInView, motionValue, value])
+  }, [delay, duration, motionValue, value])
 
   return (
-    <span ref={ref} className={className}>
+    <span className={className}>
       {display}
       {suffix}
     </span>

@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { animate, useInView, useMotionValue } from "framer-motion"
+import { animate, useMotionValue } from "framer-motion"
 
 import FadeUp from "@/components/ui/FadeUp"
 import SectionLabel from "@/components/ui/SectionLabel"
@@ -20,10 +20,10 @@ function Stat({
   description: string
   delay: number
 }) {
-  const ref = React.useRef<HTMLDivElement | null>(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
   const motionValue = useMotionValue(0)
-  const [display, setDisplay] = React.useState(0)
+  // Seed with the real value so the number is correct even if the count-up
+  // animation never runs (production framer mount animations can be deferred).
+  const [display, setDisplay] = React.useState(value)
 
   React.useEffect(() => {
     const unsubscribe = motionValue.on("change", (latest) => {
@@ -34,10 +34,6 @@ function Stat({
   }, [motionValue])
 
   React.useEffect(() => {
-    if (!isInView) {
-      return
-    }
-
     const controls = animate(motionValue, value, {
       duration: 0.8,
       delay,
@@ -45,13 +41,10 @@ function Stat({
     })
 
     return () => controls.stop()
-  }, [delay, isInView, motionValue, value])
+  }, [delay, motionValue, value])
 
   return (
-    <div
-      ref={ref}
-      className="rounded-[24px] border border-[#C9A84C]/10 bg-[#0F0F0F] p-6 shadow-[0_18px_50px_rgba(15,15,15,0.18)] transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:-translate-y-1 hover:border-[#C9A84C]/20"
-    >
+    <div className="rounded-[24px] border border-[#C9A84C]/10 bg-[#0F0F0F] p-6 shadow-[0_18px_50px_rgba(15,15,15,0.18)] transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:-translate-y-1 hover:border-[#C9A84C]/20">
       <p className="font-serif text-5xl font-light text-[#C9A84C]">{display}%</p>
       <p className="mt-3 font-ui text-[11px] uppercase tracking-[0.28em] text-[#F5F0E8]">
         {label}

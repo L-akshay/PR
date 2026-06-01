@@ -2,12 +2,9 @@
 
 import Link from "next/link"
 import * as React from "react"
-import { motion, useReducedMotion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-
-const EASE = [0.22, 0.08, 0.2, 1] as const
 
 type CtaLink = {
   href: string
@@ -31,35 +28,6 @@ export default function ClosingCta({
   secondaryCta,
   className,
 }: ClosingCtaProps) {
-  const reduceMotion = useReducedMotion()
-
-  const phraseVariants = {
-    hidden: { opacity: 0, y: reduceMotion ? 0 : 26 },
-    show: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1.1,
-        ease: EASE,
-        delay: 0.55 + i * 0.18,
-      },
-    }),
-  }
-
-  const paragraphVariants = {
-    hidden: {
-      opacity: 0,
-      y: reduceMotion ? 0 : 18,
-      filter: reduceMotion ? "blur(0px)" : "blur(6px)",
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: { duration: 1.15, ease: EASE, delay: 1.05 },
-    },
-  }
-
   const headingArray = Array.isArray(heading) ? heading : null
   const headingNode =
     headingArray === null && heading !== undefined ? heading : null
@@ -74,47 +42,14 @@ export default function ClosingCta({
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#C9A84C]/30 to-transparent" />
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-120px" }}
-          transition={{ duration: 2.2, ease: EASE }}
-          className="absolute left-1/2 top-[8%] size-[620px] -translate-x-1/2 rounded-full bg-[#C9A84C]/[0.055] blur-[140px] animate-projects-closing-drift"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-120px" }}
-          transition={{ duration: 2.4, ease: EASE, delay: 0.3 }}
-          className="absolute -left-16 bottom-0 size-[360px] rounded-full bg-[#C9A84C]/[0.035] blur-[120px] animate-float-orb"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-120px" }}
-          transition={{ duration: 2.4, ease: EASE, delay: 0.5 }}
-          className="absolute -right-12 top-24 size-[320px] rounded-full bg-[#C9A84C]/[0.03] blur-[120px] animate-float-orb-reverse"
-        />
+        <div className="absolute left-1/2 top-[8%] size-[620px] -translate-x-1/2 rounded-full bg-[#C9A84C]/[0.055] blur-[140px] animate-projects-closing-drift" />
+        <div className="absolute -left-16 bottom-0 size-[360px] rounded-full bg-[#C9A84C]/[0.035] blur-[120px] animate-float-orb" />
+        <div className="absolute -right-12 top-24 size-[320px] rounded-full bg-[#C9A84C]/[0.03] blur-[120px] animate-float-orb-reverse" />
       </div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-120px" }}
-        className="relative mx-auto max-w-5xl text-center"
-      >
+      <div className="relative mx-auto max-w-5xl text-center">
         {eyebrow ? (
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: reduceMotion ? 0 : 14 },
-              show: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.85, ease: EASE },
-              },
-            }}
-            className="inline-flex items-center gap-3"
-          >
+          <div className="inline-flex items-center gap-3 animate-fade-up-reveal">
             <span
               className="size-[6px] rounded-full bg-[#C9A84C] shadow-[0_0_12px_rgba(201,168,76,0.55)] animate-gold-dot-pulse"
               aria-hidden
@@ -126,17 +61,10 @@ export default function ClosingCta({
               className="size-[6px] rounded-full bg-[#C9A84C] shadow-[0_0_12px_rgba(201,168,76,0.55)] animate-gold-dot-pulse"
               aria-hidden
             />
-          </motion.div>
+          </div>
         ) : null}
 
-        <motion.span
-          variants={{
-            hidden: { scaleX: 0 },
-            show: {
-              scaleX: 1,
-              transition: { duration: 1.2, ease: EASE, delay: 0.28 },
-            },
-          }}
+        <span
           className={cn(
             "mx-auto block h-px w-32 origin-center bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent",
             eyebrow ? "mt-6" : "mt-0"
@@ -147,51 +75,33 @@ export default function ClosingCta({
           <h2 className="mt-10 font-serif text-[clamp(36px,4.6vw,64px)] font-light leading-[1.04] text-[#F5F0E8]">
             {headingArray.map((phrase, index) => (
               <span key={phrase} className="block overflow-hidden pb-1">
-                <motion.span
-                  variants={phraseVariants}
-                  custom={index}
-                  className="inline-block will-change-transform"
+                <span
+                  className="inline-block animate-fade-up-reveal"
+                  style={{ animationDelay: `${0.1 + index * 0.12}s` }}
                 >
                   {phrase}
-                </motion.span>
+                </span>
               </span>
             ))}
           </h2>
         ) : headingNode ? (
           <h2 className="mt-10 font-serif text-[clamp(36px,4.6vw,64px)] font-light leading-[1.04] text-[#F5F0E8]">
             <span className="block overflow-hidden pb-1">
-              <motion.span
-                variants={phraseVariants}
-                custom={0}
-                className="inline-block will-change-transform"
-              >
+              <span className="inline-block animate-fade-up-reveal">
                 {headingNode}
-              </motion.span>
+              </span>
             </span>
           </h2>
         ) : null}
 
         {supporting ? (
-          <motion.p
-            variants={paragraphVariants}
-            className="mx-auto mt-7 max-w-2xl font-ui text-[15px] leading-[1.9] text-[#888880] sm:text-[17px]"
-          >
+          <p className="mx-auto mt-7 max-w-2xl font-ui text-[15px] leading-[1.9] text-[#888880] animate-fade-up-reveal sm:text-[17px]">
             {supporting}
-          </motion.p>
+          </p>
         ) : null}
 
         {primaryCta || secondaryCta ? (
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: reduceMotion ? 0 : 20 },
-              show: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 1.1, ease: EASE, delay: 1.35 },
-              },
-            }}
-            className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 animate-fade-up-reveal sm:flex-row">
             {primaryCta ? (
               <ClosingCtaPrimary
                 href={primaryCta.href}
@@ -204,9 +114,9 @@ export default function ClosingCta({
                 label={secondaryCta.label}
               />
             ) : null}
-          </motion.div>
+          </div>
         ) : null}
-      </motion.div>
+      </div>
     </section>
   )
 }

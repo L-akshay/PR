@@ -20,7 +20,7 @@ function StatCard({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16, scale: 0.95 }}
+      initial={false}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] }}
       className={`rounded-[18px] border border-[#C9A84C]/20 bg-[#161616]/90 px-5 py-4 text-center shadow-[0_18px_40px_rgba(15,15,15,0.18)] backdrop-blur-sm transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:-translate-y-1 hover:border-[#C9A84C]/35 sm:rounded-[20px] sm:px-6 sm:py-5 sm:text-left ${className ?? ""}`}
@@ -52,7 +52,7 @@ export default function WhyChoosePR() {
             {content.checklist.map((item, index) => (
               <motion.div
                 key={item.number}
-                initial={{ opacity: 0, x: -20 }}
+                initial={false}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.5,
