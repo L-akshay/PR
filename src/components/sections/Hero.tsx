@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 import GoldButton from "@/components/ui/GoldButton"
 import GhostButton from "@/components/ui/GhostButton"
@@ -97,21 +97,12 @@ export default function Hero() {
                   </span>
                 ))}
                 <span className="col-start-1 row-start-1 inline-block overflow-hidden pb-[0.08em]">
-                  <AnimatePresence mode="wait">
-                    <motion.span
-                      key={rotatingWords[activeWord]}
-                      initial={{ opacity: 0, y: "0.35em" }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: "-0.35em" }}
-                      transition={{
-                        duration: 0.55,
-                        ease: [0.25, 0.1, 0.25, 1],
-                      }}
-                      className="inline-block"
-                    >
-                      {rotatingWords[activeWord]}
-                    </motion.span>
-                  </AnimatePresence>
+                  <span
+                    key={rotatingWords[activeWord]}
+                    className="inline-block animate-word-rotate-in"
+                  >
+                    {rotatingWords[activeWord]}
+                  </span>
                 </span>
               </span>{" "}
               {hero.headingSuffix}

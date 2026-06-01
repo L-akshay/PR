@@ -3,8 +3,6 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { AnimatePresence, motion } from "framer-motion"
-
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll"
 import SectionLabel from "@/components/ui/SectionLabel"
 import ServiceTagTicker from "@/components/ui/ServiceTagTicker"
@@ -184,15 +182,9 @@ export default function ServicesPreview() {
                           </p>
                           <div className="mt-3 h-px overflow-hidden bg-charcoal-4">
                             {active ? (
-                              <motion.div
+                              <div
                                 key={service.slug}
-                                className="h-full origin-left bg-gold"
-                                initial={{ scaleX: 0 }}
-                                animate={{ scaleX: 1 }}
-                                transition={{
-                                  duration: 0.5,
-                                  ease: [0.25, 0.1, 0.25, 1],
-                                }}
+                                className="h-full origin-left bg-gold animate-service-bar-in"
                               />
                             ) : null}
                           </div>
@@ -222,51 +214,39 @@ export default function ServicesPreview() {
 
               <div className="flex h-full items-center py-8">
                 <div className="w-full overflow-hidden rounded-[32px] border border-gold/15 bg-charcoal-2">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={activeService.slug}
-                      initial={{ opacity: 0, scale: 1.04, y: 20 }}
-                      animate={{ opacity: 1, scale: 1, y: 0 }}
-                      exit={{ opacity: 0, scale: 0.97, y: -20 }}
-                      transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-                      className="relative min-h-[580px]"
-                    >
-                      <Image
-                        src={activeService.image}
-                        alt={activeService.title}
-                        fill
-                        sizes="60vw"
-                        className="object-cover"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,15,15,0.95)_0%,rgba(15,15,15,0.5)_40%,rgba(15,15,15,0.05)_70%)]" />
-                      <div className="absolute inset-x-0 bottom-0 p-10">
-                        <motion.div
-                          key={`${activeService.slug}-content`}
-                          initial={{ opacity: 0, y: 24 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{
-                            duration: 0.5,
-                            delay: 0.2,
-                            ease: [0.25, 0.1, 0.25, 1],
-                          }}
+                  <div
+                    key={activeService.slug}
+                    className="relative min-h-[580px] animate-service-media-in"
+                  >
+                    <Image
+                      src={activeService.image}
+                      alt={activeService.title}
+                      fill
+                      sizes="60vw"
+                      className="object-cover"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,15,15,0.95)_0%,rgba(15,15,15,0.5)_40%,rgba(15,15,15,0.05)_70%)]" />
+                    <div className="absolute inset-x-0 bottom-0 p-10">
+                      <div
+                        key={`${activeService.slug}-content`}
+                        className="animate-service-content-in"
+                      >
+                        <h3 className="font-serif text-5xl font-light text-offwhite">
+                          {activeService.shortLabel}
+                        </h3>
+                        <p className="mt-4 max-w-2xl font-sans text-base leading-relaxed text-offwhite/80">
+                          {activeService.description}
+                        </p>
+                        <Link
+                          href={`/services/${activeService.slug}`}
+                          className="mt-7 inline-flex h-11 items-center gap-2 font-sans text-xs uppercase tracking-[0.24em] text-gold transition-colors duration-500 hover:text-offwhite"
                         >
-                          <h3 className="font-serif text-5xl font-light text-offwhite">
-                            {activeService.shortLabel}
-                          </h3>
-                          <p className="mt-4 max-w-2xl font-sans text-base leading-relaxed text-offwhite/80">
-                            {activeService.description}
-                          </p>
-                          <Link
-                            href={`/services/${activeService.slug}`}
-                            className="mt-7 inline-flex h-11 items-center gap-2 font-sans text-xs uppercase tracking-[0.24em] text-gold transition-colors duration-500 hover:text-offwhite"
-                          >
-                            {content.exploreLabel}
-                          </Link>
-                        </motion.div>
+                          {content.exploreLabel}
+                        </Link>
                       </div>
-                    </motion.div>
-                  </AnimatePresence>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { animate, useInView, useMotionValue } from "framer-motion"
+import { animate, useMotionValue } from "framer-motion"
 
 import { statsTicker } from "@/lib/data/stats"
 
@@ -16,10 +16,10 @@ function Counter({
   label: string
   delay: number
 }) {
-  const ref = React.useRef<HTMLDivElement | null>(null)
-  const isInView = useInView(ref, { once: true, margin: "-80px" })
   const motionValue = useMotionValue(0)
-  const [display, setDisplay] = React.useState(0)
+  // Start at the real value so the number is correct even if the count-up
+  // animation never runs (e.g. JS deferred in production).
+  const [display, setDisplay] = React.useState(value)
 
   React.useEffect(() => {
     const unsubscribe = motionValue.on("change", (latest) => {
@@ -30,10 +30,6 @@ function Counter({
   }, [motionValue])
 
   React.useEffect(() => {
-    if (!isInView) {
-      return
-    }
-
     const controls = animate(motionValue, value, {
       duration: 0.8,
       delay,
@@ -41,10 +37,10 @@ function Counter({
     })
 
     return () => controls.stop()
-  }, [delay, isInView, motionValue, value])
+  }, [delay, motionValue, value])
 
   return (
-    <div ref={ref} className="px-4 py-8 text-center lg:px-8">
+    <div className="px-4 py-8 text-center lg:px-8">
       <p className="font-serif text-6xl font-light text-[#0F0F0F] sm:text-7xl">
         {display}
         {suffix}

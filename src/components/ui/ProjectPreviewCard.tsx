@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 
 import type { ProjectItem } from "@/lib/data/projects"
@@ -14,8 +13,6 @@ type ProjectPreviewCardProps = {
   className?: string
 }
 
-const EASE = [0.22, 0.08, 0.2, 1] as const
-
 export default function ProjectPreviewCard({
   project,
   index,
@@ -23,16 +20,9 @@ export default function ProjectPreviewCard({
   className,
 }: ProjectPreviewCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 44 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{
-        duration: 0.9,
-        ease: EASE,
-        delay: 0.1 + index * 0.12,
-      }}
-      className={cn("h-full", className)}
+    <div
+      className={cn("h-full animate-fade-up-reveal", className)}
+      style={{ animationDelay: `${0.1 + index * 0.12}s` }}
     >
       <Link
         href={href}
@@ -84,6 +74,6 @@ export default function ProjectPreviewCard({
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   )
 }
