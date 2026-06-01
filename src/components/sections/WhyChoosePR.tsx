@@ -1,8 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion"
 import FadeUp from "@/components/ui/FadeUp"
 import SectionLabel from "@/components/ui/SectionLabel"
 import { heroStats } from "@/lib/data/stats"
@@ -19,14 +18,10 @@ function StatCard({
   delay: number
   className?: string
 }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: "-40px" })
-
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, y: 16, scale: 0.95 }}
-      animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.6, delay, ease: [0.25, 0.1, 0.25, 1] }}
       className={`rounded-[18px] border border-[#C9A84C]/20 bg-[#161616]/90 px-5 py-4 text-center shadow-[0_18px_40px_rgba(15,15,15,0.18)] backdrop-blur-sm transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:-translate-y-1 hover:border-[#C9A84C]/35 sm:rounded-[20px] sm:px-6 sm:py-5 sm:text-left ${className ?? ""}`}
     >
@@ -58,8 +53,7 @@ export default function WhyChoosePR() {
               <motion.div
                 key={item.number}
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.06,

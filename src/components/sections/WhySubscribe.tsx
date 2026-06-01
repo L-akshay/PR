@@ -1,7 +1,6 @@
 "use client"
 
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion"
 import {
   AlertTriangle,
   BarChart2,
@@ -27,15 +26,12 @@ const iconMap = {
 type CardContent = (typeof site.home.whySubscribe.cards)[number]
 
 function Card({ card, index }: { card: CardContent; index: number }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: "-60px" })
   const Icon = iconMap[card.icon as keyof typeof iconMap] ?? Shield
 
   return (
     <motion.article
-      ref={ref}
       initial={{ opacity: 0, y: 32 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.6,
         delay: index * 0.09,
@@ -67,7 +63,7 @@ function Card({ card, index }: { card: CardContent; index: number }) {
         <motion.div
           className="h-full origin-left bg-[#C9A84C]/30"
           initial={{ scaleX: 0 }}
-          animate={inView ? { scaleX: 1 } : {}}
+          animate={{ scaleX: 1 }}
           transition={{
             duration: 0.8,
             delay: 0.3 + index * 0.09,

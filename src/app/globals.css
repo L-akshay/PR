@@ -221,6 +221,21 @@ body {
   animation: fade-up-reveal 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) both;
 }
 
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-page-fade-in {
+  animation: page-fade-in 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee-left,
   .animate-marquee-right,
@@ -229,6 +244,7 @@ body {
   .animate-project-drift,
   .animate-gold-dot-pulse,
   .animate-projects-closing-drift,
+  .animate-page-fade-in,
   .animate-fade-up-reveal {
     animation: none !important;
     opacity: 1 !important;
