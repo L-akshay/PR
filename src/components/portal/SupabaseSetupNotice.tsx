@@ -11,8 +11,13 @@ export default function SupabaseSetupNotice() {
           Add your Supabase keys to enable the portal.
         </h1>
         <p className="mt-5 font-ui text-sm leading-relaxed text-[#888880]">
-          Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY in
-          .env.local, then run the SQL migration in Supabase.
+          Create a Supabase project, run the SQL in
+          supabase/migrations/001_minimal_project_backend.sql, then add
+          NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY to
+          .env.local.
+        </p>
+        <p className="mt-4 font-ui text-sm leading-relaxed text-[#888880]">
+          Full steps are in docs/SUPABASE_SETUP.md.
         </p>
         <Link
           href="/"

@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { AnimatePresence, motion } from "framer-motion"
-import { ChevronDown, Menu } from "lucide-react"
+import { ChevronDown, LogIn, Menu, X } from "lucide-react"
 import { usePathname } from "next/navigation"
 
 import {
@@ -172,12 +172,26 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-4 lg:flex">
           <Link
             href={navigation.primaryCta.href}
             className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#C9A84C] px-6 py-3 font-ui text-[11px] uppercase tracking-[0.28em] text-[#C9A84C] transition-all duration-700 hover:-translate-y-0.5 hover:bg-[#C9A84C] hover:text-[#0F0F0F] hover:shadow-[0_14px_30px_rgba(201,168,76,0.18)]"
           >
             {navigation.primaryCta.label}
+          </Link>
+          <Link
+            href="/login"
+            className={cn(
+              "inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-[#2A2A2A] px-5 py-3 font-ui text-[11px] uppercase tracking-[0.24em] text-[#888880] transition-all duration-700 hover:border-[#C9A84C] hover:text-[#C9A84C]",
+              pathname.startsWith("/login") ||
+                pathname.startsWith("/signup") ||
+                pathname.startsWith("/dashboard")
+                ? "border-[#C9A84C]/70 text-[#C9A84C]"
+                : ""
+            )}
+          >
+            <LogIn className="size-3.5" />
+            Login
           </Link>
         </div>
 
@@ -199,17 +213,26 @@ export default function Navbar() {
           <SheetContent
             side="right"
             showCloseButton={false}
-            className="border-l border-[#C9A84C]/20 bg-[#0F0F0F] px-5 pt-28 pb-6 text-[#F5F0E8] data-[side=right]:w-full data-[side=right]:sm:max-w-md"
+            className="z-[120] flex h-dvh flex-col overflow-hidden border-l border-[#C9A84C]/20 bg-[#0F0F0F] px-5 py-5 text-[#F5F0E8] data-[side=right]:w-full data-[side=right]:sm:max-w-md"
           >
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute top-7 right-5 z-10 text-[#F5F0E8] hover:bg-[#161616] hover:text-[#C9A84C] lg:hidden"
-              aria-label="Close menu"
-              onClick={() => setSheetOpen(false)}
-            >
-              <Menu className="size-6" />
-            </Button>
+            <div className="flex min-h-16 shrink-0 items-center justify-between border-b border-[#2A2A2A] pb-5">
+              <Link
+                href="/"
+                className="font-serif text-3xl font-light tracking-[0.01em] text-[#F5F0E8]"
+                onClick={() => setSheetOpen(false)}
+              >
+                {navigation.brandPrefix}<span className="text-[#C9A84C]">{navigation.brandAccent}</span>
+              </Link>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-[#F5F0E8] hover:bg-[#161616] hover:text-[#C9A84C] lg:hidden"
+                aria-label="Close menu"
+                onClick={() => setSheetOpen(false)}
+              >
+                <X className="size-6" />
+              </Button>
+            </div>
 
             <SheetHeader className="sr-only px-0">
               <SheetTitle>{navigation.mobileTitle}</SheetTitle>
@@ -217,28 +240,28 @@ export default function Navbar() {
 
             <motion.nav
               id="mobile-navigation"
-              className="flex flex-1 flex-col justify-center"
+              className="min-h-0 flex-1 overflow-y-auto pt-6 pr-1"
               initial="closed"
               animate={sheetOpen ? "open" : "closed"}
               variants={listVariants}
             >
-              <motion.ul className="space-y-3" variants={listVariants}>
+              <motion.ul className="space-y-1 pb-5" variants={listVariants}>
                 {navigationLinks.map((link) => (
                   <motion.li key={link.label} variants={itemVariants}>
                     <Link
                       href={link.href}
-                      className="inline-flex min-h-11 items-center font-serif text-3xl font-light text-[#F5F0E8] transition-colors duration-700 hover:text-[#C9A84C]"
+                      className="inline-flex min-h-10 items-center font-serif text-[clamp(28px,8vw,36px)] font-light leading-tight text-[#F5F0E8] transition-colors duration-700 hover:text-[#C9A84C]"
                       onClick={() => setSheetOpen(false)}
                     >
                       {link.label}
                     </Link>
                     {link.hasDropdown ? (
-                      <div className="mt-2 space-y-2 pl-4">
+                      <div className="mt-1 grid gap-1.5 pl-4">
                         {serviceNavigationLinks.map((service) => (
                           <Link
                             key={service.href}
                             href={service.href}
-                            className="block py-2 font-ui text-[11px] uppercase tracking-[0.24em] text-[#888880] transition-colors duration-700 hover:text-[#C9A84C]"
+                            className="block py-1.5 font-ui text-[10px] uppercase tracking-[0.22em] text-[#888880] transition-colors duration-700 hover:text-[#C9A84C]"
                             onClick={() => setSheetOpen(false)}
                           >
                             {service.label}
@@ -251,7 +274,15 @@ export default function Navbar() {
               </motion.ul>
             </motion.nav>
 
-            <SheetFooter className="px-0 pb-0">
+            <SheetFooter className="shrink-0 grid gap-3 border-t border-[#2A2A2A] bg-[#0F0F0F] px-0 pt-4 pb-0">
+              <Link
+                href="/login"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full border border-[#2A2A2A] px-6 py-4 font-ui text-[11px] uppercase tracking-[0.28em] text-[#F5F0E8]"
+                onClick={() => setSheetOpen(false)}
+              >
+                <LogIn className="size-4" />
+                Login
+              </Link>
               <Link
                 href={navigation.primaryCta.href}
                 className="inline-flex min-h-11 w-full items-center justify-center rounded-full bg-[#C9A84C] px-6 py-4 font-ui text-[11px] uppercase tracking-[0.28em] text-[#0F0F0F]"

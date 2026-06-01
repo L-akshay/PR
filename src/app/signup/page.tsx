@@ -1,22 +1,21 @@
 import Link from "next/link"
 import { redirect } from "next/navigation"
-import { ArrowRight, BadgeCheck, LockKeyhole, ShieldCheck } from "lucide-react"
+import { ArrowRight, UserPlus } from "lucide-react"
 
-import { signIn } from "@/app/login/actions"
+import { signUp } from "@/app/login/actions"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import SupabaseSetupNotice from "@/components/portal/SupabaseSetupNotice"
 import { hasSupabaseEnv } from "@/lib/supabase/config"
 import { createClient } from "@/lib/supabase/server"
 
-type LoginPageProps = {
+type SignupPageProps = {
   searchParams: Promise<{
     error?: string
-    notice?: string
   }>
 }
 
-export default async function LoginPage({ searchParams }: LoginPageProps) {
+export default async function SignupPage({ searchParams }: SignupPageProps) {
   if (!hasSupabaseEnv()) {
     return <SupabaseSetupNotice />
   }
@@ -33,14 +32,12 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
 
   const error =
     params.error === "missing"
-      ? "Email and password are required."
-      : params.error === "invalid"
-        ? "Those login details did not work."
-        : null
-  const notice =
-    params.notice === "created"
-      ? "Account created. Sign in after confirming your email if confirmation is enabled."
-      : null
+      ? "Name, email, and password are required."
+      : params.error === "password"
+        ? "Password must be at least 8 characters."
+        : params.error === "invalid"
+          ? "We could not create that account. Try another email or password."
+          : null
 
   return (
     <section className="relative min-h-[calc(100vh-92px)] overflow-hidden px-5 pt-36 pb-20 lg:px-16 lg:pt-40">
@@ -48,55 +45,67 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
       <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(rgba(201,168,76,1)_1px,transparent_1px),linear-gradient(90deg,rgba(201,168,76,1)_1px,transparent_1px)] [background-size:88px_88px]" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#C9A84C]/45 to-transparent" />
 
-      <div className="relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_0.8fr] lg:items-center">
+      <div className="relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.85fr_0.8fr] lg:items-center">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#C9A84C]/20 bg-[#161616]/80 px-4 py-2 font-ui text-[10px] uppercase tracking-[0.24em] text-[#C9A84C]">
-            <ShieldCheck className="size-3.5" />
-            Client Portal
-          </div>
+          <p className="font-ui text-[11px] uppercase tracking-[0.34em] text-[#C9A84C]">
+            Create Account
+          </p>
           <h1 className="mt-8 font-serif text-[clamp(48px,8vw,104px)] font-light leading-[0.92] text-[#F5F0E8]">
-            Secure access for project work.
+            Start with a client workspace.
           </h1>
           <p className="mt-6 max-w-xl font-ui text-base leading-[1.9] text-[#A9A196]">
-            Clients see assigned project updates. Admins manage clients,
-            projects, and published progress from one protected workspace.
+            New accounts are created as clients. After signup, an admin can
+            assign projects and publish updates to your dashboard.
           </p>
-
-          <div className="mt-9 grid gap-3 sm:grid-cols-2">
-            {["Role based routing", "Protected by Supabase Auth"].map((item) => (
-              <div
-                key={item}
-                className="flex items-center gap-3 border-l border-[#C9A84C]/25 pl-4 font-ui text-sm text-[#B8B0A2]"
-              >
-                <BadgeCheck className="size-4 text-[#C9A84C]" />
-                {item}
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="border border-[#C9A84C]/15 bg-[#161616]/95 p-6 shadow-[0_28px_90px_rgba(0,0,0,0.28)] sm:p-8 lg:p-10">
           <div className="mb-8 flex items-center justify-between gap-4">
             <div>
               <p className="font-ui text-[11px] uppercase tracking-[0.28em] text-[#C9A84C]">
-                Sign in
+                Signup
               </p>
               <h2 className="mt-3 font-serif text-4xl font-light text-[#F5F0E8]">
-                Welcome back.
+                Create access.
               </h2>
             </div>
             <span className="inline-flex size-12 items-center justify-center rounded-full border border-[#C9A84C]/20 bg-[#0F0F0F] text-[#C9A84C]">
-              <LockKeyhole className="size-5" />
+              <UserPlus className="size-5" />
             </span>
           </div>
 
-          <form action={signIn} className="space-y-5">
+          <form action={signUp} className="space-y-5">
+            <div>
+              <label className="font-ui text-[11px] uppercase tracking-[0.24em] text-[#C9A84C]">
+                Full Name
+              </label>
+              <Input
+                id="full_name"
+                name="full_name"
+                autoComplete="name"
+                placeholder="Your name"
+                required
+                className="mt-3 min-h-13 rounded-none border-[#2A2A2A] bg-[#111111] px-5 text-[#F5F0E8] placeholder:text-[#6F6A61]"
+              />
+            </div>
+            <div>
+              <label className="font-ui text-[11px] uppercase tracking-[0.24em] text-[#C9A84C]">
+                Company
+              </label>
+              <Input
+                id="company_name"
+                name="company_name"
+                autoComplete="organization"
+                placeholder="Company name"
+                className="mt-3 min-h-13 rounded-none border-[#2A2A2A] bg-[#111111] px-5 text-[#F5F0E8] placeholder:text-[#6F6A61]"
+              />
+            </div>
             <div>
               <label className="font-ui text-[11px] uppercase tracking-[0.24em] text-[#C9A84C]">
                 Email
               </label>
               <Input
-                id="email"
+                id="signup_email"
                 name="email"
                 type="email"
                 autoComplete="email"
@@ -110,11 +119,12 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 Password
               </label>
               <Input
-                id="password"
+                id="signup_password"
                 name="password"
                 type="password"
-                autoComplete="current-password"
-                placeholder="Password"
+                autoComplete="new-password"
+                placeholder="At least 8 characters"
+                minLength={8}
                 required
                 className="mt-3 min-h-13 rounded-none border-[#2A2A2A] bg-[#111111] px-5 text-[#F5F0E8] placeholder:text-[#6F6A61]"
               />
@@ -125,40 +135,22 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 {error}
               </p>
             ) : null}
-            {notice ? (
-              <p className="rounded-2xl border border-[#C9A84C]/20 bg-[#C9A84C]/10 px-4 py-3 font-ui text-sm text-[#F5F0E8]">
-                {notice}
-              </p>
-            ) : null}
 
             <Button
               type="submit"
               className="min-h-13 w-full rounded-none bg-[#C9A84C] font-ui text-[11px] uppercase tracking-[0.26em] text-[#0F0F0F] hover:bg-[#E0C061]"
             >
-              Sign In
+              Create Account
               <ArrowRight className="ml-2 size-4" />
             </Button>
           </form>
 
-          <p className="mt-6 font-ui text-sm leading-relaxed text-[#888880]">
-            Accounts are created in Supabase Auth. A user with profile role
-            admin enters the admin workspace; everyone else enters the client
-            portal.
-          </p>
-
-          <p className="mt-4 font-ui text-sm text-[#888880]">
-            Need an account?{" "}
-            <Link href="/signup" className="text-[#C9A84C] transition-colors hover:text-[#F5F0E8]">
-              Create one
+          <p className="mt-6 font-ui text-sm text-[#888880]">
+            Already have access?{" "}
+            <Link href="/login" className="text-[#C9A84C] transition-colors hover:text-[#F5F0E8]">
+              Sign in
             </Link>
           </p>
-
-          <Link
-            href="/"
-            className="mt-6 inline-flex font-ui text-[11px] uppercase tracking-[0.24em] text-[#C9A84C]"
-          >
-            Back to site
-          </Link>
         </div>
       </div>
     </section>

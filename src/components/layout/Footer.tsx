@@ -22,6 +22,11 @@ const socials = [
   { icon: MessageCircle, href: "#" },
 ]
 
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-conditions" },
+]
+
 export default function Footer() {
   const footer = site.footer
   const navigation = site.navigation
@@ -128,7 +133,19 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4 text-center font-ui text-[11px] uppercase tracking-[0.16em] text-[#888880] md:flex-row md:items-center md:justify-between md:text-left">
           <p>{footer.copyright}</p>
-          <p>{footer.legal}</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 md:justify-end">
+            {legalLinks.map((item, index) => (
+              <div key={item.href} className="flex items-center gap-3">
+                {index > 0 ? <span aria-hidden="true">|</span> : null}
+                <Link
+                  href={item.href}
+                  className="transition-colors duration-700 hover:text-[#F5F0E8]"
+                >
+                  {item.label}
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
